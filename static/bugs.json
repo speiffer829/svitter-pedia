@@ -1,0 +1,642 @@
+[
+  {
+    "title": "Agrias Butterfly",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 3000,
+    "location": "flying",
+    "img":"Agrias_Butterfly"
+  }, 
+  {
+    "title": "Ant",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 80,
+    "location": "rotten food",
+    "img":"Ant"
+  },
+  {
+    "title": "Atlas Moth",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 19, 20, 21,22,23,24],
+    "price": 3000,
+    "location": "trees",
+    "img":"Atlas_Moth"
+  },
+  {
+    "title": "Bagworm",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 600,
+    "location": "shaking trees",
+    "img":"Bagworm"
+  },
+  {
+    "title": "Banded Dragonfly",
+    "months": ["may", "jun", "jul", "aug", "sept", "oct"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 4500,
+    "location": "flying",
+    "img":"Banded_Dragonfly"
+  },
+  {
+    "title": "Bell Cricket",
+    "months": ["sept", "oct"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 430,
+    "location": "ground",
+    "img":"Bell_Cricket"
+  },
+  {
+    "title": "Blue Weevil Beetle",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 800,
+    "location": "palm trees",
+    "img":"Blue_Weevil_Beetle"
+  },
+  {
+    "title": "Brown Cicada",
+    "months": ["jul", "aug"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 250,
+    "location": "Hardwood/Cedar Trees",
+    "img":"Brown_Cicada"
+  },
+  {
+    "title": "Centipede",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "sept", "oct", "nov", "dec"],
+    "times": [17, 18, 19, 20, 21,22,23],
+    "price": 300,
+    "location": "rocks",
+    "img":"Centipede"
+  },
+  {
+    "title": "Cicada Shell",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 10,
+    "location": "shaking trees",
+    "img":"Cicada_Shell"
+  },
+  {
+    "title": "Citrus Long-Horned Beetle",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 350,
+    "location": "tree stump",
+    "img":"Citrus_Long_Horned_Beetle"
+  },
+  {
+    "title": "Common Bluebottle",
+    "months": ["apr", "may", "jun", "jul", "aug"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 300,
+    "location": "flying",
+    "img":"Common_Bluebottle"
+  },
+  {
+    "title": "Common Butterfly",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "sept", "oct", "nov", "dec"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 160,
+    "location": "flying",
+    "img":"Common_Butterfly"
+  },
+  {
+    "title": "Cricket",
+    "months": ["sept", "oct", "nov"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 130,
+    "location": "ground",
+    "img":"Cricket"
+  },
+  {
+    "title": "Cyclommatus Stag",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 8000,
+    "location": "coconut trees",
+    "img":"Cyclommatus_Stag"
+  },
+  {
+    "title": "Damselfly",
+    "months": ["jan", "feb","nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 500,
+    "location": "flying",
+    "img":"Damselfly"
+  },
+  {
+    "title": "Darner Dragonfly",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept", "oct"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 230,
+    "location": "flying",
+    "img":"Darner_Dragonfly"
+  },
+  {
+    "title": "Diving Beetle",
+    "months": ["may", "jun", "jul", "aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 800,
+    "location": "river/pond",
+    "img":"Diving_Beetle"
+  },
+  {
+    "title": "Drone Beetle",
+    "months": ["jun", "jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 200,
+    "location": "trees",
+    "img":"Drone_Beetle"
+  },
+  {
+    "title": "Dung Beetle",
+    "months": ["jan", "feb", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 3000,
+    "location": "snowballs",
+    "img":"Dung_Beetle"
+  },
+  {
+    "title": "Earth-Boring Dung Beetle",
+    "months": ["jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 300,
+    "location": "trees",
+    "img":"Earth_Boring_Dung_Beetle"
+  },
+  {
+    "title": "Emperor Butterfly",
+    "months": ["jan", "feb", "mar","jun", "jul", "aug", "sept", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 4000,
+    "location": "flying",
+    "img":"Emperor_Butterfly"
+  },
+  {
+    "title": "Evening Cicada",
+    "months": ["jul", "aug"],
+    "times": [4, 5, 6, 7, 8, 16, 17, 18, 19],
+    "price": 550,
+    "location": "hardwood/cedar trees",
+    "img":"Evening_Cicada"
+  },
+  {
+    "title": "Firefly",
+    "months": ["jun"],
+    "times": [0,1,2,3,4, 19, 20, 21,22,23,24],
+    "price": 300,
+    "location": "flying",
+    "img":"Firefly"
+  },
+  {
+    "title": "Flea",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept", "oct", "nov"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 70,
+    "location": "on a villager",
+    "img":"Flea"
+  },
+  {
+    "title": "Fly",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 60,
+    "location": "garbage",
+    "img":"Fly"
+  },
+  {
+    "title": "Giant Cicada",
+    "months": ["jul", "aug"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 500,
+    "location": "hardwood/cedar trees",
+    "img":"Giant_Cicada"
+  },
+  {
+    "title": "Giant Stag",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 23,24],
+    "price": 10000,
+    "location": "trees",
+    "img":"Giant_Stag"
+  },
+  {
+    "title": "Giant Water Bug",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 19, 20, 21,22,23,24],
+    "price": 2000,
+    "location": "river/pond",
+    "img":"Giant_Waterbug"
+  },
+  {
+    "title": "Giraffe Stag",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 12000,
+    "location": "coconut trees",
+    "img":"Giraffe_Stag"
+  },
+  {
+    "title": "Golden Stag",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 12000,
+    "location": "coconut trees",
+    "img":"Golden_Stag"
+  },
+  {
+    "title": "Goliath Beetle",
+    "months": ["jun", "jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 8000,
+    "location": "coconut trees",
+    "img":"Goliath_Beetle"
+  },
+  {
+    "title": "Grasshopper",
+    "months": ["jul", "aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 160,
+    "location": "ground",
+    "img":"Grasshopper"
+  },
+  {
+    "title": "Great Purple Emperor",
+    "months": ["may", "jun", "jul", "aug"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 3000,
+    "location": "flying",
+    "img":"Great_Purple_Emperor"
+  },
+  {
+    "title": "Hermit Crab",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 19, 20, 21,22,23,24],
+    "price": 1000,
+    "location": "beach",
+    "img":"Hermit_Crab"
+  },
+  {
+    "title": "Honeybee",
+    "months": ["mar", "apr", "may", "jun", "jul"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 200,
+    "location": "near flowers",
+    "img":"Honey_Bee"
+  },
+  {
+    "title": "Horned Atlas",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 8000,
+    "location": "coconut trees",
+    "img":"Horned_Atlas"
+  },
+  {
+    "title": "Horned Dynastid",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 1350,
+    "location": "trees",
+    "img":"Horned_Dynastid"
+  },
+  {
+    "title": "Horned Elephant",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 17, 18, 19, 20, 21,22,23,24],
+    "price": 8000,
+    "location": "coconut trees",
+    "img":"Horned_Elephant"
+  },
+  {
+    "title": "Horned Hercules",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 12000,
+    "location": "coconut trees",
+    "img":"Horned_Hercules"
+  },
+  {
+    "title": "Jewel Beetle",
+    "months": ["apr", "may", "jun", "jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 2400,
+    "location": "tree stump",
+    "img":"Jewel_Beetle"
+  },
+  {
+    "title": "Ladybug",
+    "months": ["mar", "apr", "may", "jun", "oct"],
+    "times": [ 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 200,
+    "location": "flowers",
+    "img":"Ladybug"
+  },
+  {
+    "title": "Long Locust",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept", "oct", "nov"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16],
+    "price": 200,
+    "location": "ground",
+    "img":"Long_Locust"
+  },
+  {
+    "title": "Madagascan Sunset Moth",
+    "months": ["apr", "may", "jun", "jul", "aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16],
+    "price": 2500,
+    "location": "flying",
+    "img":"Madagascan_Sunset_Moth"
+  },
+  {
+    "title": "Man-Faced Stinkbug",
+    "months": ["mar", "apr", "may", "jun", "jul", "aug", "sept", "oct"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 19, 20, 21,22,23,24],
+    "price": 1000,
+    "location": "flowers",
+    "img":"Man_Faced_Stinkbug"
+  },
+  {
+    "title": "Mantis",
+    "months": ["mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 430,
+    "location": "flowers",
+    "img":"Mantis"
+  },
+  {
+    "title": "Migratory Locust",
+    "months": ["feb", "mar", "apr", "may"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 600,
+    "location": "ground",
+    "img":"Migratory_Locust"
+  },
+  {
+    "title": "Miyama Stag",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 1000,
+    "location": "trees",
+    "img":"Miyama_Stag"
+  },
+  {
+    "title": "Mole Cricket",
+    "months": ["jan", "feb", "mar", "apr", "may", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 500,
+    "location": "underground",
+    "img":"Mole_Cricket"
+  },
+  {
+    "title": "Monarch Butterfly",
+    "months": ["sept", "oct", "nov"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 140,
+    "location": "flying",
+    "img":"Monarch_Butterfly"
+  },
+  {
+    "title": "Mosquito",
+    "months": ["jun", "jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 17, 18, 19, 20, 21,22,23,24],
+    "price": 130,
+    "location": "flying",
+    "img":"Mosquito"
+  },
+  {
+    "title": "Moth",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 19, 20, 21,22,23,24],
+    "price": 130,
+    "location": "flying by light",
+    "img":"Moth"
+  },
+  {
+    "title": "Orchid Mantis",
+    "months": ["mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 2400,
+    "location": "white flowers",
+    "img":"Orchid_Mantis"
+  },
+  {
+    "title": "Paper Kite Butterfly",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 1000,
+    "location": "flying",
+    "img":"Paper_Kite_Butterfly"
+  },
+  {
+    "title": "Peacock Butterfly",
+    "months": ["mar", "apr", "may", "jun"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 2500,
+    "location": "flying by hybrid flowers",
+    "img":"Peacock_Butterfly"
+  },
+  {
+    "title": "Pillbug",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 23,24],
+    "price": 250,
+    "location": "under rocks",
+    "img":"Pillbug"
+  },
+  {
+    "title": "Pondskater",
+    "months": ["may", "jun", "jul", "aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 130,
+    "location": "river/pond",
+    "img":"Pondskater"
+  },
+  {
+    "title": "Queen Alexandra's Birdwing",
+    "months": ["may", "jun", "jul", "aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 4000,
+    "location": "flying",
+    "img":"Queen_Alexandras_Birdwing"
+  },
+  {
+    "title": "Rainbow Stag",
+    "months": ["jun", "jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 19, 20, 21,22,23,24],
+    "price": 6000,
+    "location": "trees",
+    "img":"Rainbow_Stag"
+  },
+  {
+    "title": "Rajah Brooke's Birdwing",
+    "months": ["jan", "feb", "apr", "may", "jun", "jul", "aug", "sept", "dec"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 2500,
+    "location": "flying by purple flowers",
+    "img":"Rajah_Brookes_Birdwing"
+  },
+  {
+    "title": "Red Dragonfly",
+    "months": ["sept", "oct"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 180,
+    "location": "flying",
+    "img":"Red_Dragonfly"
+  },
+  {
+    "title": "Rice Grasshopper",
+    "months": ["aug", "sept", "oct", "nov"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 160,
+    "location": "ground",
+    "img":"Rice_Grasshopper"
+  },
+  {
+    "title": "Robust Cicada",
+    "months": ["jul", "aug"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 300,
+    "location": "trees",
+    "img":"Robust_Cicada"
+  },
+  {
+    "title": "Rosalia Batesi Beetle",
+    "months": ["may", "jun", "jul", "aug", "sept"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 3000,
+    "location": "tree stumps",
+    "img":"Rosalia_Batesi_Beetle"
+  },
+  {
+    "title": "Saw Stag",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 2000,
+    "location": "trees",
+    "img":"Saw_Stag"
+  },
+  {
+    "title": "Scarab Beetle",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8,23,24],
+    "price": 10000,
+    "location": "trees",
+    "img":"Scarab_Beetle"
+  },
+  {
+    "title": "Scorpion",
+    "months": ["may", "jun", "jul", "aug", "sept", "oct"],
+    "times": [0,1,2,3,4, 9, 20, 21,22,23,24],
+    "price": 8000,
+    "location": "ground",
+    "img":"Scorpion"
+  },
+  {
+    "title": "Snail",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 250,
+    "location": "rocks (when raining)",
+    "img":"Snail"
+  },
+  {
+    "title": "Spider",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8,19, 20, 21,22,23,24],
+    "price": 480,
+    "location": "shaking trees",
+    "img":"Spider"
+  },
+  {
+    "title": "Stinkbug",
+    "months": ["mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 120,
+    "location": "flowers",
+    "img":"Stinkbug"
+  },
+  {
+    "title": "Tarantula",
+    "months": ["jan", "feb", "mar", "apr", "nov", "dec"],
+    "times": [0,1,2,3,4, 19, 20, 21,22,23,24],
+    "price": 8000,
+    "location": "ground",
+    "img":"Tarantula"
+  },
+  {
+    "title": "Tiger Beetle",
+    "months": ["feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 1500,
+    "location": "ground",
+    "img":"Tiger_Beetle"
+  },
+  {
+    "title": "Tiger Butterfly",
+    "months": ["mar", "apr", "may", "jun", "jul", "aug", "sept"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 240,
+    "location": "flying",
+    "img":"Tiger_Butterfly"
+  },
+  {
+    "title": "Violin Beetle",
+    "months": ["may", "jun", "sept", "oct", "nov"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 450,
+    "location": "tree stumps",
+    "img":"Violin_Beetle"
+  },
+  {
+    "title": "Walker Cicada",
+    "months": ["aug", "sept"],
+    "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+    "price": 400,
+    "location": "trees",
+    "img":"Walker_Cicada"
+  },
+  {
+    "title": "Walking Leaf",
+    "months": ["jul", "aug"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 600,
+    "location": "near trees (furniture leaf)",
+    "img":"Walking_Leaf"
+  },
+  {
+    "title": "Walking Stick",
+    "months": ["jul", "aug", "sept", "oct", "nov"],
+    "times": [4, 5, 6, 7, 8, 17, 18, 19],
+    "price": 600,
+    "location": "trees",
+    "img":"Walking_Stick"
+  },
+  {
+    "title": "Wasp",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [0,1,2,3,4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,22,23,24],
+    "price": 2500,
+    "location": "shaking trees",
+    "img":"Wasp"
+  },
+  {
+    "title": "Wharf Roach",
+    "months": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sept", "oct", "nov", "dec"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 200,
+    "location": "beach rocks",
+    "img":"Wharf_Roach"
+  },
+  {
+    "title": "Yellow Butterfly",
+    "months": ["mar", "apr", "may", "jun", "sept", "oct"],
+    "times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+    "price": 160,
+    "location": "flying",
+    "img":"Yellow_Butterfly"
+  }
+]

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Baloo+Thambi+2:500,800&display=swap');
+
+
+:root{
+
+--font: 'Baloo Thambi 2', cursive;
+--headFont: 'Arvo', serif;
+
+--tan: #FDFDEB;
+--green: #00A144;
+--gold: #FCCC1F;
+--brown: #9A702A;
+--red: #ED2B30;
+--blue: #74A1D2;
+--purple: #B6A2C8;
+--yellow: #EFE180;
+--lgreen: #D1DB63;
+--orange: #F7B12B;
+
+font-size: 62.5%;
+}
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+body{
+	font-family: var(--headFont);
+}
