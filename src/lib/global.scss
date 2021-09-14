@@ -6,16 +6,26 @@
 --font: 'Baloo Thambi 2', cursive;
 --headFont: 'Arvo', serif;
 
---tan: #FDFDEB;
---green: #00A144;
---gold: #FCCC1F;
---brown: #9A702A;
---red: #ED2B30;
---blue: #74A1D2;
---purple: #B6A2C8;
---yellow: #EFE180;
---lgreen: #D1DB63;
---orange: #F7B12B;
+--tan: hsl(60, 81.4%, 95.7%);
+
+--green: hsl(145.4, 100%, 31.6%);
+--greenHSL: 145.4 100% 31.6%;
+--greenHS: 145.4 100%;
+--greenL: 31.6%;
+
+--gold: hsl(47, 97.3%, 55.5%);
+--brown: hsl(37.4, 57.1%, 38.5%);
+--red: hsl(358.5, 84.3%, 54.9%);
+
+--blue: hsl(211.4, 51.2%, 64%);
+--blueHS: 211.4 51.2%;
+--blueL: 64%;
+
+--dblue: hsl(198.6, 75.4%, 15.9%);
+--purple: hsl(271.8, 25.6%, 71%);
+--yellow: hsl(52.4, 77.5%, 72%);
+--lgreen: hsl(65, 62.6%, 62.4%);
+--orange: hsl(39.4, 92.8%, 56.9%);
 
 font-size: 62.5%;
 }
@@ -28,4 +38,11 @@ font-size: 62.5%;
 
 body{
 	font-family: var(--headFont);
+	background: var(--tan);
+	background-image: url('/play-dots.png');
+  background-size: 36px 34.5px;
+}
+
+.critter-grid{
+	
 }
