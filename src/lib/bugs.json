@@ -8,6 +8,7 @@
     "flickPrice": 4500,
     "location": "flying",
     "img":"Agrias_Butterfly",
+    "slug":"agrias_butterfly",
     "rarity": "uncommon",
     "phrase": "I caught an agrias butterfly! I wonder if it finds me disagrias-able?",
     "blathers": "Some say the agrias butterfly is one of the most beautiful butterflies in the world. Bah, I say! BAH! They may have brightly colored wings, but the way they flutter and flitter...SO FOUL! In fact, the agrias butterfly flies so fast, it is quite a feat to catch one. I suppose I should congratulate you on your good fortune... But catching any bug seems a misfortune to me."
@@ -21,6 +22,7 @@
     "flickPrice":120,
     "location": "rotten food",
     "img":"Ant",
+    "slug":"ant",
     "rarity": "common",
     "phrase": "I caught an ant! TELL ME WHERE THE QUEEN IS!",
     "blathers": "I warn you, the ant may be a small bug, but it finds scary strength in numbers. You see, the ant itself is the strongest creature in the world in relation to its size. One of these diminutive fiends can carry 50 times its own bodyweight! And if it wants to lift something even larger... Why, it simply calls on its ant friends to join the effort. Creepy cooperation, I say..."
@@ -34,6 +36,7 @@
     "flickPrice": 4500,
     "location": "trees",
     "img":"Atlas_Moth",
+    "slug":"atlas_moth",
     "rarity": "uncommon",
     "phrase": "I caught an Atlas moth! I bet it never gets lost!",
     "blathers": "The Atlas moth is a monstrous thing! Not only is it one of the largest moths in the world... The tips of its wings look rather like the heads of venomous snakes! Despite its largeness and loathsome looks, the adult Atlas moth lives only for a few days. It emerges from its cocoon without a mouth, you see...and so cannot eat. I feel for the poor thing...but it is still foul!"
@@ -47,6 +50,7 @@
     "flickPrice": 900,
     "location": "shaking trees",
     "img":"Bagworm",
+    "slug":"bagworm",
     "rarity": "common",
     "phrase": "I caught a bagworm! Guess I'm a bragworm!",
     "blathers": "The bagworm is, in fact, not a worm at all, but a caterpillar instead. The filthy fraud uses silk and leaves to spin a cozy bag for it to hide inside—hence the name. Some find it cute the way bagworms dangle from trees. But the truth is they're gluttonous monsters. These beasts love to stuff their bug- gullets full of leaves, devouring the very trees they hang upon. Wretched villains is what they are."
@@ -60,6 +64,7 @@
     "flickPrice": 6750,
     "location": "flying",
     "img":"Banded_Dragonfly",
+    "slug":"banded_dragonfly",
     "rarity": "rare",
     "phrase": "I did it! Did you see that? I caught a banded dragonfly!",
     "blathers": "The banded dragonfly is known for its black-and-yellow-striped body, as well as for its piercing green eyes. And it is those very eyes that help make dragonflies master hunters, you see. Alas, when one looks at me, I can't help but feel it is sizing me up for a meal! Hoot! The horrors! Look away, fiend!"
@@ -73,6 +78,7 @@
     "flickPrice": 645,
     "location": "ground",
     "img":"Bell_Cricket",
+    "slug":"bell_cricket",
     "rarity": "common",
     "phrase": "I found a bell cricket! It would make a great bellhop!",
     "blathers": "The call of the bell cricket heralds the arrival of autumn. And I concede it is a rather pleasant sound. What I do NOT find pleasant is the way these things rub their strange wings together to make their song! Ick and blech! And to make matters worse, bell crickets have been known to shed two of their four wings! And they simply leave these wings where they fall, as if it were litter! I simply cannot abide such odious behavior."
@@ -86,6 +92,7 @@
     "flickPrice": 1200,
     "location": "palm trees",
     "img":"Blue_Weevil_Beetle",
+    "slug":"blue_weevil_beetle",
     "rarity": "common",
     "phrase": "I caught a blue weevil b…lesser of blue weevils!",
     "blathers": "Yes, yes. The blue weevil beetle does come in beautiful shades of blue and green. The colors are so bright, some say it looks like a living jewel. But I say it looks like a weevil...and weevil rhymes with EVIL. Draw your own conclusions from there. Hoot! I certainly have!"
@@ -99,6 +106,7 @@
     "flickPrice": 375,
     "location": "Hardwood/Cedar Trees",
     "img":"Brown_Cicada",
+    "slug":"brown_cicada",
     "rarity": "common",
     "phrase": "I caught a brown cicada! Now it probably feels blue, cicada.",
     "blathers":"Cicadas are obnoxious insects. And not just brown cicadas, mind you...but all cicadas! They flex ribbed membranes on their torso called tymbals to make a loud snapping sound. So rude! Hoo! Yes, it is only the males who make the noise. Sometimes at a volume that can produce pain at close range! Appallingly inconsiderate, I must say..."
@@ -112,6 +120,7 @@
     "flickPrice": 450,
     "location": "rocks",
     "img":"Centipede",
+    "slug":"centipede",
     "rarity": "common",
     "phrase": "I caught a centipede! 99 more and I'll have a dollarpede!",
     "blathers": "The centipede's name means \"100 legs.\" But I tell you now, that's a lie! These ugly bugs can have as few as 15 pairs of legs...or as many as 171. But because of how their bodies are segmented, they never have exactly 100! Hoo! It's true! You know what else is true? Centipedes are carnivorous, aggressive, and venomous! And their bite is quite painful too! HOO-rrible things, I say."
@@ -125,6 +134,7 @@
     "flickPrice": 15,
     "location": "shaking trees",
     "img":"Cicada_Shell",
+    "slug":"cicada_shell",
     "rarity": "rare",
     "phrase": "I found a cicada shell! I'm glad the little guy came out of it!",
     "blathers": "Cicadas! The nerve! Not only are they loud, they leave their cicada shells lying about! When it's time for a cicada nymph to turn into an adult, you see, it clings to a tree and sheds its exoskeleton. Then it just leaves this shell of its former self hanging right there! Awful manners, really...and awfully terrifying too."
@@ -138,6 +148,7 @@
     "flickPrice": 525,
     "location": "tree stump",
     "img":"Citrus_Long_Horned_Beetle",
+    "slug":"citrus_long_horned_beetle",
     "rarity": "common",
     "phrase": "I caught a citrus long-horned beetle! Orange you happy for me?",
     "blathers": "The citrus long-horned beetle is a putrid pest and a grave threat to trees. Hoo! It's true! Adults possess powerful jaws and use them to chomp through hard wood and plant fibers with ease. The little larvae are no better, boring bullet-like holes into innocent trees with gusto—citrus trees especially. Voracious and vile, indeed!"
@@ -152,6 +163,7 @@
     "flickPrice": 450,
     "location": "flying",
     "img":"Common_Bluebottle",
+    "slug":"common_bluebottle",
     "rarity": "common",
     "phrase": "I caught a common bluebottle! I'll put it in a rare green jar!",
     "blathers": "The common bluebottle is a type of swallowtail butterfly with a bright blue line running down its wings. They fly quite nimbly, it seems, and are thus quite difficult to catch. But seeing how they've been known to slurp nutrients from MUD puddles... I simply CAN'T imagine wanting to catch one myself. What awful breath!"
@@ -165,6 +177,7 @@
     "flickPrice": 240,
     "location": "flying",
     "img":"Common_Butterfly",
+    "slug":"common_butterfly",
     "rarity": "common",
     "phrase": "I caught a common butterfly! They often flutter by!",
     "blathers": "The common butterfly would have you believe it is but a beautiful friend flitting prettily about the flowers. Bah, I say! They may seem innocent things with their pretty white wings, but they hide a dark side! The common butterfly caterpillar is called a cabbage worm, you see, and it's a most voracious pest. The ravenous beasts chew through cabbage, broccoli, kale and the like with a devastating gusto. And my feathers! Their green coloring is truly GROSS! A hoo-rrific hue, I say."
@@ -178,6 +191,7 @@
     "flickPrice": 195,
     "location": "ground",
     "img":"Cricket",
+    "slug":"cricket",
     "rarity": "common",
     "phrase": "I caught a cricket! What a chirp thrill!",
     "blathers": "I say, where shall I start with the cricket? Well, to begin with, they are mostly nocturnal creatures. And for that you day-loving diurnal types should be grateful! Hoo! It means you don't have to lay eyes upon their prickly legs or overly long antennae like us night owls! Of course, crickets are best known for the chirping sound they make by rubbing their wings together. Some find the noise lovely to listen to. Alas, it only serves to remind me of another unpleasant fact... Which is to say...you will find a cricket's ears right next to its knees! I've gone weak in the knees at the mention of it!"
@@ -191,6 +205,7 @@
     "flickPrice": 12000,
     "location": "coconut trees",
     "img":"Cyclommatus_Stag",
+    "slug":"cyclommatus_stag",
     "rarity": "ultra-rare",
     "phrase": "I caught a cyclommatus stag! Those mandibles are a mouthful!",
     "blathers": "The cyclommatus stag is known for its giant jaws, which can be even larger than its body. Its round eyes and silver color make it a beloved beetle. Though how one could love a beetle is beyond me. Imagine being pinched by those long jaws, and the pain it would cause! Ouch and ewww!"
@@ -204,6 +219,7 @@
     "flickPrice": 750,
     "location": "flying",
     "img":"Damselfly",
+    "slug":"damselfly",
     "rarity": "common",
     "phrase":"I caught a damselfly! Now it's a damselfly in distress!",
     "blathers": "The colorful damselfly is similar to its cousin, the dragonfly, though it tends to be smaller and thinner. But don't let the delicate looks fool you! Much like the dragonfly, the damselfly is a ruthless predator. It loves to catch flies midair and eat them, and has been known to snack on spiders it plucks from the web! In short, it is not a dinner guest I would recommend... And it is not a menu I could keep down."
@@ -217,6 +233,7 @@
     "flickPrice": 345,
     "location": "flying",
     "img":"Darner_Dragonfly",
+    "slug":"darner_dragonfly",
     "rarity": "common",
     "phrase": "I caught a darner dragonfly! It better watch its mouth!",
     "blathers": "The darner dragonfly is the fastest dragonfly there is, flying at speeds up to 40 miles per hour! They all have a distinctive green hue, but the males have blue underbellies while females have yellow ones. It all sounds pleasant enough, no? Well, did you know their young eat tadpoles...and even some small fish! Worse, these creepy carnivores will eat each other in a pinch! Grotesque does not describe it..."
@@ -230,6 +247,7 @@
     "flickPrice": 1200,
     "location": "river/pond",
     "img":"Diving_Beetle",
+    "slug":"diving_beetle",
     "rarity": "common",
     "phrase": "I caught a diving beetle! Now I'm making a splash!",
     "blathers": "Ah, the dastardly diving beetle! Famous for its distinctive round shape...and its voracious appetite. This powerful predator uses thick back legs covered in hairs to paddle after its prey. And it uses suction cups on its front legs to grip its quarry for good. My own legs have gone weak thinking about it..."
@@ -244,6 +262,7 @@
     "flickPrice": 300,
     "location": "trees",
     "img":"Drone_Beetle",
+    "slug":"drone_beetle",
     "rarity": "common",
     "phrase":"I caught a drone beetle! Shouldn't you have more propellers?",
     "blathers": "I must say, the drone beetle is like that boorish acquaintance who is much too loud for polite company. That is, it is a large bug with a square head and is so named for the droning noise it makes when it flies. Furthermore, it has hooks on its feet that help it to cling tightly to trees. HOOK FEET... How gauche!"
@@ -258,6 +277,7 @@
     "flickPrice": 4500,
     "location": "snowballs",
     "img":"Dung_Beetle",
+    "slug":"dung_beetle",
     "rarity":"common",
     "phrase": "I caught a dung beetle! This species likes feces!",
     "blathers": "What can I say? The aptly-named dung beetle feeds on the feces of animals. Hoo! You heard right! This putrid pest rolls up balls of dung...and then rolls them away to dine on at a later date. As if that weren't atrocious enough, some dung beetles lay their eggs in the feces too! What a dreadful place to raise the young."
@@ -272,6 +292,7 @@
     "flickPrice": 450,
     "location": "trees",
     "img":"Earth_Boring_Dung_Beetle",
+    "slug":"earth_boring_dung_beetle",
     "rarity":"common",
     "phrase": "I caught an earth-boring dung beetle! It's not boring at all!",
     "blathers": "Earth-boring dung beetles are considered quite handsome by some, thanks to their metallic luster. In fact, some even think them to be good omens and bringers of favorable fortune. But I must protest! These field- ravaging pests love to burrow under piles of dung and lay their eggs. They raise their young under DUNG! Need I say more? Ick. I think not."
@@ -286,6 +307,7 @@
     "flickPrice": 6000,
     "location": "flying",
     "img":"Emperor_Butterfly",
+    "slug":"emperor_butterfly",
     "rarity": "uncommon",
     "phrase": "I caught an emperor butterfly! It's not your average monarch!",
     "blathers": "The emperor butterfly is called the jewel of the forest. But its vivid blue hue... Ewww, let me tell you! The color does not come from a dye, but rather from light reflecting off layers of translucent scales. Yes, butterfly wings are covered in tiny scales! SCALES! Butterfly? Bah! More like snake of the sky!"
@@ -300,6 +322,7 @@
     "flickPrice":825,
     "location": "hardwood/cedar trees",
     "img":"Evening_Cicada",
+    "slug":"evening_cicada",
     "rarity":"common",
     "phrase":"I caught an evening cicada! Better than an odding cicada...",
     "blathers": "The evening cicada certainly knows how to ruin a quiet moment. As the sun sets, it strikes up a sad song so sonorous, one can't hear one's own thoughts! I'd feel sorry for its melancholy moods if it weren't so very vocal about how it feels. Ugh, please pipe down..."
@@ -314,6 +337,7 @@
     "flickPrice": 450,
     "location": "flying",
     "img":"Firefly",
+    "slug":"firefly",
     "rarity": "common",
     "phrase": "I caught a firefly! I'm on fire now!",
     "blathers": "The firefly isn't a fly at all! It is a beetle, you see—and one known for its ghastly glowing backside. This light is called \"bioluminescence\" and it is caused by...by...a chemical reaction in the rump. Males flash about in the night sky to attract females, while their larvae turn on the glow to put off predators. Speaking of their yucky young, firefly larvae love to dine on snails! Hoo! Ewwww!"
@@ -328,6 +352,7 @@
     "flickPrice": 105,
     "location": "on a villager",
     "img":"Flea",
+    "slug":"flea",
     "rarity": "common",
     "phrase": "I caught a flea! The curse is lifted.",
     "blathers": "Allow me to be blunt. The flea is foul! It is also disgusting, repugnant, and vile! Hoo! But I digress... This horrid pest sucks the blood of humans and animals. In fact, it is the flea's own saliva that makes us itch! And did you know their legs are so strong, they can jump more than 50 times their body length? So you see, it's all too easy for a flea to jump from you to me! I itch at the very thought."
@@ -342,6 +367,7 @@
     "flickPrice": 90,
     "location": "garbage",
     "img":"Fly",
+    "slug":"fly",
     "rarity": "common",
     "phrase": "I caught a fly! I was just wingin' it...",
     "blathers": "The foul fly is quite the disquieting creature. I tell you, it tastes its food with its feet! Yeep! In fact, when flies rub their legs together, they do so to get rid of debris blocking their taste receptors. And did you know, their hairy toes release a sticky goo so they can walk on any surface? Even your ceiling! This gross goo gets on your food too!"
@@ -356,6 +382,7 @@
     "flickPrice": 750,
     "location": "hardwood/cedar trees",
     "img":"Giant_Cicada",
+    "slug":"giant_cicada",
     "rarity": "uncommon",
     "phrase": "I caught a giant cicada! I guess it's PRETTY big...",
     "blathers": "The giant cicada is rather aptly named. That is, it's a truly enormous bug. Ugh! These beasts spend most of their lives underground where they gorge on tree roots. But once they emerge, they make an awful racket. In fact, some say their song sounds like a shrieking siren. I would rather listen to nails on a chalkboard."
@@ -370,6 +397,7 @@
     "flickPrice": 15000,
     "location": "trees",
     "img":"Giant_Stag",
+    "slug":"giant_stag",
     "rarity": "rare",
     "phrase": "Whoaaa! I caught a giant stag! I'm gonna need way bigger pockets...",
     "blathers": "It is said the giant stag is a popular pet among bug enthusiasts. Though how one might consider oneself enthusiastic about bugs is quite beyond me... But I digress. Giant stags look fearsome with their enormous curved mandibles. But in truth, they're really quite cowardly. Oh how they love to hide away in rotting wood, only to reveal themselves under the cover of dark. Hoot! I shall never turn off the lights again!"
@@ -384,6 +412,7 @@
     "flickPrice": 3000,
     "location": "river/pond",
     "img":"Giant_Waterbug",
+    "slug":"giant_waterbug",
     "rarity": "rare",
     "phrase": "I caught a giant water bug! It should've stayed in the water!",
     "blathers": "How to put this gently? Ah yes... BEWARE the giant water bug! I tell you, this vicious predator has been known to attack fish, frogs, and even snakes! SNAKES! Truth be told, no one is safe! Its nickname is \"the toe-biter,\" for goodness sakes! Now, one final fact before I faint... The gruesome bug uses its nose...to inject its prey...with digestive juices. Hoo... Must stop thinking about...the unthinkable."
@@ -398,6 +427,7 @@
     "flickPrice": 18000,
     "location": "coconut trees",
     "img":"Giraffe_Stag",
+    "slug":"giraffe_stag",
     "rarity": "ultra-rare",
     "phrase":"I caught a giraffe stag! Does that make it a longhorn?",
     "blathers":"The giraffe stag beetle is a bug of preposterous proportions. Not only is its body rather large, it has two long, jagged jaws that can put it over five inches in size! The giraffe stag beetle's long jaws have been compared to the long neck of the giraffe...hence the name. But I say such comparisons are a stretch. Giraffe necks are NOT lined with spikes! If I were a giraffe, I would protest."
@@ -412,6 +442,7 @@
     "flickPrice": 18000,
     "location": "coconut trees",
     "img":"Golden_Stag",
+    "slug":"golden_stag",
     "rarity": "ultra-rare",
     "phrase":"Wooooow! I caught a golden stag! Does this mean I can retire?",
     "blathers":"Yes. Yes. The golden stag beetle is quite the prize thanks to its metallic gold coloring. But let me speak plainly... The golden stag is NOT made of gold. It is made of BUG, through and through. And thus it is vile! Golden stag? Bah! Gross stag is more like it."
@@ -426,6 +457,7 @@
     "flickPrice": 12000,
     "location": "coconut trees",
     "img":"Goliath_Beetle",
+    "slug":"goliath_beetle",
     "rarity":"ultra-rare",
     "phrase": "I caught a goliath beetle! Am I a legend or what?",
     "blathers": "Hoo! Ewww! The goliath beetle is a colossal creature that can grow up to four-inches long. Yes, they love to sup on sap and pollen, and frolic among the flowers. But did you know, the goliath beetle has a horn upon its head that it uses to fight its foes? And picture this... Each one of this behemoth's legs ends in pincers! Deep...calming...breaths..."
@@ -440,6 +472,7 @@
     "flickPrice": 240,
     "location": "ground",
     "img":"Grasshopper",
+    "slug":"grasshopper",
     "rarity": "common",
     "phrase": "I caught a grasshopper! They're a grass act!",
     "blathers": "Grasshoppers are known for making a \"chirping\" sound. Though it doesn't sound like chirping to me... They make this rude racket by rubbing their hind legs against their wings. And though they eat seeds and pollen, they sometimes prey on smaller insects too. I say! Such violent table manners should not be tolerated! Horrible hoppers."
@@ -454,6 +487,7 @@
     "flickPrice": 4500,
     "location": "flying",
     "img":"Great_Purple_Emperor",
+    "slug":"great_purple_emperor",
     "rarity": "rare",
     "phrase":"I caught a great purple emperor! Its purple reign is over now!",
     "blathers": "The great purple emperor lives high in the treetops and is renowned for its pretty purple-hued wings. Its impressive bird-like wingspan and elusive nature have made it a favorite among butterfly aficionados. But truth be told, the so-called great purple emperor has some not-so-great personal peculiarities. For one...it has two horrid HORNS upon its head when it is in its caterpillar form. For two...it has been known to dine on feces and animal carcasses! Hoo! That's why I call it the Emperor of EWWW!"
@@ -468,6 +502,7 @@
     "flickPrice": 1500,
     "location": "beach",
     "img":"Hermit_Crab",
+    "slug":"hermit_crab",
     "phrase":"I caught a hermit crab! I think it wanted to be left alone!",
     "blathers":"The hermit crab is not an insect... Though it most certainly resembles one. Blech! It looks much like a spider—what with its creepy eyes and crawly legs—but is, in fact, a crustacean. As such, the hermit crab has 10 legs and also wears a shell. But it doesn't grow this shell itself. It slips its soft body into shells left behind by snails, you see, and moves into ever-larger ones as it grows. Talk about a strange way to make a home."
   },
@@ -481,6 +516,7 @@
     "flickPrice": 300,
     "location": "near flowers",
     "img":"Honey_Bee",
+    "slug":"honey_bee",
     "rarity": "common",
     "phrase": "I caught a honeybee! Ah, sweet success!",
     "blathers": "Did you know it takes a team of honeybees working together to transform flower nectar into honey? Indeed, forager bees suck nectar from flowers into their \"honey stomachs\" and then fly it to the hive. Hive bees then chew the substance and spit it into the honeycomb, fluttering their wings to dry it out. Yes, you could say honey is a tasty tribute to the hard work of the humble honeybee. Oh! Oh my! You mustn't confuse my lengthy description for admiration! At the end of the day, honeybees are still insects, and thus still ghastly! A wee bit less ghastly than most, I admit."
@@ -495,6 +531,7 @@
     "flickPrice": 12000,
     "location": "coconut trees",
     "img":"Horned_Atlas",
+    "slug":"horned_atlas",
     "rarity": "ultra-rare",
     "phrase": "I caught a horned atlas! I didn't even need a map!",
     "blathers": "Beware the horned atlas! I tell you, this rhinoceros beetle is known for its violent temperament! The males use the three large horns on their heads to fight amongst each other for dominance. But it is their young that truly give me the cold sweats. You see, their larvae grow quite large and, worst of all...they bite! It is the stuff of nightmares, I say."
@@ -509,6 +546,7 @@
     "flickPrice": 2025,
     "location": "trees",
     "img":"Horned_Dynastid",
+    "slug":"horned_dynastid",
     "rarity": "common",
     "phrase": "I caught a horned dynastid! I'd hate to hear it honk that schnoz!",
     "blathers": "The horned dynastid's head is shaped like a samurai warrior's helmet, hootie-hoo! It would be a most impressive fact if their large size wasn't so horrifying! Adult males use their huge horned heads for fighting and digging, while the females have no such need. As for their larvae and pupae, they too are quite large and feed on rotting wood at a tremendous pace. A foul feast, indeed!"
@@ -523,6 +561,7 @@
     "flickPrice": 12000,
     "location": "coconut trees",
     "img":"Horned_Elephant",
+    "slug":"horned_elephant",
     "rarity": "ultra-rare",
     "phrase": "I caught a horned elephant! I think it's too small to ride...",
     "blathers": "The horned elephant beetle certainly lives up to its namesake. Not only does the horn on its head resemble the trunk of an elephant... It is also one of the heaviest beetles in the world! Size aside, allow me to reveal the real reason I find horned elephant beetles so repugnant... Their backs are covered in a fine coat of hair! Hirsute beetles! Hoot! The horror!"
@@ -537,6 +576,7 @@
     "flickPrice": 18000,
     "location": "coconut trees",
     "img":"Horned_Hercules",
+    "slug":"horned_hercules",
     "rarity": "ultra-rare",
     "phrase": "I caught a horned hercules! Guess I was stronger!",
     "blathers": "The horned hercules is not only known for its tremendous strength, but for its size as well. It can grow up to seven-inches long and has powerful pincers covered in hair that help with gripping! As if this weren't ghastly enough, these behemoth beetles let loose a foul odor that fends off enemies... And offends my sense of smell."
@@ -551,6 +591,7 @@
     "flickPrice": 3600,
     "location": "tree stump",
     "img":"Jewel_Beetle",
+    "slug":"jewel_beetle",
     "rarity": "uncommon",
     "phrase": "I caught a jewel beetle! It's a real gem!",
     "blathers":"The green shimmer of the jewel beetle's wings is nothing short of nauseating...yes? No? Well, so says you. Though...jewel beetles were once prized by collectors who turned their iridescent wings into pretty jewelry. Why anyone would want to wear bug parts on their body is beyond me. Fashion foul indeed."
@@ -565,6 +606,7 @@
     "flickPrice": 300,
     "location": "flowers",
     "img":"Ladybug",
+    "slug":"ladybug",
     "rarity":"common",
     "phrase": "I caught a ladybug! Sorry to disturb you, ma'am.",
     "blathers": "Yes. Yes. Ladybugs are quite beloved thanks to their tiny round shape and adorable spots. To that I say BAH! The fact of the matter is, some have stripes instead of spots. And SOME have no markings at all! No, I shall never understand why it is said that when a ladybug lands on you...you'll have good luck. I shall only have a fainting spell."
@@ -579,6 +621,7 @@
     "flickPrice": 300,
     "location": "ground",
     "img":"Long_Locust",
+    "slug":"long_locust",
     "rarity": "common",
     "phrase": "I caught a long locust! Or, as I call it, a looooocust.",
     "blathers": "As if the average locust weren't large enough...we must suffer the long locust too! The wretched beasts are known for their unusually long hind legs as well as their elongated heads. But that is hardly the long locusts' worst trait... I tell you, they spit brown goo when they're scared!"
@@ -593,6 +636,7 @@
     "flickPrice": 3750,
     "location": "flying",
     "img":"Madagascan_Sunset_Moth",
+    "slug":"madagascan_sunset_moth",
     "rarity": "uncommon",
     "phrase": "I caught a Madagascan sunset moth! Wow, you're not from around here!",
     "blathers": "The Madagascan sunset moth is said to be the most beautiful moth in the world...a sentiment even I can't deny. While most moths are nocturnal, this one flutters about during the day, making good use of the light. That is, when the daylight reflects off its wings, a kaleidoscope of colors are revealed! Oh! Eh...too bad it has such startling red feet as a caterpillar. I might have found it almost tolerable otherwise. Almost, but not quite."
@@ -605,6 +649,7 @@
     "flickPrice": 1500,
     "location": "flowers",
     "img":"Man_Faced_Stinkbug",
+    "slug":"man_faced_stinkbug",
     "rarity": "uncommon",
     "phrase": "I caught a man-faced stink bug! Reminds me of my uncle!",
     "blathers": "Never mind this stink bug's smell. What you have here is a bug...with a FACE...on its BACK!! Wot-wot! Simply put, the man-faced stink bug has markings on its shell that resemble a human face. Once you notice this face, you cannot UN-notice it. Indeed, this face might haunt you forever. At least the face will distract you from the stink."
@@ -619,6 +664,7 @@
     "flickPrice": 645,
     "location": "flowers",
     "img":"Mantis",
+    "slug":"mantis",
     "rarity": "common",
     "phrase":"I caught a mantis! Man, 'tis so cool!",
     "blathers":"Hoo! Don't let the mantis's angelic pose fool you...for it is truly monstrous. The mantis is known for its large size and tremendous strength...and for sickle-like arms that pack a punch. And though they tend to eat bugs and spiders...mantises have been known to dine on small animals too! And those eerie eyes! Oh my! Did you know it has five of them! Two big ones and three small! I shall faint if I think on it further..."
@@ -632,6 +678,7 @@
     "price": 600,
     "location": "ground",
     "img":"Migratory_Locust",
+    "slug":"migratory_locust",
     "rarity": "uncommon",
     "phrase": "I caught a migratory locust! Things just went south for this guy!",
     "blathers": "Ah yes, the lone migratory locust. It seems like such a harmless hopper as it bounces about in the grass. But beware! When these pests band together and travel in swarms, they leave devastation in their wake! Migratory locusts have gathered by the millions throughout history, wiping out crops and causing famine. That's why I always say, \"Never let a locust hang out with its friends!\". That is precisely how a plague begins."
@@ -645,6 +692,7 @@
     "price": 1000,
     "location": "trees",
     "img":"Miyama_Stag",
+    "slug":"miyama_stag",
     "rarity":"common",
     "phrase":"I caught a miyama stag! Its mandibles are jaw-dropping!",
     "blathers":"The miyama stag has protrusions on its head that resemble ears... And yet, the ugly lumps are not ears! It is, however, called a \"stag\" beetle because of the large, deer-like horns upon its head. And the word \"miyama\" in its name means \"deep mountain\" in Japanese. Feel free to call it what you like. I will simply call it DISGUSTING. \"Disgusting stag beetle\" does have a ring."
@@ -658,6 +706,7 @@
     "price": 500,
     "location": "underground",
     "img":"Mole_Cricket",
+    "slug":"mole_cricket",
     "rarity":"common",
     "phrase":"I caught a mole cricket! I really dug it!",
     "blathers":"Be warned, there is nowhere one might hide from the mole cricket. This plump pest has powerful front claws made for digging holes, and oh how it loves to burrow underground! A cousin to the grasshopper, it also has wings and can easily take to the air. And I swear this on my pinfeathers... Some have even been seen walking on water! Oh mercy, I may need a moment. This is making me feel rather woozy..."
@@ -671,6 +720,7 @@
     "price": 140,
     "location": "flying",
     "img":"Monarch_Butterfly",
+    "slug":"monarch_butterfly",
     "rarity": "common",
     "phrase":"I caught a monarch butterfly! Guess the butterflies are a democracy now!",
     "blathers": "Did you know the monarch butterfly migrates south for the winter and returns north for the summer? Indeed, these horrid orange beasties do not tolerate the cold and travel 3,000 miles to escape the winter. During the journey, they cluster together in trees by the thousands just to stay warm. Imagine! Hordes of the foul flittering fiends huddled together in one place! If only they'd put on tiny coats instead."
@@ -684,6 +734,7 @@
     "price": 130,
     "location": "flying",
     "img":"Mosquito",
+    "slug":"mosquito",
     "rarity":"common",
     "phrase":"I caught a mosquito! It's itching for a fight!",
     "blathers":"As everyone knows, the mosquito is a vampiric pest that sucks blood from innocent bystanders. But did you know that only the females suck blood? Hoo! It's true! They need it to make their eggs. When they sink their snout into our skin, they inject us with a saliva that helps them slurp up their meal. It's that saliva that makes us itch and scratch, you know. Hoo! So rude!"
@@ -697,6 +748,7 @@
     "price": 130,
     "location": "flying by light",
     "img":"Moth",
+    "slug":"moth",
     "rarity":"common",
     "phrase": "I caught a moth! And I had a ball doing it!",
     "blathers": "Many think the moth is strictly a nocturnal creature. Alas, no! These frightful fluttering beasts have been known to haunt the daylight and twilight hours too. Thus, there is no time of day one might escape the moth trait I dislike most of all—those feathery antennae! The mere thought of them gives my feathers goosebumps. And I'm no goose."
@@ -710,6 +762,7 @@
     "price": 2400,
     "location": "white flowers",
     "img":"Orchid_Mantis",
+    "slug":"orchid_mantis",
     "rarity": "uncommon",
     "phrase":"I caught an orchid mantis! Our friendship is blooming!",
     "blathers": "The orchid mantis is a bug whose brilliant colors and petal-shaped limbs give it the look of a flower. This masterful mimicry allows it to hide from predators in among the orchids. But oh this fraudulent flower! It lures other insects in to drink its nectar... And makes a meal of them instead! Imagine! To behold a beautiful bud... only to discover it's a bug instead! A repulsive revelation indeed!"
@@ -723,6 +776,7 @@
     "price": 1000,
     "location": "flying",
     "img":"Paper_Kite_Butterfly",
+    "slug":"paper_kite_butterfly",
     "rarity":"common",
     "phrase": "I caught a paper kite butterfly! Do I read it, fly it, or spreadit on toast?",
     "blathers":"With its black-and-white-striped wing pattern, the paper kite butterfly is both elegant and pretty... PRETTY POISONOUS I MEAN! Hoo dear! Where was I? Oh yes... Even this butterfly's black-and-white-striped larva and little golden pupae are toxic to predators. Indeed, the paper kite butterfly's foul flavor is famous, and thus birds, in particular, steer clear of the fiends. THIS bird most of all!"
@@ -736,6 +790,7 @@
     "price": 2500,
     "location": "flying by hybrid flowers",
     "img":"Peacock_Butterfly",
+    "slug":"peacock_butterfly",
     "rarity":"uncommon",
     "phrase": "I caught a peacock butterfly! Now it's my turn to strut my stuff!",
     "blathers": "Pretty as a peacock? Bah, I say! The wings of the peacock butterfly may have a pattern similar to that of the beautiful bird... But its forewings are also often covered in a dark, velvety hair! You heard right! HAIRY wings! A hair-raising revelation indeed!"
@@ -749,6 +804,7 @@
     "price": 250,
     "location": "under rocks",
     "img":"Pillbug",
+    "slug":"pillbug",
     "rarity":"common",
     "phrase":"I caught a pill bug! That's a tough act to swallow!",
     "blathers": "Blech, the pill bug! Children delight at the way these beasts roll into balls when poked... But the appeal is utterly lost on me. One look at their leggy undersides... Hoo! Ewww! How they wriggle! Young pill bugs shed their exo- skeletons as they grow, and in doing so, sprout another pair of legs. As if 12 appendages weren't alarming enough! Yuck, I say. Yuck!"
@@ -762,6 +818,7 @@
     "price": 130,
     "location": "river/pond",
     "img":"Pondskater",
+    "slug":"pondskater",
     "rarity": "common",
     "phrase": "I caught a pondskater! Wonder if it can do a pond ollie...",
     "blathers": "Putrid pondskaters! They walk on water, you know...which is most preposterous! It is a trick they perform by secreting oil onto the hairs of their feet. To which I say BLEEECH! And one must wonder... What will they do next? Walk on air? Walk through walls? Perish the thought..."
@@ -775,6 +832,7 @@
     "price": 4000,
     "location": "flying",
     "img":"Queen_Alexandras_Birdwing",
+    "slug":"queen_alexandras_birdwing",
     "rarity": "rare",
     "phrase":"I caught a Queen Alexandra's birdwing! That's a feather in my cap!",
     "blathers": "Hoo! The horror! This behemoth butterfly may be called a Queen Alexandra's birdwing... But I call it the Queen of My Nightmares! It is huge! Indeed, the world's hugest. No butterfly can best its foot-long wingspan. The larvae alone grow to more than 4 inches. As if that weren't appalling enough...they're poisonous! Murderous monsters, indeed!"
@@ -788,6 +846,7 @@
     "price": 6000,
     "location": "trees",
     "img":"Rainbow_Stag",
+    "slug":"rainbow_stag",
     "rarity":"rare",
     "phrase": "I caught a rainbow stag! Its rainbow armor is so shiny!",
     "blathers": "Rainbows are beautiful things, I'm sure we all agree. But rainbow stag beetles? Bleech! Yes, yes, this beetle's back and belly shine with a pretty rainbow- colored luster. But that does not change the fact this bug has large pincers on its face and loves to pick a fight! If one can wish upon a rainbow, then I wish to stay far away from the rainbow stag. Perhaps I've picked the wrong profession."
@@ -801,6 +860,7 @@
     "price": 2500,
     "location": "flying by purple flowers",
     "img":"Rajah_Brookes_Birdwing",
+    "slug":"rajah_brookes_birdwing",
     "rarity": "uncommon",
     "phrase": "I caught a Rajah Brooke's birdwing! Nothing else I'd rajah be doing!",
     "blathers": "Did you know that the repulsive Rajah Brooke's birdwing loves to luxuriate in hot-springs water? It's true! Hoo! The males gather in groups to sip the moisture while the females hide in jungle trees. And though they dress to impress in red and green, these fluttering fiends are not just stylish... They're also quite malicious! Their little larvae pack a poisonous punch that's supposed to protect them from predators... But I suspect more diabolical designs."
@@ -814,6 +874,7 @@
     "price": 180,
     "location": "flying",
     "img":"Red_Dragonfly",
+    "slug":"red_dragonfly",
     "rarity": "common",
     "phrase": "I caught a red dragonfly! Didn't even have to roll for initiative!",
     "blathers": "I won't deny that the wretched red dragonfly is an elegant aeronaut. It manipulates its four wings quite uniquely so it can hover and maneuver through the air with ease. But the veins on its wings! What ghastly things! One can't help but gasp at the sight of them... Appalling aerodynamics, indeed!"
@@ -827,6 +888,7 @@
     "price": 160,
     "location": "ground",
     "img":"Rice_Grasshopper",
+    "slug":"rice_grasshopper",
     "rarity":"common",
     "phrase":"I caught a rice grasshopper! I've been looking for agluten-free alternative...",
     "blathers": "In point of fact, rice grasshoppers are an awful pest! They devour rice plants and wipe out the crucial crop. But revenge is sweet! These bugs are edible, you see, and so some folks eat them as way to get rid of them. When boiled in soy sauce, rice grasshoppers are quite tasty, it's said. Though why anyone would put an insect in their mouth is beyond me. The mere thought gives me the gags!"
@@ -840,6 +902,7 @@
     "price": 300,
     "location": "trees",
     "img":"Robust_Cicada",
+    "slug":"robust_cicada",
     "rarity":"common",
     "phrase": "I caught a robust cicada! It DOES seem pretty lively!",
     "altPhrase": ["I caught a robust cicada! Not so energetic in the rain, huh?"],
@@ -854,6 +917,7 @@
     "price": 3000,
     "location": "tree stumps",
     "img":"Rosalia_Batesi_Beetle",
+    "slug":"rosalia_batesi_beetle",
     "rarity": "uncommon",
     "phrase": "I caught a rosalia batesi beetle! That's easier to do than say!",
     "blathers": "The rosalia batesi beetle is a type of longhorn beetle, so named for the long antenna upon its head. But did you know that longhorn beetles often grow antenna LONGER than their very own bodies, wot wot? As if this weren't odious enough, look closely and you will find these antenna...are covered in tufts of hair! Best not look closely, I say."
@@ -867,6 +931,7 @@
     "price": 2000,
     "location": "trees",
     "img":"Saw_Stag",
+    "slug":"saw_stag",
     "rarity": "common",
     "phrase": "I caught a saw stag! Now I can't unsee it!",
     "blathers": "The saw stag got its name from the shape of its pincers. That is, its pincers look like jagged saws! And I tell you, the bigger the beetle, the more saw-like teeth its giant jaws have. I say the saw stag seems more at home in a horror film than in nature. I have terrified myself just talking about it."
@@ -880,6 +945,7 @@
     "price": 10000,
     "location": "trees",
     "img":"Scarab_Beetle",
+    "slug":"scarab_beetle",
     "rarity": "rare",
     "phrase": "I caught a scarab beetle! It's just a dung beetle with better hobbies.",
     "blathers": "Collectors consider the scarab beetle quite the prize, thanks to its shiny metallic shell. But did you know this bug has no nose and uses its antenna to sense smells instead? In fact, the scarab beetle's plated antenna are quite unique and set it apart from other beetles. But ALL antennae are equally awful in my book."
@@ -893,6 +959,7 @@
     "price": 8000,
     "location": "ground",
     "img":"Scorpion",
+    "slug":"scorpion",
     "rarity": "common",
     "phrase": "I caught a scorpion! It was a sting operation!",
     "blathers": "The scorpion...how should I put this? Those legs! Those pincers! That tail! And that venomous stinger! It's as if someone took all the most awful insect parts...and put them together to make the scorpion! All scorpions are venomous, you know! Though I understand that only a few kinds are truly deadly. I fear I might die just thinking about it."
@@ -906,6 +973,7 @@
     "price": 250,
     "location": "rocks (when raining)",
     "img":"Snail",
+    "slug":"snail",
     "rarity": "common",
     "phrase": "I caught a snail! It's...not much to brag about.",
     "blathers": "Snails are not insects, I'll admit. But they're just as revolting to me. Snails are mollusks, you see, and are born wearing shells they cannot remove. Instead, their shells get bigger and bigger as they grow. Hoo! They must get heavy, don't you know! I suppose that's why they need a trail of mucus to move about. A truly foul form of transportation."
@@ -919,6 +987,7 @@
     "price": 480,
     "location": "shaking trees",
     "img":"Spider",
+    "slug":"spider",
     "rarity": "common",
     "phrase": "I caught a spider! I spied 'er first!",
     "blathers": "The spider is renowned for having eight eyes and eight legs... WHICH IS SIX TOO MANY, I SAY! Oh dear. I do apologize. Now where was I? Most spiders are carnivorous. In fact, some will eat creatures several times larger than themselves. To catch their prey, many of these ruthless predators spin sticky webs of surprising strength. Worse yet, they've also been known to ambush their victims, and some even chase down their meals! All this talk about the feeding habits of spiders... I'm feeling quite queasy. Hoot! The horror!"
@@ -932,6 +1001,7 @@
     "price": 120,
     "location": "flowers",
     "img":"Stinkbug",
+    "slug":"stinkbug",
     "rarity": "common",
     "phrase": "I caught a stinkbug! It lives up to its name!",
     "blathers": "I daresay the name says it all... Stinkbugs are known for their stench. Hoo! Peeyew! As it happens, these crop-eating pests use straw-like mouths to pierce plants and drink the juices. And when threatened, they use a smelly chemical in their belly to release their odious odor! Hoo! How DO they live with themselves?"
@@ -945,6 +1015,7 @@
     "price": 8000,
     "location": "ground",
     "img":"Tarantula",
+    "slug":"tarantula",
     "rarity": "common",
     "phrase": "I caught a tarantula! This situation just got hairy!",
     "blathers": "As giant spiders go, the tarantula is said to be quite docile. But have you ever seen such foul fuzziness?! It is a fact, tarantulas have barbed belly hair! I say again...BARBED. BELLY. HAIR! These awful arachnids let loose their spiky, itchy hairs to protect themselves from predators. But seeing how tarantulas also prey on frogs, mice, and even birds, one must ask... Who needs protecting from whom?! Hoo! Who indeed!"
@@ -958,6 +1029,7 @@
     "price": 1500,
     "location": "ground",
     "img":"Tiger_Beetle",
+    "slug":"tiger_beetle",
     "rarity": "uncommon",
     "phrase": "I caught a tiger beetle! I pounced first!",
     "blathers": "The tiger beetle is extremely fleet of foot, though it runs in a rather peculiar way. That is, it sprints, then stops, then sprints again...using these speedy maneuvers to run down its prey. You see, the tiger beetle—like a real tiger—is a powerful predator. The mere thought of it giving chase gives me the willies. Tigers are terrifying at any size."
@@ -971,6 +1043,7 @@
     "price": 240,
     "location": "flying",
     "img":"Tiger_Butterfly",
+    "slug":"tiger_butterfly",
     "rarity": "common",
     "phrase":"I caught a tiger butterfly! I've earned my stripes!",
     "blathers":"Tiger butterflies are known for their majestic wings, which many consider quite beautiful. Truth be told, I find them monstrous! Those strange striped patterns... They give this owl the goose bumps! And while you may imagine young tiger butterfly larvae to look like lovely green caterpillars...it's not so! Why, when tiger butterflies are but babes, they're covered in unsightly white, brown, and black spots. In this way, they camouflage themselves as...as...bird droppings! Putrid pests, indeed!"
@@ -984,6 +1057,7 @@
     "price": 450,
     "location": "tree stumps",
     "img":"Violin_Beetle",
+    "slug":"violin_beetle",
     "rarity":"common",
     "phrase": "I caught a violin beetle! Apparently I'm as fit as a fiddle!",
     "blathers": "The violin beetle gets its name from its shape. That is, SOME think it resembles the stringed instrument. If you ask me, this is an insult to violins! With its flat body and small head, the violin beetle looks like nothing but a repulsive bug, plain and simple. In fact it is so repulsive, it oozes a foul liquid when frightened! Ugh! This insect strikes a sour note indeed."
@@ -997,6 +1071,7 @@
     "price": 400,
     "location": "trees",
     "img":"Walker_Cicada",
+    "slug":"walker_cicada",
     "rarity":"common",
     "phrase":"I caught a walker cicada! Pffft... I walk all the time and no one calls me \"Walker ...\"",
     "altPhrase": ["I caught a walker cicada! It must hate getting its feet wet."],
@@ -1011,6 +1086,7 @@
     "price": 600,
     "location": "near trees (furniture leaf)",
     "img":"Walking_Leaf",
+    "slug":"walking_leaf",
     "rarity": "uncommon",
     "phrase": "I caught a walking leaf! It seems to be taking it in stride!",
     "blathers": "What a fraud! What a phony! The walking leaf is, in fact, the very embodiment of a lie! This master mimic looks like a tree leaf all the way down to the tiniest details. In fact, this bug has been known to sway to and fro as it walks...just so it looks like a leaf blown by the wind! And the fakery works! These insects look so much like leaves that even leaf-eating insects nibble on them! Lying liars, indeed!"
@@ -1024,6 +1100,7 @@
     "price": 600,
     "location": "trees",
     "img":"Walking_Stick",
+    "slug":"walking_stick",
     "rarity": "uncommon",
     "phrase": "I caught a walking stick! Check out its walking schtick! Look, these are the jokes, OK?",
     "blathers": "The walking stick looks just like a twig, does it not? Hoo! It even has knots like a real twig would! These bashful bugs mimic plants in this way to hide from predators. A noble goal, you might say. But though the deceptive wretches fool some, they do not fool me! I see these bugs for what they are... Monsters, plain and simple! I say, did you know that walking sticks can grow to two feet long?! Imagine running into one! Surely I would faint."
@@ -1037,6 +1114,7 @@
     "price": 2500,
     "location": "shaking trees",
     "img":"Wasp",
+    "slug":"wasp",
     "rarity":"common",
     "phrase":"I caught a wasp! That's gotta sting...",
     "blathers": "Hoo! Allow me to share a fact with you! Wasps are sometimes called \"meat bees\" because... They. Eat. MEAT! MEAT! Of almost any sort! Surely you've seen what a menace they make of themselves at picnics. 'Tis hardly the worst of it, wot wot! Aggressive predators with venomous stingers, wasps not only hunt and eat other insects... they paralyze their prey, then drag their victims home ALIVE, leaving them for their larva to feed upon. Suddenly a simple sting seems quite tolerable."
@@ -1050,6 +1128,7 @@
     "price": 200,
     "location": "beach rocks",
     "img":"Wharf_Roach",
+    "slug":"wharf_roach",
     "rarity": "common",
     "phrase": "I caught a wharf roach! This water-loving roach has no pier!",
     "blathers": "The wharf roach is an omnivore, which is merely a polite way of saying it will eat almost anything. This skittering scavenger and its uncouth appetite help keep beaches clean, it's said. But I dare say, their long antenna and bulging eyes turn MY stomach. Unappetizing indeed..."
@@ -1061,6 +1140,7 @@
     "price": 160,
     "location": "flying",
     "img":"Yellow_Butterfly",
+    "slug":"yellow_butterfly",
     "rarity":"common",
     "phrase": "I caught a yellow butterfly! Shouldn't all BUTTERflies be yellow?",
     "blathers": "Allow me to enlighten you... The yellow butterfly is named for its yellow wings. Need I say more? If I must, then allow me to note that the female yellow butterfly can lay up to 600 eggs at a time! Bleech! And their creepy crawly caterpillars just love to chomp on clover plants. A recipe for disaster, I say. Just imagine reaching for a four-leaf clover, only to touch a larva instead! Yuck! The worst of luck!"
