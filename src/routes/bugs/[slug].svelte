@@ -15,4 +15,23 @@
 	export let bug;
 </script>
 
-<h1>{ bug.name }</h1>
+<svelte:head>
+	<style>
+		body{
+			background-color: var(--green);
+			background-image: url('/green-triangles.png');
+			background-size: 156px 154.5px;
+			width: 100%;
+			min-height: 100vh;
+		}
+	</style>
+</svelte:head>
+<div class="green-bg">
+	<h1>{ bug.name }</h1>
+	<img src={`/bugs-detailed/${bug.img.toLowerCase()}.png`} alt={bug.name}>
+</div>
+
+
+<style>
+
+</style>
