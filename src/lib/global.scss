@@ -28,6 +28,9 @@
 --orange: hsl(39.4, 92.8%, 56.9%);
 
 font-size: 62.5%;
+
+--dot-size: 36px 34.5px;
+--triangle-size: 156px 154.5px;
 }
 
 *{
@@ -40,10 +43,10 @@ body{
 	font-family: var(--headFont);
 	background: var(--tan);
 	background-image: url('/play-dots.png');
-  background-size: 36px 34.5px;
+  background-size: var(--dot-size);
 
 }
 
-.critter-grid{
-	
+img{
+	max-width: 100%;
 }

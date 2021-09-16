@@ -1,9 +1,7 @@
 <script>
 	import '$lib/global.scss'
+	import Header from '$lib/components/Header.svelte'
 </script>
 
-<nav>
-	<a href="/">Home</a>
-	<a href="/bugs">Bugs</a>
-</nav>
+<Header />
 <slot />

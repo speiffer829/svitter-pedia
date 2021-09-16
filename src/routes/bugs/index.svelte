@@ -1,6 +1,6 @@
 <script>
-	import bugs from '$lib/bugs.json'
-	import Header from '$lib/components/Header.svelte'
+	import critters from '$lib/bugs.json'
+	import CritterList from '$lib/components/CritterList.svelte'
 // export let bugs;
 
 </script>
@@ -9,12 +9,12 @@
 	<title>Bugs | Critterpoo</title>
 </svelte:head>
 
-<Header />
 
-{#each bugs as bug}
-	<h2>{bug.name}</h2>
-	<img src={`/bugs/${bug.img}.png`} alt={bug.name}>
-	<a href={`/bugs/${bug.slug}`} sveltekit:prefetch>View Bug</a>
-{/each}
+<div class="critter-list">
+	<CritterList {critters} dir="bugs" />
+</div>
 
 
+<style>
+	
+</style>
