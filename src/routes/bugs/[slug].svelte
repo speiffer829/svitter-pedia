@@ -5,7 +5,7 @@
 
 		return {
 			props: {
-				bug: bug
+				critter: bug
 			}
 		}
 	}
@@ -13,11 +13,12 @@
 
 <script>
 	import CritterImg from '$lib/components/CritterImg.svelte'
-	export let bug;
+	import CritterCard from '$lib/components/CritterCard.svelte'
+	export let critter;
 </script>
 
 <svelte:head>
-	<title>{bug.name} | Critterpoo</title>
+	<title>{critter.name} | Critterpoo</title>
 	<style>
 		body{
 			background-color: var(--green);
@@ -31,25 +32,7 @@
 </svelte:head>
 
 
-	<div class="img-contain">
-		<CritterImg src={`/bugs-detailed/${bug.detailedImg}.png`} alt={bug.name} />
-	</div>
+	<CritterImg src={`/bugs-detailed/${critter.detailedImg}.png`} alt={critter.name} />
 
-	<main class="info-card">
+	<CritterCard {critter} dir="bugs" />
 
-	</main>
-
-
-<style>
-	main{
-		height: 300vh;
-		width: 100%;
-		background-color: var(--tan);
-		background-image: url('/play-dots.png');
-		background-size: var(--dot-size);
-		border-radius: 2rem 2rem 0 0;
-		box-shadow: 0 -3px 10px hsl(0 0% 0% / 20%);
-		z-index: 2;
-		position: relative;
-	}
-</style>

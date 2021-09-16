@@ -10,9 +10,7 @@
 </svelte:head>
 
 
-<div class="critter-list">
-	<CritterList {critters} dir="bugs" />
-</div>
+<CritterList {critters} dir="bugs" />
 
 
 <style>
