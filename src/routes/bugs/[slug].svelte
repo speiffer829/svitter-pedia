@@ -19,16 +19,6 @@
 
 <svelte:head>
 	<title>{critter.name} | Critterpoo</title>
-	<style>
-		body{
-			background-color: var(--green);
-			background-image: url('/green-triangles.png');
-			background-size: 156px 154.5px;
-			background-attachment: fixed;
-			width: 100%;
-			min-height: 100vh;
-		}
-	</style>
 </svelte:head>
 
 

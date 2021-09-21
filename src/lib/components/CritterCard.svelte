@@ -7,18 +7,34 @@
 	function handleScroll(e) {
 		titleAtTop = title.getBoundingClientRect().top <= 10
 	}
+
+	const findMoneyBracket = () => {
+		if(critter.price >= 10000){
+			return 'gold';
+		}else if(critter.price >= 5000){
+			return 'purple';
+		}else if(critter.price >= 1000){
+			return 'blue';
+		}else{
+			return 'green';
+		}
+	}
 </script>
 
 <svelte:window on:scroll={handleScroll} />
 
-<main>
-	<div class="title-contain" class:atTop={titleAtTop}>
+<main class="{findMoneyBracket()}">
+	<section class="title-contain" class:atTop={titleAtTop}>
 		<h1 class="name" bind:this={title} >{ critter.name }</h1>
 		<div class="icon"><img src={`/${dir}/${critter.img}.png`} alt={critter.name}></div>
-	</div>
+	</section>
+
+	<blockquote class="phrase">
+		"{ critter.phrase }"
+	</blockquote>
 </main>
 
-<style>
+<style lang="scss">
 		main{
 		height: 300vh;
 		width: 100%;
@@ -30,7 +46,23 @@
 		z-index: 2;
 		position: relative;
 
-		--rarity: var(--lgreen);
+		--bg: var(--lgreen);
+		--color: var(--dgreen);
+
+		&.blue{
+			--bg: var(--blue);
+			--color: var(--dblue)
+		}
+
+		&.purple{
+			--bg: var(--purple);
+			--color: var(--dpurple)
+		}
+
+		&.gold{
+			--bg: var(--gold);
+			--color: var(--dgold)
+		}
 	}
 
 	.icon{
@@ -43,7 +75,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--rarity);
+		background-color: var(--bg);
 		border-radius: 50%;
 		background-image: url('/play-dots.png');
 		background-size: var(--dot-size);
@@ -86,5 +118,19 @@
 		box-shadow: 0 3px 10px hsl(0 0% 0% / 20%);
 	}
 
+
+	.phrase{
+		width: 100%;
+		padding: 5.5rem 1.6rem;
+		font-size: 2.5rem;
+		text-align: center;
+	}
+
+	blockquote{
+		font-style: italic;
+		color: var(--color);
+		font-weight: normal;
+		text-shadow: 1px 1px 2px hsl(420 69% 0% / 25%);
+	}
 
 </style>

@@ -21,18 +21,17 @@
 		max-width: 1200px;
 		margin: 1rem auto;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 		grid-gap: 1.6rem;
 	}
 
 	a{
-		background-color: var(--green);
-		background-image: url('/green-triangles.png');
-		background-size: var(--triangle-size);
+		background-color: var(--brown);
+		background-image: url('/play-dots.png');
+		background-size: var(--dot-size);
 		box-shadow: 2px 3px 4px hsl( 420 69% 0% / 25% );
-		font-size: 1rem;
 		display: flex;
-		// margin: 1rem 0;
+		width: 100%;
 		border-radius: 1rem;
 		align-items: center;
 		font-size: 2.2rem;
@@ -44,6 +43,7 @@
 
 		span{
 			padding-left: 1.5rem;
+			display: block;
 		}
 	}
 </style>
