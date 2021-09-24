@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation'
 	export let critter, dir;
 
 	let title;
@@ -19,6 +20,10 @@
 			return 'green';
 		}
 	}
+
+	function goBack() {
+		goto(`/${dir}#${critter.slug}`)
+	}
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -33,6 +38,14 @@
 		"{ critter.phrase }"
 	</blockquote>
 </main>
+
+<div class="btn-container">
+	<button class="back-btn" on:click={goBack}>
+		<svg width="100%" height="100%" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM44 16.5L3 16.5V21.5L44 21.5V16.5Z" fill="var(--brown)"/>
+		</svg>
+	</button>
+</div>
 
 <style lang="scss">
 		main{
@@ -82,7 +95,7 @@
 		z-index: 5;
 		box-shadow: 0 3px 10px hsl(0 0% 0% / 20%);
 		border: solid 4px var(--brown);
-		transition: all 300ms;
+		transition: all 600ms;
 	}
 
 	.atTop > .icon{
@@ -133,4 +146,24 @@
 		text-shadow: 1px 1px 2px hsl(420 69% 0% / 25%);
 	}
 
+
+
+
+	.btn-container{
+		position: fixed;
+		z-index: 15;
+		bottom: 10rem;
+		right: 3rem;
+	}
+
+	button{
+		width: 50px;
+		height: 50px;
+		background-color: var(--gold);
+		border: none;
+		border-radius: 100%;
+		cursor: pointer;
+		box-shadow: 2px 3px 0 var(--dbrown);
+		padding: 1.5rem;
+	}
 </style>

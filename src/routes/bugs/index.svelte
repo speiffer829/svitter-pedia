@@ -11,8 +11,3 @@
 
 
 <CritterList {critters} dir="bugs" />
-
-
-<style>
-	
-</style>

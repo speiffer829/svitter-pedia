@@ -15,6 +15,7 @@
 --gold: hsl(47, 97.3%, 55.5%);
 --dgold: hsl(47, 97.3%, 45.5%);
 --brown: hsl(37.4, 57.1%, 38.5%);
+--dbrown: hsl(37.4, 57.1%, 28.5%);
 --red: hsl(358.5, 84.3%, 54.9%);
 
 --blue: hsl(211.4, 51.2%, 64%);
@@ -46,9 +47,10 @@ font-size: 62.5%;
 body{
 	font-family: var(--headFont);
 	background-color: var(--green);
-			background-image: url('/green-triangles.png');
-			background-size: var(--triangle-size);
-			background-attachment: fixed;
+	background-image: url('/green-triangles.png');
+	background-size: var(--triangle-size);
+	background-attachment: fixed;
+	scroll-padding: 4rem;
 
 }
 
