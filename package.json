@@ -21,6 +21,7 @@
   },
   "type": "module",
   "dependencies": {
+    "postcss": "^7.0.36",
     "sass": "^1.39.0",
     "svelte-preprocess": "^4.0.0-alpha.2"
   }
