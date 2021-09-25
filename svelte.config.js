@@ -6,7 +6,9 @@ const config = {
 		target: '#svelte',
 		adapter: adapter()
 	},
-	preprocess: preprocess()
+	preprocess: [
+		preprocess()
+	]
 };
 
 export default config;
