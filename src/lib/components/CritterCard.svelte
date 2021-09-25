@@ -24,6 +24,8 @@
 	function goBack() {
 		goto(`/${dir}#${critter.slug}`)
 	}
+
+	$: flickPrice = critter.price * 1.5
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -34,9 +36,21 @@
 		<div class="icon"><img src={`/${dir}/${critter.img}.png`} alt={critter.name}></div>
 	</section>
 
+	<div class="grid col-2 gap-none">
+		<div class="price">
+			<span class="label">Price</span>
+			<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
+		</div>
+		<div class="price flick">
+			<span class="label">Flick's Price</span>
+			<p>${ Intl.NumberFormat('en-US').format(flickPrice) }</p>
+		</div>
+	</div>
+
 	<blockquote class="phrase">
 		"{ critter.phrase }"
 	</blockquote>
+
 </main>
 
 <div class="btn-container">
@@ -78,6 +92,17 @@
 		}
 	}
 
+	span.label{
+		display: inline-block;
+		background: var(--gold);
+		color: var(--brown);
+		text-align: center;
+		border-radius: 100px;
+		padding: 5px 10px;
+		font-size: 1.2rem;
+		margin-bottom: 5px;
+	}
+
 	.icon{
 		position: absolute;
 		left: 50%;
@@ -110,7 +135,7 @@
 	h1{
 		font-size: 3.5rem;
 		color: #fccc1f;
-		padding: 3rem 2rem 6.5rem;
+		padding: 3rem 6rem 6.5rem;
 		background: #9a702a;
 		margin: 0;
 		text-shadow: 2px 2px 5px #72531f;
@@ -134,7 +159,7 @@
 
 	.phrase{
 		width: 100%;
-		padding: 5.5rem 1.6rem;
+		padding: 3.5rem 1.6rem 3.5rem;
 		font-size: 2.5rem;
 		text-align: center;
 	}
@@ -146,14 +171,36 @@
 		text-shadow: 1px 1px 2px hsl(420 69% 0% / 25%);
 	}
 
+	.price {
+		background-color: var(--bg);
+		background-image: url('/play-dots.png');
+		background-size: var(--dot-size);
+		padding: 2rem 1rem 2rem;
+		color: var(--light);
+		text-align: center;
+
+		&.flick {
+			background-color: var(--color);
+		}
+		
+
+		p{
+			font-size: 3.2rem;
+			font-weight: bold;
+			text-align: center;
+			text-shadow: 1px 1px 0 #77770c;
+		}
+
+	}
+
 
 
 
 	.btn-container{
 		position: fixed;
 		z-index: 15;
-		bottom: 10rem;
-		right: 3rem;
+		top: 2.5rem;
+		left: 2rem;
 	}
 
 	button{
