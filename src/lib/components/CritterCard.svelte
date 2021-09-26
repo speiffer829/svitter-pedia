@@ -104,6 +104,14 @@
 		<p>{ critter.rarity }</p>
 	</div>
 
+	<div class="blathers-fact info-block">
+		<blockquote>
+			"{ critter.blathers }"
+		</blockquote>
+
+		<img src="/blathers.webp" alt="blathers" width="180" loading="lazy">
+	</div>
+
 </main>
 
 <div class="btn-container">
@@ -188,6 +196,7 @@
 	.title-contain{
 		position: sticky;
 		top: 0;
+		z-index: 50;
 	}
 
 	h1{
@@ -290,6 +299,19 @@
 		&.uncommon{ background-color: var(--blue); }
 		&.rare{ background-color: var(--purple); }
 		&.ultra-rare{ background-color: var(--gold); }
+
+		p{
+			text-transform: capitalize;
+		}
+	}
+
+	.blathers-fact{
+
+		blockquote{
+			font-size: 1.6rem;
+			padding: 1.5rem;
+			line-height: 3.2rem;
+		}
 	}
 
 

@@ -4,7 +4,7 @@
 
 </script>
 
-<div><img {src} {alt} use:parallaxImg></div>
+<div><img {src} {alt} use:parallaxImg loading="eager" decoding="async"></div>
 
 <style lang="scss">
 	img{
