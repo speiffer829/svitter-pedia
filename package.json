@@ -17,8 +17,11 @@
     "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
+    "sharp": "^0.28.2",
     "svelte": "^3.34.0",
-    "svelte-image": "^0.2.9"
+    "svelte-image": "^0.2.9",
+    "vanilla-lazyload": "^17.5.0",
+    "vite-imagetools": "^3.6.8"
   },
   "type": "module",
   "dependencies": {

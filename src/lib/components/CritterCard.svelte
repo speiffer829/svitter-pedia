@@ -58,7 +58,6 @@
 
 <style lang="scss">
 		main{
-		height: 300vh;
 		width: 100%;
 		background-color: var(--tan);
 		background-image: url('/play-dots.png');
@@ -67,6 +66,10 @@
 		box-shadow: 0 -3px 10px hsl(0 0% 0% / 20%);
 		z-index: 2;
 		position: relative;
+
+		@media screen and (min-width: 767px) {
+			border-radius: 2rem;
+		}
 
 		--bg: var(--lgreen);
 		--color: var(--dgreen);

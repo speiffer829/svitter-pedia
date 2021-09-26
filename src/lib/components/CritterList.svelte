@@ -7,7 +7,7 @@
 	{#each critters as critter}
 		<li id={critter.slug}>
 			<a href={`${dir}/${critter.slug}`} sveltekit:prefetch>
-				<img src={`/${dir}/${critter.img}.png`} alt={critter.name}>
+				<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64">
 				<span>{critter.name}</span>
 			</a>
 		</li>
@@ -44,6 +44,11 @@
 		span{
 			padding-left: 1.5rem;
 			display: block;
+		}
+
+		img{
+			width: 64px;
+			height: 64px;
 		}
 	}
 </style>

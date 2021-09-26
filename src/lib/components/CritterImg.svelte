@@ -4,7 +4,7 @@
 
 </script>
 
-<img {src} {alt} use:parallaxImg>
+<div><img {src} {alt} use:parallaxImg></div>
 
 <style lang="scss">
 	img{
@@ -18,6 +18,16 @@
 
 		@media screen and (min-width: 767px) {
 			transform: none;
+		}
+	}
+
+	div{
+		@media screen and (min-width: 767px) {
+			max-height: calc(100vh - 5rem);
+			display: flex;
+			align-items: center;
+			position: sticky;
+			top: 0px;
 		}
 	}
 </style>

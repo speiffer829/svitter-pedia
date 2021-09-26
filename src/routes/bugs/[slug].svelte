@@ -22,7 +22,21 @@
 </svelte:head>
 
 
-	<CritterImg src={`/bugs-detailed/${critter.detailedImg}.png`} alt={critter.name} />
+	<div class="grid col-2-md gap-3-md">
+		<CritterImg src={`/bugs-detailed/${critter.detailedImg}.png`} alt={critter.name} />
+		<CritterCard {critter} dir="bugs" />
+	</div>
 
-	<CritterCard {critter} dir="bugs" />
+
+	<style lang="scss">
+		div{
+			max-width: 1100px;
+			margin: 0 auto;
+			
+			@media screen and (min-width: 767px) {
+				padding: 5rem 2rem;
+				position: relative;
+			}
+		}
+	</style>
 
