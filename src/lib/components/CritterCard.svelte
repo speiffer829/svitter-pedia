@@ -45,7 +45,7 @@
 			<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
 		</div>
 		<div class="price flick info-block">
-			<span class="label">Flick's Price</span>
+			<span class="label">{dir === 'bugs' ? 'Flick\'s' : 'CJ\'s'} Price</span>
 			<p>${ Intl.NumberFormat('en-US').format(flickPrice) }</p>
 		</div>
 	</div>
@@ -54,7 +54,7 @@
 		"{ critter.phrase }"
 	</blockquote>
 
-	<div class="grid {dir === 'fish' ? 'col-3' : 'col-1'}">
+	<div class="grid {dir === 'fish' ? 'col-3' : 'col-1'} gap-none">
 		{#if dir === 'fish'}
 			<div class="size info-block">
 				<span class="label">Size</span>
@@ -62,7 +62,7 @@
 			</div>
 		{/if}
 		
-		<div class="location info-block">
+		<div class="location info-block {dir === 'fish' ? 'span-2' : ''}">
 			<span class="label">Location</span>
 			<p>{ critter.location }</p>
 		</div>
@@ -135,6 +135,7 @@
 
 		@media screen and (min-width: 767px) {
 			border-radius: 2rem;
+			margin: 5rem 0;
 		}
 
 		--bg: var(--lgreen);
@@ -195,7 +196,7 @@
 
 	.title-contain{
 		position: sticky;
-		top: 0;
+		top: -17px;
 		z-index: 50;
 	}
 
@@ -219,7 +220,6 @@
 	}
 
 	.atTop > .name{
-		border-radius: 0;
 		box-shadow: 0 3px 10px hsl(0 0% 0% / 20%);
 	}
 
@@ -266,6 +266,9 @@
 
 	.location{
 		background-color: var(--dbrown);
+	}
+	.size{
+		background-color: var(--brown);
 	}
 
 	.time > p{

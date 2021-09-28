@@ -2,9 +2,21 @@
 	import {parallaxImg} from '$lib/actions/parallaxImg'
 	export let src, alt;
 
+	// const imgSrc = async () => {
+	// 	const getImg = await import(src);
+	// 	console.log( getImg )
+	// 	return 'boob.png'
+	// }
+
 </script>
 
-<div><img {src} {alt} use:parallaxImg loading="eager" decoding="async"></div>
+<div>
+	<picture>
+		<source srcset={`${src}?width=600&format=webp`} type="image/webp">
+		<img {src} {alt} use:parallaxImg loading="eager" decoding="async">
+	</picture>
+	<!-- <img src="/bugs-detailed/brown_cicada.png?width=600&format=webp" alt="dsf"> -->
+</div>
 
 <style lang="scss">
 	img{
@@ -14,7 +26,6 @@
 		margin: 0 auto;
 		display: block;
 		transform: translate3d(0, var(--translateY, 0), 0) scale(var(--scale, 1));
-		aspect-ratio: 1/1;
 
 		@media screen and (min-width: 767px) {
 			transform: none;
@@ -27,7 +38,7 @@
 			display: flex;
 			align-items: center;
 			position: sticky;
-			top: 0px;
+			top: 5rem;
 		}
 	}
 </style>

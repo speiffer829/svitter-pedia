@@ -1,12 +1,13 @@
-<script context="module">
-
-</script>
-
 <script>
-	// $: console.log(datas)
+	import critters from '$lib/fish.json'
+	import CritterList from '$lib/components/CritterList.svelte'
+
 </script>
 
 <svelte:head>
-	<title>Fish | Critterpoo</title>
+	<title>Bugs | Critterpoo</title>
 </svelte:head>
+
+
+<CritterList {critters} dir="fish" />
 

@@ -1,5 +1,11 @@
-<section class="intro">
+<script>
+	let butterfly = ''
+	import butterflyImg from "$lib/img/rajah_brookes_birdwing.png?format=webp"
 
+</script>
+
+<section class="intro">
+	<img src={butterflyImg} type="image/webp" alt="bug">
 </section>
 
 <section class="bug-section"></section>

@@ -1,11 +1,11 @@
 <script context="module">
-	import bugs from '$lib/bugs.json'
+	import fishies from '$lib/fish.json'
 	export function load({page}){
-		const bug = bugs.find(bug => bug.slug === page.params.slug)
+		const fish = fishies.find(fish => fish.slug === page.params.slug)
 
 		return {
 			props: {
-				critter: bug
+				critter: fish
 			}
 		}
 	}
@@ -23,8 +23,8 @@
 
 
 	<div class="grid col-2-md gap-3-md">
-		<CritterImg src={`/bugs-detailed/${critter.detailedImg}.png`} alt={critter.name} />
-		<CritterCard {critter} dir="bugs" />
+		<CritterImg src={`/fish-detailed/${critter.detailedImg}.png`} alt={critter.name} />
+		<CritterCard {critter} dir="fish" />
 	</div>
 
 
@@ -39,4 +39,3 @@
 			}
 		}
 	</style>
-
