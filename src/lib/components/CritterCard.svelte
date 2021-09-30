@@ -1,23 +1,12 @@
 <script>
-	export let critter, dir;
+	import { browser } from '$app/env'
+	export let critter, dir, moneyBracket;
 
 	let title;
 	let titleAtTop = false;
 
 	function handleScroll(e) {
 		titleAtTop = title.getBoundingClientRect().top <= 10
-	}
-
-	const findMoneyBracket = () => {
-		if(critter.price >= 10000){
-			return 'gold';
-		}else if(critter.price >= 5000){
-			return 'purple';
-		}else if(critter.price >= 1000){
-			return 'blue';
-		}else{
-			return 'green';
-		}
 	}
 
 	function timeConvert(time) {
@@ -33,7 +22,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<main class="{findMoneyBracket()}">
+<main class="{moneyBracket}">
 	<section class="title-contain" class:atTop={titleAtTop}>
 		<h1 class="name" bind:this={title} >{ critter.name }</h1>
 		<div class="icon"><img src={`/${dir}/${critter.img}.png`} alt={critter.name}></div>

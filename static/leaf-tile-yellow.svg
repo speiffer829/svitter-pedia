@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="300">
+
+    <defs>
+
+         <pattern class="leaf-pattern" id="leaf-pattern" x="60" y="15" height="33%" width="20%" patternUnits="userSpaceOnUse">
+
+    		<image class="leaf" width="26" height="24" id="leaf-1" x="25" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAMAAADTXB33AAAAAXNSR0IB2cksfwAAASNQTFRFAAAA6Nlf6Nhd399g4dJa59ld59le5tld6d5Z5tpf59le59le59le59le59le7dtb69Zc6Npf5tpe59le59le6Npd59ld59le1dVV59le59le6Ndg7t1m59lf5tpe5Nde5tpd59hf59he59le6tZg6NFd59le59le59td59hd59le//+A4+NV59le59le//9V5tld59pe59tf6tVg59hf6Npe6Nle59le5dxh59le59le59pe//8A59pe59ld59le59lf5thd59le6dpi59le5Ntb6Nhe5tle6Ntd69hi59le5tlZ6Nhf59le5Nde6ddc5t1e59le5the59hf5Npg399g59le59le59ld5thg59le59pe59he59le59pe59le6NxdRlahLAAAAGF0Uk5TAHlCCBHK+mUXfNH8//3WDhlZZ/LjN3PBBoDxLQ/o2hNSzcDsJQvn+T92+wIJ6qIDhrgrGJdtxPYd/vB1AdNK85RwtiLHHJimTRrpFIT3JjoelVyyMBBqvd1IqMzh9O61FhLXlsIAAAD2SURBVHicbdLXUgJBEAXQRlDC3pUk4qqgoGIAVEwggosBUFEMmEn+/1c4w4baWea+dFefh+nqGiJpPDOugdfnNbvZOb9jHgiGFKjzwTDrIyoQtSUWh5GFBNEikFyyRIOd5ZXVFNJrlqzDkUwWG5uWbOUgZHvHfmhXFOxpeVMKRbizf2BQdEqAQ4NKElKOuBwrEsIJp1OZIM3pTEplJpVzKVUZXUgFGaJaXU5s+0txojeurnlVbyh/K+7VZE+0WNOeOt8dX/lexUOH6PFJoO7kPKnqMy8vr7qD3ibUezcP//H5ZZ/qu+P+XOEf7bc/0IejwfjPmv0DqQMkiLfDPW4AAAAASUVORK5CYII="/>
+
+    		<image class="leaf" width="26" height="24" id="leaf-2" x="90" y="50" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAMAAADTXB33AAAAAXNSR0IB2cksfwAAASNQTFRFAAAA6Nlf6Nhd399g4dJa59ld59le5tld6d5Z5tpf59le59le59le59le59le7dtb69Zc6Npf5tpe59le59le6Npd59ld59le1dVV59le59le6Ndg7t1m59lf5tpe5Nde5tpd59hf59he59le6tZg6NFd59le59le59td59hd59le//+A4+NV59le59le//9V5tld59pe59tf6tVg59hf6Npe6Nle59le5dxh59le59le59pe//8A59pe59ld59le59lf5thd59le6dpi59le5Ntb6Nhe5tle6Ntd69hi59le5tlZ6Nhf59le5Nde6ddc5t1e59le5the59hf5Npg399g59le59le59ld5thg59le59pe59he59le59pe59le6NxdRlahLAAAAGF0Uk5TAHlCCBHK+mUXfNH8//3WDhlZZ/LjN3PBBoDxLQ/o2hNSzcDsJQvn+T92+wIJ6qIDhrgrGJdtxPYd/vB1AdNK85RwtiLHHJimTRrpFIT3JjoelVyyMBBqvd1IqMzh9O61FhLXlsIAAAD2SURBVHicbdLXUgJBEAXQRlDC3pUk4qqgoGIAVEwggosBUFEMmEn+/1c4w4baWea+dFefh+nqGiJpPDOugdfnNbvZOb9jHgiGFKjzwTDrIyoQtSUWh5GFBNEikFyyRIOd5ZXVFNJrlqzDkUwWG5uWbOUgZHvHfmhXFOxpeVMKRbizf2BQdEqAQ4NKElKOuBwrEsIJp1OZIM3pTEplJpVzKVUZXUgFGaJaXU5s+0txojeurnlVbyh/K+7VZE+0WNOeOt8dX/lexUOH6PFJoO7kPKnqMy8vr7qD3ibUezcP//H5ZZ/qu+P+XOEf7bc/0IejwfjPmv0DqQMkiLfDPW4AAAAASUVORK5CYII="/>
+
+
+  		</pattern>
+
+    </defs>
+
+    <rect class="leaf-pattern" x="0" y="0" width="100%" height="100%" fill="url(#leaf-pattern)" />
+
+</svg>
+

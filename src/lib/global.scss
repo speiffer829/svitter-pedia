@@ -33,6 +33,8 @@
 
 --light: var(--tan);
 
+--bodyBg: var(--tan);
+
 font-size: 62.5%;
 
 --dot-size: 36px 34.5px;
@@ -50,6 +52,7 @@ body{
 	font-family: var(--headFont);
 	background-color: var(--green);
 	background-image: url('/green-triangles.png');
+	// background-image: url('/play-dots.png');
 	background-size: var(--triangle-size);
 	background-attachment: fixed;
 	scroll-padding: 4rem;
