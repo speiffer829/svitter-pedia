@@ -20,8 +20,7 @@
     "sharp": "^0.28.2",
     "svelte": "^3.34.0",
     "svelte-image": "^0.2.9",
-    "vanilla-lazyload": "^17.5.0",
-    "vite-imagetools": "^3.4.0-next.7"
+    "vanilla-lazyload": "^17.5.0"
   },
   "type": "module",
   "dependencies": {
