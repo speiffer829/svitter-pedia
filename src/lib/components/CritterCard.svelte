@@ -1,13 +1,11 @@
 <script>
-	import { browser } from '$app/env'
+	import { onMount } from 'svelte'
 	export let critter, dir, moneyBracket;
 
 	let title;
-	let titleAtTop = false;
+	export let titleAtTop = false;
 
-	function handleScroll(e) {
-		titleAtTop = title.getBoundingClientRect().top <= 10
-	}
+
 
 	function timeConvert(time) {
 		if(time === 0){
@@ -17,18 +15,21 @@
 		}
 	}
 
+	onMount(() => {
+		titleAtTop = false
+	})
+
 	$: flickPrice = critter.price * 1.5
 </script>
 
-<svelte:window on:scroll={handleScroll} />
 
 <main class="{moneyBracket}">
-	<section class="title-contain" class:atTop={titleAtTop}>
-		<h1 class="name" bind:this={title} >{ critter.name }</h1>
+	<section class="title-contain" class:atTop={!titleAtTop}>
+		<h1 class="name">{ critter.name }</h1>
 		<div class="icon"><img src={`/${dir}/${critter.img}.png`} alt={critter.name}></div>
 	</section>
 
-	<div class="grid col-2 gap-none">
+	<section class="grid col-2 gap-none">
 		<div class="price info-block">
 			<span class="label">Price</span>
 			<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
@@ -37,7 +38,7 @@
 			<span class="label">{dir === 'bugs' ? 'Flick\'s' : 'CJ\'s'} Price</span>
 			<p>${ Intl.NumberFormat('en-US').format(flickPrice) }</p>
 		</div>
-	</div>
+	</section>
 
 	<blockquote class="phrase">
 		"{ critter.phrase }"
@@ -104,11 +105,11 @@
 </main>
 
 <div class="btn-container">
-	<a class="back-btn" href={`/${dir}#${critter.slug}`}>
+	<button class="back-btn" href={`/${dir}#${critter.slug}`} on:click="{ () => window.history.back() }">
 		<svg width="100%" height="100%" viewBox="0 0 44 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M1.23223 17.2322C0.255922 18.2085 0.255922 19.7915 1.23223 20.7678L17.1421 36.6777C18.1184 37.654 19.7014 37.654 20.6777 36.6777C21.654 35.7014 21.654 34.1184 20.6777 33.1421L6.53553 19L20.6777 4.85786C21.654 3.88155 21.654 2.29864 20.6777 1.32233C19.7014 0.34602 18.1184 0.34602 17.1421 1.32233L1.23223 17.2322ZM44 16.5L3 16.5V21.5L44 21.5V16.5Z" fill="var(--brown)"/>
 		</svg>
-	</a>
+	</button>
 </div>
 
 <style lang="scss">
@@ -155,7 +156,7 @@
 		padding: 5px 10px;
 		font-size: 1.2rem;
 		margin-bottom: 5px;
-		box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
+		// box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
 		border: solid 1px var(--dbrown)
 	}
 
@@ -315,7 +316,7 @@
 		top: 2.5rem;
 		left: 2rem;
 
-		a{
+		button{
 			width: 50px;
 			height: 50px;
 			display: block;
