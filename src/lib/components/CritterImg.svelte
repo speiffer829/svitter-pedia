@@ -1,6 +1,9 @@
 <script>
+	import { onMount } from 'svelte'
 	import {parallaxImg} from '$lib/actions/parallaxImg'
 	export let src, alt;
+
+
 
 	// const imgSrc = async () => {
 	// 	const getImg = await import(src);
@@ -10,10 +13,11 @@
 
 </script>
 
-<div>
+<div id="img">
 	<picture>
-		<source srcset={`${src}?width=600&format=webp`} type="image/webp">
-		<img {src} {alt} use:parallaxImg loading="eager" decoding="async">
+		<source srcset={`${src}.avif`} type="image/avif">
+		<source srcset={`${src}.webp`} type="image/webp">
+		<img src={`${src}.png`} {alt} use:parallaxImg loading="eager" decoding="async">
 	</picture>
 	<!-- <img src="/bugs-detailed/brown_cicada.png?width=600&format=webp" alt="dsf"> -->
 </div>
