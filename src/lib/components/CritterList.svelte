@@ -6,7 +6,7 @@
 <ul class="critter-list">
 	{#each critters as critter}
 		<li id={critter.slug}>
-			<a href={`${dir}/${critter.slug}`} sveltekit:prefetch>
+			<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch>
 				<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64">
 				<span>{critter.name}</span>
 			</a>
