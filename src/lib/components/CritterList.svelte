@@ -7,7 +7,11 @@
 	{#each critters as critter}
 		<li id={critter.slug}>
 			<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch>
-				<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64">
+				<picture>
+					<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
+					<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
+					<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64">
+				</picture>
 				<span>{critter.name}</span>
 			</a>
 		</li>

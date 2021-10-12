@@ -313,8 +313,13 @@
 	.btn-container{
 		position: fixed;
 		z-index: 15;
-		top: 2.5rem;
+		bottom: 2.5rem;
 		left: 2rem;
+
+		@media screen and (min-width: 767px) {
+			top: 2.5rem;
+			bottom: auto;
+		}
 
 		button{
 			width: 50px;

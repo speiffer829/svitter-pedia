@@ -33,6 +33,9 @@
 	}
 
 	let moneyBracket = findMoneyBracket()
+
+	$: width = dir === 'fish' ? 1024 : 600
+	$: height = dir === 'fish' ? 512 : 600
 </script>
 
 <svelte:head>
@@ -42,7 +45,7 @@
 
 	<div class="body-bg {moneyBracket}">
 		<div class="grid col-2-md gap-3-md">
-			<CritterImg src={`/${dir}-detailed/${critter.detailedImg}`} alt={critter.name} />
+			<CritterImg src={`/${dir}-detailed/${critter.detailedImg}`} alt={critter.name} {width} {height} />
 			{#key critter.name}
 				<CritterCard {critter} {moneyBracket} {dir} {titleAtTop} />
 			{/key}
