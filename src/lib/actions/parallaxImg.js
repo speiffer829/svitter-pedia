@@ -13,23 +13,9 @@ export function parallaxImg(node) {
 			damping: 0.25
 		}
 	);
-	
-	new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				window.addEventListener('scroll', handleScroll, false)
-				document.addEventListener(
-					'touchmove',
-					function (e) {
-						e.preventDefault();
-					},
-					true
-				);
-			}else{
-				window.removeEventListener('scroll', handleScroll, false);
-			}
-		})
-	}).observe(node)
+
+		window.addEventListener('scroll', handleScroll, true);
+		window.addEventListener('touchmove', handleScroll, true);
 
 	function handleScroll(e) {
 		const nodeRect = node.getBoundingClientRect()

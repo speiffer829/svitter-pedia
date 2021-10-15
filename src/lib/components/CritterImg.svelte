@@ -1,5 +1,5 @@
 <script>
-	import { elasticOut } from 'svelte/easing'
+	import { elasticOut as bounceOut } from 'svelte/easing'
 	import { scale } from 'svelte/transition'
 	import {parallaxImg} from '$lib/actions/parallaxImg'
 	export let src, alt, width, height;
@@ -15,7 +15,7 @@
 			loading="eager" 
 			decoding="async"
 			{width} {height} 
-			in:scale={{duration: 500}}>
+			in:scale={{duration: 1500, easing: bounceOut}}>
 	</picture>
 </div>
 

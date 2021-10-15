@@ -24,7 +24,7 @@
 </script>
 
 
-<main in:fly={{ y: 300, duration: 1500, easing: elasticOut }} class="{moneyBracket}">
+<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1400, easing: elasticOut }} class="{moneyBracket}">
 	<section class="title-contain" class:atTop={!titleAtTop}>
 		<h1 class="name">{ critter.name }</h1>
 		<div class="icon">
