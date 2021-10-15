@@ -10,7 +10,7 @@
 				<picture>
 					<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
 					<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
-					<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64">
+					<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64" loading="lazy">
 				</picture>
 				<span>{critter.name}</span>
 			</a>

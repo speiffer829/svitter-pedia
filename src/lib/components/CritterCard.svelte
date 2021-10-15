@@ -1,8 +1,9 @@
 <script>
 	import { onMount } from 'svelte'
+	import { fly } from 'svelte/transition'
+	import { elasticOut } from 'svelte/easing'
 	export let critter, dir, moneyBracket;
 
-	let title;
 	export let titleAtTop = false;
 
 
@@ -23,10 +24,16 @@
 </script>
 
 
-<main class="{moneyBracket}">
+<main in:fly={{ y: 300, duration: 1500, easing: elasticOut }} class="{moneyBracket}">
 	<section class="title-contain" class:atTop={!titleAtTop}>
 		<h1 class="name">{ critter.name }</h1>
-		<div class="icon"><img src={`/${dir}/${critter.img}.png`} alt={critter.name}></div>
+		<div class="icon">
+			<picture>
+				<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
+				<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
+				<img src={`/${dir}/${critter.img}.png`} alt={critter.name} width="64" height="64" loading="eager" decoding="async">
+			</picture>
+		</div>
 	</section>
 
 	<section class="grid col-2 gap-none">
@@ -96,7 +103,7 @@
 
 	<div class="blathers-fact info-block">
 		<blockquote>
-			"{ critter.blathers }"
+			"{ critter.blathers || "God is Dead. Long Live Beelzebub" }"
 		</blockquote>
 
 		<img src="/blathers.webp" alt="blathers" width="180" loading="lazy">

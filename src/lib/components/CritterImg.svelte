@@ -1,15 +1,8 @@
 <script>
-	import { onMount } from 'svelte'
+	import { elasticOut } from 'svelte/easing'
+	import { scale } from 'svelte/transition'
 	import {parallaxImg} from '$lib/actions/parallaxImg'
 	export let src, alt, width, height;
-
-
-
-	// const imgSrc = async () => {
-	// 	const getImg = await import(src);
-	// 	console.log( getImg )
-	// 	return 'boob.png'
-	// }
 
 </script>
 
@@ -17,9 +10,13 @@
 	<picture>
 		<source srcset={`${src}.avif`} type="image/avif">
 		<source srcset={`${src}.webp`} type="image/webp">
-		<img src={`${src}.png`} {alt} use:parallaxImg loading="eager" decoding="async" {width} {height}>
+		<img src={`${src}.png`} {alt} 
+			use:parallaxImg 
+			loading="eager" 
+			decoding="async"
+			{width} {height} 
+			in:scale={{duration: 500}}>
 	</picture>
-	<!-- <img src="/bugs-detailed/brown_cicada.png?width=600&format=webp" alt="dsf"> -->
 </div>
 
 <style lang="scss">
