@@ -6,6 +6,10 @@
 
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image"  href={`${src}.webp`} type="image/webp" />
+</svelte:head>
+
 <div id="img">
 	<picture>
 		<source srcset={`${src}.avif`} type="image/avif">
