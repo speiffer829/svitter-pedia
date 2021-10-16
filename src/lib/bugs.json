@@ -538,6 +538,7 @@
     "img":"Hermit_Crab",
     "detailedImg":"hermit_crab",
     "slug":"hermit_crab",
+    "rarity": "common",
     "phrase":"I caught a hermit crab! I think it wanted to be left alone!",
     "blathers":"The hermit crab is not an insect... Though it most certainly resembles one. Blech! It looks much like a spider—what with its creepy eyes and crawly legs—but is, in fact, a crustacean. As such, the hermit crab has 10 legs and also wears a shell. But it doesn't grow this shell itself. It slips its soft body into shells left behind by snails, you see, and moves into ever-larger ones as it grows. Talk about a strange way to make a home."
   },
