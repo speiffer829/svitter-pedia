@@ -12,30 +12,45 @@
 --greenHS: 145.4 100%;
 --greenL: 31.6%;
 
+--lgold: hsl(47, 97.3%, 65.5%);
 --gold: hsl(47, 97.3%, 55.5%);
 --dgold: hsl(47, 97.3%, 45.5%);
 --brown: hsl(37.4, 57.1%, 38.5%);
 --dbrown: hsl(37.4, 57.1%, 28.5%);
 --red: hsl(358.5, 84.3%, 54.9%);
 
+--lblue: hsl(211.4, 51.2%, 74%);
 --blue: hsl(211.4, 51.2%, 64%);
 --dblue: hsl(211.4, 51.2%, 54%);
 --blueHS: 211.4 51.2%;
 --blueL: 64%;
 
 --dark: hsl(198.6, 75.4%, 15.9%);
+
+--lpurple: hsl(271.8, 25.6%, 81%);
 --purple: hsl(271.8, 25.6%, 71%);
 --dpurple: hsl(271.8, 25.6%, 61%);
+
+--lyellow: hsl(52.4, 77.5%, 82%);
 --yellow: hsl(52.4, 77.5%, 72%);
+--dyellow: hsl(53.9, 74.1%, 63.7%);
+
 --lgreen: hsl(65, 62.6%, 62.4%);
 --dgreen: hsl(65, 62.6%, 42.4%);
+
 --orange: hsl(39.4, 92.8%, 56.9%);
 
---light: var(--tan);
+--lmint: hsl(161.4, 49.9%, 77.1%);
+--mint: hsl(161.4, 49.9%, 67.1%);
+--dmint: hsl(161.4, 49.9%, 47.1%);
+
+--light: hsl(49.9, 47.7%, 92.6%);
 
 --bodyBg: var(--tan);
 
 font-size: 62.5%;
+
+--border-radius: 6rem;
 
 --dot-size: 36px 34.5px;
 --triangle-size: 156px 154.5px;

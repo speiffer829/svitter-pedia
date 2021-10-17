@@ -15,7 +15,7 @@
 			});
 		})
 
-		observer.observe(document.querySelector('#img'))
+		observer.observe(document?.querySelector('#top'))
 		
 	})
 
@@ -75,7 +75,7 @@
 				--bgImage: url('/leafs-blue.svg');
 			}
 			&.green{
-				--bg: var(--lgreen);
+				--bg: var(--mint);
 				--bgImage: url('/leafs-green.svg');
 			}
 			&.dark{

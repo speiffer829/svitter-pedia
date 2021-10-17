@@ -1,7 +1,8 @@
 <script>
-	import { elasticOut as bounceOut } from 'svelte/easing'
+	import { elasticOut } from 'svelte/easing'
 	import { scale } from 'svelte/transition'
 	import {parallaxImg} from '$lib/actions/parallaxImg'
+	import { browser } from '$app/env'
 	export let src, alt, width, height;
 
 </script>
@@ -19,7 +20,7 @@
 			loading="eager" 
 			decoding="async"
 			{width} {height} 
-			in:scale={{duration: 1500, easing: bounceOut}}>
+			in:scale={{duration: 1000, easing: elasticOut}}>
 	</picture>
 </div>
 
@@ -29,7 +30,7 @@
 		position: relative;
 		width: calc(100% - 20px);
 		height: auto;
-		margin: 0 auto;
+		margin: 1rem auto 0;
 		display: block;
 		transform: translate3d(0, var(--translateY, 0), 0) scale(var(--scale, 1));
 

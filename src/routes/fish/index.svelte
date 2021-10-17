@@ -9,5 +9,5 @@
 </svelte:head>
 
 
-<CritterList {critters} dir="fish" />
+<CritterList {critters} dir="fish" title="Fish" />
 

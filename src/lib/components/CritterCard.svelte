@@ -4,7 +4,7 @@
 	import { elasticOut } from 'svelte/easing'
 	export let critter, dir, moneyBracket;
 
-	export let titleAtTop = false;
+	export let titleAtTop = true;
 
 
 
@@ -20,11 +20,13 @@
 		titleAtTop = false
 	})
 
-	$: flickPrice = critter.price * 1.5
+	$: specialPrice = critter.price * 1.5
+	$: reducedPrice = critter.price * 0.8
 </script>
 
 
-<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1400, easing: elasticOut }} class="{moneyBracket}">
+<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1000, easing: elasticOut }} class="{moneyBracket}">
+<div id="top"/>
 	<section class="title-contain" class:atTop={!titleAtTop}>
 		<h1 class="name">{ critter.name }</h1>
 		<div class="icon">
@@ -37,17 +39,22 @@
 	</section>
 
 	<section class="grid col-2 gap-none">
-		<div class="price info-block">
-			<span class="label">Price</span>
-			<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
+		<div class="reduced price info-block">
+			<span class="label">Drop-Off Price</span>
+			<p>${ Intl.NumberFormat('en-US').format(reducedPrice) }</p>
 		</div>
-		<div class="price flick info-block">
+		<div class="price special info-block">
 			<span class="label">{dir === 'bugs' ? 'Flick\'s' : 'CJ\'s'} Price</span>
-			<p>${ Intl.NumberFormat('en-US').format(flickPrice) }</p>
+			<p>${ Intl.NumberFormat('en-US').format(specialPrice) }</p>
+		</div>
+
+		<div class="price info-block span-2">
+			<span class="label">Base Price</span>
+			<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
 		</div>
 	</section>
 
-	<blockquote class="phrase">
+	<blockquote class="phrase info-block">
 		"{ critter.phrase }"
 	</blockquote>
 
@@ -123,34 +130,40 @@
 		main{
 		width: 100%;
 		background-color: var(--tan);
-		background-image: url('/play-dots.png');
-		background-size: var(--dot-size);
-		border-radius: 2rem 2rem 0 0;
+		border-radius: var(--border-radius) var(--border-radius) 0 0;
 		box-shadow: 0 -3px 10px hsl(0 0% 0% / 20%);
 		z-index: 2;
 		position: relative;
 
 		@media screen and (min-width: 767px) {
-			border-radius: 2rem;
+			border-radius: var(--border-radius);
 			margin: 5rem 0;
 		}
 
-		--bg: var(--lgreen);
-		--color: var(--dgreen);
+		&:before{
+			content: '';
+		}
+
+		--base: var(--mint);
+		--darker: var(--dmint);
+		--lighter: var(--lmint);
 
 		&.blue{
-			--bg: var(--blue);
-			--color: var(--dblue)
+			--base: var(--blue);
+			--darker: var(--dblue);
+			--lighter: var(--lblue);
 		}
 
 		&.purple{
-			--bg: var(--purple);
-			--color: var(--dpurple)
+			--base: var(--purple);
+			--darker: var(--dpurple);
+			--lighter: var(--lpurple);
 		}
 
 		&.gold{
-			--bg: var(--gold);
-			--color: var(--dgold)
+			--base: var(--gold);
+			--darker: var(--dgold);
+			--lighter: var(--lgold);
 		}
 	}
 
@@ -177,7 +190,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--bg);
+		background-color: var(--base);
 		border-radius: 50%;
 		background-image: url('/play-dots.png');
 		background-size: var(--dot-size);
@@ -191,9 +204,11 @@
 		transform: translate(-50%, 30%) scale(.7);
 	}
 
+	
+
 	.title-contain{
 		position: sticky;
-		top: -17px;
+		top: -25px;
 		z-index: 50;
 	}
 
@@ -210,21 +225,23 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border-radius: 2rem 2rem 0 0;
+		border-radius: var(--border-radius) var(--border-radius) 0 0;
 		text-align: center;
 		
-		transition: border-radius 300ms;
+		transition: border-radius 100ms;
 	}
 
 	.atTop > .name{
 		box-shadow: 0 3px 10px hsl(0 0% 0% / 20%);
+		border-radius: 2rem 2rem 0 0;
 	}
 
 
-	.phrase{
+	.info-block.phrase{
 		width: 100%;
 		padding: 3.5rem 1.6rem 3.5rem;
 		font-size: 2.5rem;
+		color: var(--dark);
 		text-align: center;
 	}
 
@@ -253,10 +270,13 @@
 	}
 
 	.price {
-		background-color: var(--bg);
+		background-color: var(--darker);
 
-		&.flick {
-			background-color: var(--color);
+		&.special {
+			background-color: var(--base);
+		}
+		&.reduced {
+			background-color: var(--lighter);
 		}
 
 	}
@@ -295,7 +315,7 @@
 	.rarity{
 		background-color: var(--brown);
 
-		&.common{ background-color: var(--lgreen); }
+		&.common{ background-color: var(--mint); }
 		&.uncommon{ background-color: var(--blue); }
 		&.rare{ background-color: var(--purple); }
 		&.ultra-rare{ background-color: var(--gold); }

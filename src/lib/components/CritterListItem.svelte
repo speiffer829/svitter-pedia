@@ -19,10 +19,24 @@
 			});
 		}).observe(item)
 	})
+
+		const findMoneyBracket = () => {
+		if(critter.price >= 10000){
+			return 'gold';
+		}else if(critter.price >= 5000){
+			return 'purple';
+		}else if(critter.price >= 1000){
+			return 'blue';
+		}else{
+			return 'green';
+		}
+	}
+
+	let moneyBracket = findMoneyBracket()
 </script>
 
-<li id={critter.slug} bind:this={item}>
-	<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch>
+<li id={critter.slug} bind:this={item} >
+	<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket}>
 		<picture>
 			<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
 			<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
@@ -34,20 +48,71 @@
 
 <style lang="scss">
 		a{
-		background-color: var(--brown);
-		background-image: url('/play-dots.png');
-		background-size: var(--dot-size);
+		background-color: var(--tan);
 		box-shadow: 2px 3px 4px hsl( 420 69% 0% / 25% );
-		display: flex;
+		display: grid;
+		grid-template-columns: 64px 1fr;
 		width: 100%;
-		border-radius: 1rem;
+		border-radius: 3rem;
 		align-items: center;
 		font-size: 2.2rem;
 		padding: 1rem 1.5rem;
-		color: var(--gold);
+		color: var(--darker);
 		text-decoration: none;
 		font-weight: bold;
-		text-shadow: 2px 2px 5px hsl(420 69% 0% / 20%);
+		text-shadow: 2px 2px 5px hsl(420 69% 0% / 10%);
+		position: relative;
+		isolation: isolate;
+		overflow: hidden;
+
+		--base: var(--mint);
+		--darker: var(--dmint);
+		--lighter: var(--lmint);
+
+		&.blue{
+			--base: var(--blue);
+			--darker: var(--dblue);
+			--lighter: var(--lblue);
+		}
+
+		&.purple{
+			--base: var(--purple);
+			--darker: var(--dpurple);
+			--lighter: var(--lpurple);
+		}
+
+		&.gold{
+			--base: var(--gold);
+			--darker: var(--dgold);
+			--lighter: var(--lgold);
+		}
+
+		&::after{
+			content: '';
+			width: 180px;
+			height: 180px;
+			position: absolute;
+			z-index: -1;
+			background: var(--lighter);
+			border-radius: 150px;
+			top: 0;
+			left:0;
+			transform: translate(-55%, -55%);
+			opacity: 0.5;
+		}
+		&::before{
+			content: '';
+			width: 250px;
+			height: 160px;
+			position: absolute;
+			z-index: -1;
+			background: var(--lighter);
+			border-radius: 150px;
+			bottom: 0;
+			right:0;
+			transform: translate(55%, 55%);
+			opacity: 0.5;
+		}
 
 		span{
 			padding-left: 1.5rem;

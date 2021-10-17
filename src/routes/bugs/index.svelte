@@ -10,4 +10,4 @@
 </svelte:head>
 
 
-<CritterList {critters} dir="bugs" />
+<CritterList {critters} dir="bugs" title="Bugs" />
