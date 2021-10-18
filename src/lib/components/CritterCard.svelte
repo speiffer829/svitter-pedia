@@ -14,7 +14,6 @@
 	}
 
 	let titleAtTop = false;
-	$: console.log('titleAtTop:', titleAtTop)
 
 	onMount(() => {
 
@@ -38,99 +37,101 @@
 	$: reducedPrice = critter.price * 0.8
 </script>
 
-
-<div id="top"/>
-<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1000, easing: elasticOut, opacity: 1}} class="{moneyBracket}">
-	<section class="title-contain" class:atTop={titleAtTop}>
-		<h1 class="name">{ critter.name }</h1>
-		<div class="icon">
-			<picture>
-				<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
-				<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
-				<img src={`/${dir}/${critter.img}.png`} alt={critter.name} width="64" height="64" loading="eager" decoding="async">
-			</picture>
-		</div>
-	</section>
-
-	<section class="grid col-2 gap-none">
-		<div class="reduced price info-block">
-			<span class="label">Drop-Off Price</span>
-			<p>${ Intl.NumberFormat('en-US').format(reducedPrice) }</p>
-		</div>
-		<div class="price special info-block">
-			<span class="label">{dir === 'bugs' ? 'Flick\'s' : 'CJ\'s'} Price</span>
-			<p>${ Intl.NumberFormat('en-US').format(specialPrice) }</p>
-		</div>
-
-		<div class="price info-block span-2">
-			<span class="label">Base Price</span>
-			<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
-		</div>
-	</section>
-
-	<blockquote class="phrase info-block">
-		"{ critter.phrase }"
-	</blockquote>
-
-	<div class="grid {dir === 'fish' ? 'col-3' : 'col-1'} gap-none">
-		{#if dir === 'fish'}
-			<div class="size info-block">
-				<span class="label">Size</span>
-				<p>{ critter.size }</p>
+<div>
+	
+	<div id="top"/>
+	<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1000, easing: elasticOut, opacity: 1}} class="{moneyBracket}">
+		<section class="title-contain" class:atTop={titleAtTop}>
+			<h1 class="name">{ critter.name }</h1>
+			<div class="icon">
+				<picture>
+					<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
+					<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
+					<img src={`/${dir}/${critter.img}.png`} alt={critter.name} width="64" height="64" loading="eager" decoding="async">
+				</picture>
 			</div>
-		{/if}
-		
-		<div class="location info-block {dir === 'fish' ? 'span-2' : ''}">
-			<span class="label">Location</span>
-			<p>{ critter.location }</p>
-		</div>
-	</div>
-
-	<div class="info-block time">
-		<span class="label">Time</span>
-		{#if Array.isArray(critter.start)}
-			{#each critter.start as start, i}
-				<p>{ timeConvert(start) } - { timeConvert(critter.end[i]) }</p>
-			{/each}
-		{:else if critter.start === 0 && critter.end === 24}
-			<p>All Day</p>
-		{:else}
-			<p>{ timeConvert(critter.start) } - { timeConvert(critter.end) }</p>
-		{/if}
-	</div>
-
-	<div class="info-block months">
-		<span class="label">Months</span>
-		<div class="grid col-4 gap-1">
-			<p class="month" class:active={critter.months.includes('jan')}>Jan</p>
-			<p class="month" class:active={critter.months.includes('feb')}>Feb</p>
-			<p class="month" class:active={critter.months.includes('mar')}>Mar</p>
-			<p class="month" class:active={critter.months.includes('apr')}>Apr</p>
-			<p class="month" class:active={critter.months.includes('may')}>May</p>
-			<p class="month" class:active={critter.months.includes('jun')}>Jun</p>
-			<p class="month" class:active={critter.months.includes('jul')}>Jul</p>
-			<p class="month" class:active={critter.months.includes('aug')}>Aug</p>
-			<p class="month" class:active={critter.months.includes('sept')}>Sept</p>
-			<p class="month" class:active={critter.months.includes('oct')}>Oct</p>
-			<p class="month" class:active={critter.months.includes('nov')}>Nov</p>
-			<p class="month" class:active={critter.months.includes('dec')}>Dec</p>
-		</div>
-	</div>
-
-	<div class="rarity info-block {critter.rarity}">
-		<span class="label">Rarity</span>
-		<p>{ critter.rarity }</p>
-	</div>
-
-	<div class="blathers-fact info-block">
-		<blockquote>
-			"{ critter.blathers || "God is Dead. Long Live Beelzebub" }"
+		</section>
+	
+		<section class="grid col-2 gap-none">
+			<div class="reduced price info-block">
+				<span class="label">Drop-Off Price</span>
+				<p>${ Intl.NumberFormat('en-US').format(reducedPrice) }</p>
+			</div>
+			<div class="price special info-block">
+				<span class="label">{dir === 'bugs' ? 'Flick\'s' : 'CJ\'s'} Price</span>
+				<p>${ Intl.NumberFormat('en-US').format(specialPrice) }</p>
+			</div>
+	
+			<div class="price info-block span-2">
+				<span class="label">Base Price</span>
+				<p>${ Intl.NumberFormat('en-US').format(critter.price) }</p>
+			</div>
+		</section>
+	
+		<blockquote class="phrase info-block">
+			"{ critter.phrase }"
 		</blockquote>
-
-		<img src="/blathers.webp" alt="blathers" width="180" loading="lazy">
-	</div>
-
-</main>
+	
+		<div class="grid {dir === 'fish' ? 'col-3' : 'col-1'} gap-none">
+			{#if dir === 'fish'}
+				<div class="size info-block">
+					<span class="label">Size</span>
+					<p>{ critter.size }</p>
+				</div>
+			{/if}
+	
+			<div class="location info-block {dir === 'fish' ? 'span-2' : ''}">
+				<span class="label">Location</span>
+				<p>{ critter.location }</p>
+			</div>
+		</div>
+	
+		<div class="info-block time">
+			<span class="label">Time</span>
+			{#if Array.isArray(critter.start)}
+				{#each critter.start as start, i}
+					<p>{ timeConvert(start) } - { timeConvert(critter.end[i]) }</p>
+				{/each}
+			{:else if critter.start === 0 && critter.end === 24}
+				<p>All Day</p>
+			{:else}
+				<p>{ timeConvert(critter.start) } - { timeConvert(critter.end) }</p>
+			{/if}
+		</div>
+	
+		<div class="info-block months">
+			<span class="label">Months</span>
+			<div class="grid col-4 gap-1">
+				<p class="month" class:active={critter.months.includes('jan')}>Jan</p>
+				<p class="month" class:active={critter.months.includes('feb')}>Feb</p>
+				<p class="month" class:active={critter.months.includes('mar')}>Mar</p>
+				<p class="month" class:active={critter.months.includes('apr')}>Apr</p>
+				<p class="month" class:active={critter.months.includes('may')}>May</p>
+				<p class="month" class:active={critter.months.includes('jun')}>Jun</p>
+				<p class="month" class:active={critter.months.includes('jul')}>Jul</p>
+				<p class="month" class:active={critter.months.includes('aug')}>Aug</p>
+				<p class="month" class:active={critter.months.includes('sept')}>Sept</p>
+				<p class="month" class:active={critter.months.includes('oct')}>Oct</p>
+				<p class="month" class:active={critter.months.includes('nov')}>Nov</p>
+				<p class="month" class:active={critter.months.includes('dec')}>Dec</p>
+			</div>
+		</div>
+	
+		<div class="rarity info-block {critter.rarity}">
+			<span class="label">Rarity</span>
+			<p>{ critter.rarity }</p>
+		</div>
+	
+		<div class="blathers-fact info-block">
+			<blockquote>
+				"{ critter.blathers || "God is Dead. Long Live Beelzebub" }"
+			</blockquote>
+	
+			<img src="/blathers.webp" alt="blathers" width="180" loading="lazy">
+		</div>
+	
+	</main>
+</div>
 
 <div class="btn-container">
 	<button class="back-btn" href={`/${dir}#${critter.slug}`} on:click="{ () => window.history.back() }">
@@ -141,13 +142,6 @@
 </div>
 
 <style lang="scss">
-
-	#top{
-		display: block;
-		width: 100%;
-		height: 10px;
-		background: var(--base);
-	}
 		main{
 		width: 100%;
 		background-color: var(--tan);

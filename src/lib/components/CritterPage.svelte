@@ -28,6 +28,8 @@
 
 <svelte:head>
 	<title>{critter.name} | Critterpoo</title>
+	<meta name="theme-color" 
+      content="#b6a2c8">
 </svelte:head>
 
 
