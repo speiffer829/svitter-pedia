@@ -4,9 +4,6 @@
 	import { elasticOut } from 'svelte/easing'
 	export let critter, dir, moneyBracket;
 
-	export let titleAtTop = true;
-
-
 
 	function timeConvert(time) {
 		if(time === 0){
@@ -16,8 +13,25 @@
 		}
 	}
 
+	let titleAtTop = false;
+	$: console.log('titleAtTop:', titleAtTop)
+
 	onMount(() => {
-		titleAtTop = false
+
+		const options = {
+			root: null,
+			rootMargin: "0px",
+      threshold: 0.1,
+		}
+
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach(entry => {
+				titleAtTop = !entry.isIntersecting
+			});
+		})
+
+		observer.observe(document?.querySelector('#top'), options)
+		
 	})
 
 	$: specialPrice = critter.price * 1.5
@@ -25,9 +39,9 @@
 </script>
 
 
-<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1000, easing: elasticOut }} class="{moneyBracket}">
 <div id="top"/>
-	<section class="title-contain" class:atTop={!titleAtTop}>
+<main in:fly={{ y: window.innerWidth > 767 ? 0 : 400, x: window.innerWidth > 767 ? 300 : 0, duration: 1000, easing: elasticOut, opacity: 1}} class="{moneyBracket}">
+	<section class="title-contain" class:atTop={titleAtTop}>
 		<h1 class="name">{ critter.name }</h1>
 		<div class="icon">
 			<picture>
@@ -127,6 +141,13 @@
 </div>
 
 <style lang="scss">
+
+	#top{
+		display: block;
+		width: 100%;
+		height: 10px;
+		background: var(--base);
+	}
 		main{
 		width: 100%;
 		background-color: var(--tan);
@@ -228,7 +249,7 @@
 		border-radius: var(--border-radius) var(--border-radius) 0 0;
 		text-align: center;
 		
-		transition: border-radius 100ms;
+		transition: border-radius 100ms 100ms;
 	}
 
 	.atTop > .name{
