@@ -10,7 +10,7 @@
 		if(critter.price >= 10000){
 			return 'hsl(52.4, 77.5%, 72%)';
 		}else if(critter.price >= 5000){
-			return 'hsl(271.8, 25.6%, 81%)';
+			return 'hsl(271.8, 25.6%, 71%)';
 		}else if(critter.price >= 1000){
 			return 'hsl(211.4, 51.2%, 64%)';
 		}else{
@@ -67,7 +67,7 @@
 			background-attachment: fixed;
 
 			&.gold{
-				--bg: #f1e369;
+				--bg: var(--yellow);
 				--bgImage: url('/leafs-gold.svg');
 			}
 			&.purple{
