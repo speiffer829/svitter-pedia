@@ -6,6 +6,20 @@
 	export let dir;
 
 
+	const findThemeColor = () => {
+		if(critter.price >= 10000){
+			return 'hsl(52.4, 77.5%, 72%)';
+		}else if(critter.price >= 5000){
+			return 'hsl(271.8, 25.6%, 81%)';
+		}else if(critter.price >= 1000){
+			return 'hsl(211.4, 51.2%, 64%)';
+		}else{
+			return 'hsl(161.4, 49.9%, 67.1%)';
+		}
+	}
+
+	let themeColor = findThemeColor()
+
 
 
 	const findMoneyBracket = () => {
@@ -29,7 +43,7 @@
 <svelte:head>
 	<title>{critter.name} | Critterpoo</title>
 	<meta name="theme-color" 
-      content="#b6a2c8">
+      content={themeColor}>
 </svelte:head>
 
 
