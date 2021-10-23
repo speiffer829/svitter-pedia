@@ -35,16 +35,16 @@
 	let moneyBracket = findMoneyBracket()
 </script>
 
-<li id={critter.slug} bind:this={item} >
-	<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket}>
-		<picture>
-			<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
-			<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
-			<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64" loading="lazy">
-		</picture>
-		<span>{critter.name}</span>
-	</a>
-</li>
+
+<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket} bind:this={item} id={critter.slug}>
+	<picture>
+		<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
+		<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
+		<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64" loading="lazy">
+	</picture>
+	<span>{critter.name}</span>
+</a>
+
 
 <style lang="scss">
 		a{

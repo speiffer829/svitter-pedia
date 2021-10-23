@@ -155,10 +155,6 @@
 			margin: 5rem 0;
 		}
 
-		&:before{
-			content: '';
-		}
-
 		--base: var(--mint);
 		--darker: var(--dmint);
 		--lighter: var(--lmint);
@@ -243,7 +239,7 @@
 		border-radius: var(--border-radius) var(--border-radius) 0 0;
 		text-align: center;
 		
-		transition: border-radius 100ms 100ms;
+		transition: border-radius 100ms;
 	}
 
 	.atTop > .name{
@@ -346,6 +342,9 @@
 			font-size: 1.6rem;
 			padding: 1.5rem;
 			line-height: 3.2rem;
+		}
+		@media screen and (min-width: 767px) {
+			border-radius: 0 0 var(--border-radius) var(--border-radius);
 		}
 	}
 

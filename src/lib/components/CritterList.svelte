@@ -1,17 +1,32 @@
 <script>
+	import {flip} from "svelte/animate"
+	import { scale } from "svelte/transition"
 	import CritterListItem from "./CritterListItem.svelte";
+	import FilterPane from "./FilterPane.svelte";
 	
 	export let critters, dir, title;
+
+	let currentCritterList = critters
 </script>
 
 <h1>{ title }</h1>
-<ul class="critter-list">
-	{#each critters as critter}
-		<CritterListItem {critter} {dir} />
-	{/each}
-</ul>
+<main>
+	<FilterPane bind:currentCritterList {critters} {dir} />
+	<ul class="critter-list span-2-md span-3-lg">
+		{#each currentCritterList as critter (critter.name)}
+			<li animate:flip={{duration: 500}} transition:scale|local={{duration: 500}}>
+				<CritterListItem {critter} {dir} />
+			</li>
+		{/each}
+	</ul>
+</main>
 
 <style lang="scss">
+
+	main{
+		max-width: 1400px;
+		margin: 1rem auto;
+	}
 
 	h1{
 		font-size: 6.4rem;
@@ -23,8 +38,6 @@
 	ul{
 		padding: 1rem;
 		list-style: none;
-		max-width: 1200px;
-		margin: 1rem auto;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 1.6rem;
