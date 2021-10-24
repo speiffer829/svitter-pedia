@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte'
+import ActiveDot from './ActiveDot.svelte';
 	export let critter, dir;
 
 	let item;
@@ -37,6 +38,7 @@
 
 
 <a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket} bind:this={item} id={critter.slug}>
+	<ActiveDot {critter} alignTopLeft={true} />
 	<picture>
 		<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
 		<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">

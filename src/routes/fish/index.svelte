@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Bugs | Critterpoo</title>
+	<title>Fish | Critterpoo</title>
 </svelte:head>
 
 

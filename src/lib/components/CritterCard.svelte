@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte'
 	import { fly } from 'svelte/transition'
 	import { elasticOut } from 'svelte/easing'
+import ActiveDot from './ActiveDot.svelte';
 	export let critter, dir, moneyBracket;
 
 
@@ -44,6 +45,7 @@
 		<section class="title-contain" class:atTop={titleAtTop}>
 			<h1 class="name">{ critter.name }</h1>
 			<div class="icon">
+				<ActiveDot {critter} />
 				<picture>
 					<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
 					<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">

@@ -71,7 +71,7 @@ import { elasticOut } from 'svelte/easing';
 		font-size: 2.4rem;
 		padding: 2rem;
 		border-radius: 3rem;
-		border: solid 3px var(--brown);
+		border: solid 3px transparent;
 		font-family: var(--headFont);
 		color: var(--brown);
 		background: var(--light);
