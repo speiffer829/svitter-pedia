@@ -6,12 +6,26 @@
 		const { start, end } = critter
 		const date = new Date(Date.now())
 		const currentHour = date.getHours()
-		let isHoursActive;
-		if(start < end){
-			isHoursActive = start <= currentHour && currentHour <= end
+		let isHoursActive = false
+
+		if(Array.isArray(start)){
+
+			start.forEach((startTime, i) => {
+				if(startTime < end[i]){
+					if(startTime <= currentHour && currentHour <= end[i]) isHoursActive = true
+				}else{
+					if(startTime <= currentHour || currentHour <= end[i]) isHoursActive = true
+				}
+			})
+
 		}else{
-			isHoursActive =	start <= currentHour || currentHour <= end
+			if(start < end){
+				isHoursActive = start <= currentHour && currentHour <= end
+			}else{
+				isHoursActive =	start <= currentHour || currentHour <= end
+			}
 		}
+
 		const currentMonth = date.toLocaleString('en-US', {month: 'short'}).toLocaleLowerCase();
 
 		return critter.months.includes(currentMonth) && isHoursActive
