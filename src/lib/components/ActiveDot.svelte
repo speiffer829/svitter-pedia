@@ -10,7 +10,7 @@
 		if(start < end){
 			isHoursActive = start <= currentHour && currentHour <= end
 		}else{
-			isHoursActive =	start >= currentHour || currentHour >= end
+			isHoursActive =	start <= currentHour || currentHour <= end
 		}
 		const currentMonth = date.toLocaleString('en-US', {month: 'short'}).toLocaleLowerCase();
 
