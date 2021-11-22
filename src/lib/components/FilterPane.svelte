@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte'
 	import { fly } from 'svelte/transition'
-	import { search, currentDir, showActiveOnlyBool, currentCritterList } from '$lib/stores/filterStore.js'
+	import { search, currentDir, showActiveOnlyBool, showAllBool, currentCritterList } from '$lib/stores/filterStore.js'
 	import { elasticOut } from 'svelte/easing';
 	import { findIfActive } from '$lib/findIfActive'
 
@@ -10,8 +10,11 @@
 
 	function handleFilter() {
 		if($search === ''){
+			$showAllBool = true
 			$currentCritterList = [...critters]
 		}else{
+			$showAllBool = false
+			$showActiveOnlyBool = false
 			const freshArr = critters.filter((critter) => {
 				return critter.name.toLowerCase().indexOf($search.toLowerCase()) !== -1
 			})
@@ -26,6 +29,7 @@
 		if($showActiveOnlyBool) return
 		$search = ''
 		$showActiveOnlyBool = true
+		$showAllBool = false
 		$currentCritterList = [...critters.filter(critter => {
 			return findIfActive( critter.start, critter.end, critter.months )
 		})]
@@ -35,8 +39,14 @@
 
 	function showAll() {
 		$search = ''
+		$showAllBool = true
 		$showActiveOnlyBool = false
 		$currentCritterList = [...critters]
+	}
+
+	function clearSearch() {
+		$search= ''
+		showAll()
 	}
 
 
@@ -58,7 +68,7 @@
 			<div class="input-contain">
 				<input type="search" bind:value={$search} on:input={handleFilter} placeholder="Search">
 				{#if $search !== ''}
-				<button class="clear-btn" on:click={() => $search = ''} transition:fly|local={{ x: 50, duration: 1000, easing: elasticOut }}>
+				<button class="clear-btn" on:click={clearSearch} transition:fly|local={{ x: 50, duration: 1000, easing: elasticOut }}>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M2.12109 2L14 14" stroke="#643939" stroke-width="3" stroke-linecap="round"/>
 						<path d="M2 13.9395L14 2.06055" stroke="#643939" stroke-width="3" stroke-linecap="round"/>
@@ -70,7 +80,7 @@
 
 		<section class="btns grid col-2">
 			<button class="btn" class:active={$showActiveOnlyBool} on:click={showActiveOnly}>Show Currently Active</button>
-			<button class="btn" class:active={!$showActiveOnlyBool} on:click={showAll}>Show All</button>
+			<button class="btn" class:active={$showAllBool} on:click={showAll}>Show All</button>
 		</section>
 	</div>
 </aside>

@@ -6,4 +6,5 @@ export const search = writable('')
 
 export const currentDir = writable('');
 
+export const showAllBool = writable(true);
 export const showActiveOnlyBool = writable(false);
