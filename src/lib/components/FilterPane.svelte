@@ -1,30 +1,52 @@
 <script>
 	import { onMount } from 'svelte'
 	import { fly } from 'svelte/transition'
-	import { search, currentDir } from '$lib/stores/filterStore.js'
-import { elasticOut } from 'svelte/easing';
-	export let currentCritterList, critters, dir;
+	import { search, currentDir, showActiveOnlyBool, currentCritterList } from '$lib/stores/filterStore.js'
+	import { elasticOut } from 'svelte/easing';
+	import { findIfActive } from '$lib/findIfActive'
+
+	export let critters, dir;
 
 
-	function handleFilter(query) {
-		if(query === ''){
-			currentCritterList = []
-			currentCritterList = [...critters]
+	function handleFilter() {
+		if($search === ''){
+			$currentCritterList = [...critters]
 		}else{
 			const freshArr = critters.filter((critter) => {
-				return critter.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
+				return critter.name.toLowerCase().indexOf($search.toLowerCase()) !== -1
 			})
 
-			currentCritterList = [...freshArr]
+			$currentCritterList = [...freshArr]
 		}
+
+
 	}
 
-	$: handleFilter($search)
+	function showActiveOnly() {
+		if($showActiveOnlyBool) return
+		$search = ''
+		$showActiveOnlyBool = true
+		$currentCritterList = [...critters.filter(critter => {
+			return findIfActive( critter.start, critter.end, critter.months )
+		})]
+
+	}
+
+
+	function showAll() {
+		$search = ''
+		$showActiveOnlyBool = false
+		$currentCritterList = [...critters]
+	}
+
+
+
 
 	onMount(() => {
 		if($currentDir !== dir){
 			$search = ''
 			$currentDir = dir
+			$currentCritterList = [...critters]
 		}
 	})
 </script>
@@ -34,7 +56,7 @@ import { elasticOut } from 'svelte/easing';
 
 		<section class="search-section">
 			<div class="input-contain">
-				<input type="search" bind:value={$search} placeholder="Search">
+				<input type="search" bind:value={$search} on:input={handleFilter} placeholder="Search">
 				{#if $search !== ''}
 				<button class="clear-btn" on:click={() => $search = ''} transition:fly|local={{ x: 50, duration: 1000, easing: elasticOut }}>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +67,11 @@ import { elasticOut } from 'svelte/easing';
 				{/if}
 			</div>
 		</section>
+
+		<section class="btns grid col-2">
+			<button class="btn" class:active={$showActiveOnlyBool} on:click={showActiveOnly}>Show Currently Active</button>
+			<button class="btn" class:active={!$showActiveOnlyBool} on:click={showAll}>Show All</button>
+		</section>
 	</div>
 </aside>
 
@@ -53,6 +80,11 @@ import { elasticOut } from 'svelte/easing';
 		width: 100%;
 		max-width: 1400px;
 		padding: 1rem;
+	}
+
+	section{
+		max-width: 767px;
+		margin: 10px auto;
 	}
 
 	.search-section{
@@ -94,5 +126,25 @@ import { elasticOut } from 'svelte/easing';
 		align-items: center;
 		border: none;
 		cursor: pointer;
+	}
+
+	.btns{
+		button{
+			text-align: center;
+			border: none;
+			box-shadow: var(--shadow);
+			background: var(--brown);
+			color: var(--gold);
+			font-family: var(--headfont);
+			font-size: 2rem;
+			padding: 2rem;
+			border-radius: 2rem;
+			cursor: pointer;
+
+			&.active{
+				background: var(--gold);
+				color: var(--brown);
+			}
+		}
 	}
 </style>

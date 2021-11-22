@@ -3,18 +3,21 @@
 	import { scale } from "svelte/transition"
 	import CritterListItem from "./CritterListItem.svelte";
 	import FilterPane from "./FilterPane.svelte";
+	import { currentCritterList } from '$lib/stores/filterStore'
 	
 	export let critters, dir, title;
 
-	let currentCritterList = critters
+
 </script>
 
 <h1>{ title }</h1>
 <main>
-	<FilterPane bind:currentCritterList {critters} {dir} />
+	<FilterPane {critters} {dir} />
 	<ul class="critter-list span-2-md span-3-lg">
-		{#each currentCritterList as critter (critter.name)}
-			<li animate:flip={{duration: 500}} transition:scale|local={{duration: 500}}>
+		{#each $currentCritterList as critter (critter.name)}
+			<li 
+				animate:flip={{duration: 500}} 
+				transition:scale|local={{duration: 500}}>
 				<CritterListItem {critter} {dir} />
 			</li>
 		{/each}

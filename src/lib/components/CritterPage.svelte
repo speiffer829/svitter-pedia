@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte'
 	import CritterImg from '$lib/components/CritterImg.svelte'
 	import CritterCard from '$lib/components/CritterCard.svelte'
 	export let critter;

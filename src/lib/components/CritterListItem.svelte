@@ -34,10 +34,16 @@ import ActiveDot from './ActiveDot.svelte';
 	}
 
 	let moneyBracket = findMoneyBracket()
+
+	function handleHover(e) {
+		const rect = e.target.getBoundingClientRect()
+		const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+	}
 </script>
 
 
-<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket} bind:this={item} id={critter.slug}>
+<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket} bind:this={item} id={critter.slug} on:mouseenter={handleHover}>
 	<ActiveDot {critter} alignTopLeft={true} />
 	<picture>
 		<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
