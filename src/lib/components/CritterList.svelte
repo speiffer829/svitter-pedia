@@ -17,7 +17,8 @@
 		{#each $currentCritterList as critter (critter.name)}
 			<li 
 				animate:flip={{duration: 500}} 
-				transition:scale|local={{duration: 500}}>
+				in:scale={{duration: 500}}
+				out:scale|local={{duration: 500}}>
 				<CritterListItem {critter} {dir} />
 			</li>
 		{/each}

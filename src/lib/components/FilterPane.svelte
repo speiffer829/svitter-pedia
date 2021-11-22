@@ -56,6 +56,8 @@
 		if($currentDir !== dir){
 			$search = ''
 			$currentDir = dir
+			$showAllBool = true
+			$showActiveOnlyBool = false
 			$currentCritterList = [...critters]
 		}
 	})
@@ -78,7 +80,7 @@
 			</div>
 		</section>
 
-		<section class="btns grid col-2">
+		<section class="btns grid col-2-sm">
 			<button class="btn" class:active={$showActiveOnlyBool} on:click={showActiveOnly}>Show Currently Active</button>
 			<button class="btn" class:active={$showAllBool} on:click={showAll}>Show All</button>
 		</section>
@@ -146,7 +148,7 @@
 			background: var(--brown);
 			color: var(--gold);
 			font-family: var(--headfont);
-			font-size: 2rem;
+			font-size: 1.5rem;
 			padding: 2rem;
 			border-radius: 2rem;
 			cursor: pointer;
