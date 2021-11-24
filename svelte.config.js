@@ -1,6 +1,6 @@
 import preprocess from 'svelte-preprocess'
 // import { imagetools } from 'vite-imagetools';
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 import path from 'path';
 const config = {
 	kit: {
