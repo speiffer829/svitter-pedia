@@ -374,6 +374,11 @@ import ActiveDot from './ActiveDot.svelte';
 			cursor: pointer;
 			box-shadow: 2px 3px 0 var(--dbrown);
 			padding: 1.5rem;
+			transition: all 100ms;
+
+			&:active{
+				transform: scale(.9)
+			}
 		}
 	}
 

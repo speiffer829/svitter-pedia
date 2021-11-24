@@ -152,6 +152,11 @@
 			padding: 2rem;
 			border-radius: 2rem;
 			cursor: pointer;
+			transition: all 100ms;
+
+			&:active{
+				transform: scale(.9);
+			}
 
 			&.active{
 				background: var(--gold);

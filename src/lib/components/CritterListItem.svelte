@@ -72,6 +72,11 @@ import ActiveDot from './ActiveDot.svelte';
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
+		transition: all 100ms;
+
+		&:active{
+			transform: scale(.9);
+		}
 
 		--base: var(--mint);
 		--darker: var(--dmint);

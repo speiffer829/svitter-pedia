@@ -1,6 +1,7 @@
 <script>
 	import {flip} from "svelte/animate"
 	import { scale } from "svelte/transition"
+	import { elasticOut, quintOut } from "svelte/easing"
 	import CritterListItem from "./CritterListItem.svelte";
 	import FilterPane from "./FilterPane.svelte";
 	import { currentCritterList } from '$lib/stores/filterStore'
@@ -16,8 +17,8 @@
 	<ul class="critter-list span-2-md span-3-lg">
 		{#each $currentCritterList as critter (critter.name)}
 			<li 
-				animate:flip={{duration: 500}} 
-				in:scale={{duration: 500}}
+				animate:flip={{duration: 500, easing: quintOut}} 
+				in:scale={{duration: 1500, easing: elasticOut}}
 				out:scale|local={{duration: 500}}>
 				<CritterListItem {critter} {dir} />
 			</li>
