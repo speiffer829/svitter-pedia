@@ -62,24 +62,24 @@
 			width: 100%;
 			min-height: 100vh;
 			background-color: var(--bg, var(--tan));
-			background-image: var(--bgImage, url('/play-dots.png'));
+			background-image: var(--bgImage, url('/leaf-test.png'));
 			background-attachment: fixed;
 
 			&.gold{
 				--bg: var(--yellow);
-				--bgImage: url('/leafs-gold.svg');
+				--bgImage: url('/gold-leafs.webp');
 			}
 			&.purple{
 				--bg: var(--purple);
-				--bgImage: url('/leafs-purple.svg');
+				--bgImage: url('/purple-leafs.webp');
 			}
 			&.blue{
 				--bg: var(--blue);
-				--bgImage: url('/leafs-blue.svg');
+				--bgImage: url('/blue-leafs.webp');
 			}
 			&.green{
 				--bg: var(--mint);
-				--bgImage: url('/leafs-green.svg');
+				--bgImage: url('/green-leafs.webp');
 			}
 			&.dark{
 				--bg: var(--dark);

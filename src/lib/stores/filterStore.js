@@ -8,3 +8,4 @@ export const currentDir = writable('');
 
 export const showAllBool = writable(true);
 export const showActiveOnlyBool = writable(false);
+export const filtersActive = writable(false);
