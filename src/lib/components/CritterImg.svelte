@@ -2,7 +2,6 @@
 	import { elasticOut } from 'svelte/easing'
 	import { scale } from 'svelte/transition'
 	import {parallaxImg} from '$lib/actions/parallaxImg'
-	import { browser } from '$app/env'
 	export let src, alt, width, height;
 
 </script>
@@ -20,7 +19,7 @@
 			loading="eager" 
 			decoding="async"
 			{width} {height} 
-			in:scale={{duration: 1000, easing: elasticOut}}>
+			in:scale={{duration: 1000, easing: elasticOut, opacity: 1}}>
 	</picture>
 </div>
 
