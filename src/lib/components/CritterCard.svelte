@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	import { fly, scale } from 'svelte/transition'
 	import { elasticOut } from 'svelte/easing'
-import ActiveDot from './ActiveDot.svelte';
+	import ActiveDot from './ActiveDot.svelte';
 	export let critter, dir, moneyBracket;
 
 
@@ -41,7 +41,7 @@ import ActiveDot from './ActiveDot.svelte';
 <div>
 	
 	<div id="top"/>
-	<main in:scale={{ duration: 1000, easing: elasticOut, opacity: 1}} class="{moneyBracket}">
+	<main in:fly={{ y: window.innerWidth > 767 ? 0 : -400, x: window.innerWidth > 767 ? 300 : 0, duration: 1000, easing: elasticOut, opacity: 1}} class="{moneyBracket}">
 		<section class="title-contain" class:atTop={titleAtTop}>
 			<h1 class="name">{ critter.name }</h1>
 			<div class="icon">
@@ -377,7 +377,7 @@ import ActiveDot from './ActiveDot.svelte';
 			transition: all 100ms;
 
 			&:active{
-				transform: scale(.9)
+				transform: scale(.9);
 			}
 		}
 	}

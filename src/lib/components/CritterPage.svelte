@@ -49,9 +49,7 @@
 	<div class="body-bg {moneyBracket}">
 		<div class="grid col-2-md gap-3-md">
 			<CritterImg src={`/${dir}-detailed/${critter.detailedImg}`} alt={critter.name} {width} {height} />
-			{#key critter.name}
-				<CritterCard {critter} {moneyBracket} {dir} />
-			{/key}
+			<CritterCard {critter} {moneyBracket} {dir} />
 		</div>
 	</div>
 

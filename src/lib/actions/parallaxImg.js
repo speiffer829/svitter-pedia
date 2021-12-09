@@ -23,13 +23,6 @@ export function parallaxImg(node) {
 		const newY = window.scrollY / 1.7
 		const newScale = scaleMath > 0.1 ? scaleMath : 0.1
 
-		// transTween.update($store => {
-		// 	return {
-		// 		newY,
-		// 		newScale
-		// 	}
-		// })
-
 		transTween.subscribe($store => {
 			node.style.setProperty('--scale', `${newScale}`);
 			node.style.setProperty('--translateY', `${newY}px`);
