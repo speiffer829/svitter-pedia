@@ -12,7 +12,7 @@
 	export let title
 </script>
 
-<h1>UH OH! FUCKIN SPAGHETTI-O's</h1>
+<h1>UH OH! SPAGHETTI-O's</h1>
 <h2>{ title }</h2>
 
 <style>

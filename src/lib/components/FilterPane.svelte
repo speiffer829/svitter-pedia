@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte'
-	import { fly, scale } from 'svelte/transition'
-	import { search, currentDir, showActiveOnlyBool, showAllBool, currentCritterList, filtersActive } from '$lib/stores/filterStore.js'
+	import { fly, scale, fade } from 'svelte/transition'
+	import { search, currentDir, showActiveOnlyBool, showAllBool, currentCritterList, filtersActive, currentFilteredMonth } from '$lib/stores/filterStore.js'
 	import { elasticOut, backIn } from 'svelte/easing';
 	import { findIfActive } from '$lib/findIfActive'
 
@@ -60,6 +60,18 @@
 		clearFilters()
 	}
 
+	function filterMonth(month) {
+		$search = ''
+		$showActiveOnlyBool = true
+		$showAllBool = false
+		$filtersActive = true;
+		filtersAreVisible = false
+		$currentFilteredMonth = month
+		$currentCritterList = [...critters.filter(critter => {
+			return critter.months.includes(month)
+		})]
+	}
+
 
 
 
@@ -73,6 +85,9 @@
 		}
 	})
 </script>
+{#if filtersAreVisible}
+	<div class="overlay" on:click={() => filtersAreVisible = false} transition:fade={{duration: 500}} />
+{/if}
 
 <section class="search-section">
 	<div class="input-contain">
@@ -97,22 +112,42 @@
 
 {#if filtersAreVisible}
 	<aside 
-		in:scale|local={{ duration: 1100, easing: elasticOut }}
-		out:scale|local={{ duration: 300, easing: backIn }}>
+		in:scale|local={{ duration: 1100, easing: elasticOut, opacity: 1 }}
+		out:scale|local={{ duration: 300, easing: backIn, opacity: 1 }}>
 		<button class="close-btn" on:click={() => filtersAreVisible = false}>&times;</button>
 		<h2>Filters</h2>
-			<section class="btns grid col-2-sm">
-				<button class="btn" class:active={$showActiveOnlyBool} on:click={showActiveOnly}>Show Currently Active</button>
-				<button class="btn" class:active={$showAllBool} on:click={() => clearFilters(true)}>Show All</button>
+			<section class="btns grid gap-1">
+				{#if $filtersActive}
+					<button class="btn clear-filters-btn" on:click={() => clearFilters(true)}>Clear Filters</button>
+				{/if}
+				<button class="btn currently-active-btn" class:active={$showActiveOnlyBool} on:click={showActiveOnly}>Show Currently Active</button>
+				<!-- <button class="btn" class:active={$showAllBool} on:click={() => clearFilters(true)}>Show All</button> -->
+			</section>
+
+			<section class="btns grid col-3-md col-2 gap-1">
+				<button on:click={() => filterMonth('jan')} class="btn month-btn" class:active={'jan' === $currentFilteredMonth}>Jan</button>
+				<button on:click={() => filterMonth('feb')} class="btn month-btn" class:active={'feb' === $currentFilteredMonth}>Feb</button>
+				<button on:click={() => filterMonth('Mar')} class="btn month-btn" class:active={'mar' === $currentFilteredMonth}>Mar</button>
+				<button on:click={() => filterMonth('Apr')} class="btn month-btn" class:active={'apr' === $currentFilteredMonth}>Apr</button>
+				<button on:click={() => filterMonth('May')} class="btn month-btn" class:active={'may' === $currentFilteredMonth}>May</button>
+				<button on:click={() => filterMonth('Jun')} class="btn month-btn" class:active={'jun' === $currentFilteredMonth}>Jun</button>
+				<button on:click={() => filterMonth('Jul')} class="btn month-btn" class:active={'jul' === $currentFilteredMonth}>Jul</button>
+				<button on:click={() => filterMonth('Aug')} class="btn month-btn" class:active={'aug' === $currentFilteredMonth}>Aug</button>
+				<button on:click={() => filterMonth('Sept')} class="btn month-btn" class:active={'sept' === $currentFilteredMonth}>Sept</button>
+				<button on:click={() => filterMonth('Oct')} class="btn month-btn" class:active={'oct' === $currentFilteredMonth}>Oct</button>
+				<button on:click={() => filterMonth('Nov')} class="btn month-btn" class:active={'nov' === $currentFilteredMonth}>Nov</button>
+				<button on:click={() => filterMonth('Dec')} class="btn month-btn" class:active={'dec' === $currentFilteredMonth}>Dec</button>
 			</section>
 	</aside>
 {/if}
 
 <style lang="scss">
 	aside{
+		width: 90%;
 		max-width: 767px;
 		position: fixed;
-		inset: 20px;
+		inset: 50% auto auto 50%;
+		transform: translate(-50%, -50%);
 		background-color: var(--light);
 		background-image: url('/play-dots.png');
 		background-size: var(--dot-size);
@@ -120,7 +155,6 @@
 		z-index: 100;
 		box-shadow: var(--shadow);
 		border-radius: 4rem;
-
 	}
 
 	section{
@@ -205,6 +239,10 @@
 			transform: scale(.9);
 		}
 
+		&.currently-active-btn{
+			background: var(--green);
+		}
+
 		&.active{
 			background: var(--gold);
 			color: var(--brown);
@@ -242,5 +280,12 @@
 		background: var(--red);
 		box-shadow: var(--shadow);
 		color: var(--light);
+	}
+
+	.overlay{
+		position: fixed;
+		inset: 0;
+		background: hsl(var(--darkHSL) / 50%);
+		z-index: 100;
 	}
 </style>
