@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	import { fly, scale, fade } from 'svelte/transition'
 	import { search, currentDir, showActiveOnlyBool, showAllBool, currentCritterList, filtersActive, currentFilteredMonth } from '$lib/stores/filterStore.js'
-	import { elasticOut, backIn } from 'svelte/easing';
+	import { backOut, backIn } from 'svelte/easing';
 	import { findIfActive } from '$lib/findIfActive'
 
 	export let critters, dir;
@@ -115,7 +115,7 @@
 
 {#if filtersAreVisible}
 	<aside 
-		in:scale|local={{ duration: 1100, easing: elasticOut, opacity: 1 }}
+		in:scale|local={{ duration: 300, easing: backOut, opacity: 1 }}
 		out:scale|local={{ duration: 300, easing: backIn, opacity: 1 }}>
 		<button class="close-btn" on:click={() => filtersAreVisible = false}>&times;</button>
 		<h2>Filters</h2>
