@@ -78,11 +78,8 @@
 
 	onMount(() => {
 		if($currentDir !== dir){
-			$search = ''
 			$currentDir = dir
-			$showAllBool = true
-			$showActiveOnlyBool = false
-			$currentCritterList = [...critters]
+			clearFilters(true)
 		}
 	})
 </script>
