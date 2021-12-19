@@ -18,6 +18,7 @@
 		$showAllBool = true
 		$filtersActive = false;
 		filtersAreVisible = false
+		$currentFilteredMonth = null
 
 		if(resetCritters){
 			$currentCritterList = [...critters]
@@ -62,7 +63,7 @@
 
 	function filterMonth(month) {
 		$search = ''
-		$showActiveOnlyBool = true
+		$showActiveOnlyBool = false
 		$showAllBool = false
 		$filtersActive = true;
 		filtersAreVisible = false
@@ -90,23 +91,28 @@
 {/if}
 
 <section class="search-section">
-	<div class="input-contain">
-		<input type="search" bind:value={$search} on:input={handleFilter} placeholder="Search">
-		{#if $search !== ''}
-		<button class="clear-btn" on:click={() => clearFilters(true)} transition:fly|local={{ x: 50, duration: 1000, easing: elasticOut }}>
-			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M2.12109 2L14 14" stroke="#643939" stroke-width="3" stroke-linecap="round"/>
-				<path d="M2 13.9395L14 2.06055" stroke="#643939" stroke-width="3" stroke-linecap="round"/>
+	<div class="input-grid grid">
+		<div class="input-contain">
+			<input type="search" bind:value={$search} on:input={handleFilter} placeholder="Search">
+			{#if $search !== ''}
+			<button class="clear-btn" on:click={() => clearFilters(true)} transition:fly|local={{ x: 50, duration: 1000, easing: elasticOut }}>
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.12109 2L14 14" stroke="#643939" stroke-width="3" stroke-linecap="round"/>
+					<path d="M2 13.9395L14 2.06055" stroke="#643939" stroke-width="3" stroke-linecap="round"/>
+				</svg>
+			</button>
+			{/if}
+		</div>
+		<button class="btn filter-btn" on:click={() => filtersAreVisible = !filtersAreVisible} class:active={$filtersActive}>
+			<svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect x="23" y="25" width="30" height="3" rx="1" fill="currentcolor"/>
+				<rect x="23" y="37" width="30" height="3" rx="1" fill="currentcolor"/>
+				<rect x="46" y="22" width="3" height="8" rx="1" fill="currentcolor"/>
+				<rect x="28" y="34" width="3" height="8" rx="1" fill="currentcolor"/>
+				<rect x="39" y="46" width="3" height="8" rx="1" fill="currentcolor"/>
+				<rect x="23" y="49" width="30" height="3" rx="1" fill="currentcolor"/>
 			</svg>
 		</button>
-		{/if}
-	</div>
-
-	<div class="filter-btns">
-		<button class="btn" on:click={() => filtersAreVisible = !filtersAreVisible}>Filters: { $filtersActive ? 'On' : 'Off' }</button>
-		{#if $filtersActive}
-			<button class="btn clear-filters-btn" on:click={() => clearFilters(true)}>Clear Filters</button>
-		{/if}
 	</div>
 </section>
 
@@ -116,27 +122,26 @@
 		out:scale|local={{ duration: 300, easing: backIn, opacity: 1 }}>
 		<button class="close-btn" on:click={() => filtersAreVisible = false}>&times;</button>
 		<h2>Filters</h2>
-			<section class="btns grid gap-1">
+			<section class="btns grid col-2-md gap-1" class:col-2-md={$filtersActive}>
 				{#if $filtersActive}
 					<button class="btn clear-filters-btn" on:click={() => clearFilters(true)}>Clear Filters</button>
 				{/if}
 				<button class="btn currently-active-btn" class:active={$showActiveOnlyBool} on:click={showActiveOnly}>Show Currently Active</button>
-				<!-- <button class="btn" class:active={$showAllBool} on:click={() => clearFilters(true)}>Show All</button> -->
 			</section>
 
 			<section class="btns grid col-3-md col-2 gap-1">
 				<button on:click={() => filterMonth('jan')} class="btn month-btn" class:active={'jan' === $currentFilteredMonth}>Jan</button>
 				<button on:click={() => filterMonth('feb')} class="btn month-btn" class:active={'feb' === $currentFilteredMonth}>Feb</button>
-				<button on:click={() => filterMonth('Mar')} class="btn month-btn" class:active={'mar' === $currentFilteredMonth}>Mar</button>
-				<button on:click={() => filterMonth('Apr')} class="btn month-btn" class:active={'apr' === $currentFilteredMonth}>Apr</button>
-				<button on:click={() => filterMonth('May')} class="btn month-btn" class:active={'may' === $currentFilteredMonth}>May</button>
-				<button on:click={() => filterMonth('Jun')} class="btn month-btn" class:active={'jun' === $currentFilteredMonth}>Jun</button>
-				<button on:click={() => filterMonth('Jul')} class="btn month-btn" class:active={'jul' === $currentFilteredMonth}>Jul</button>
-				<button on:click={() => filterMonth('Aug')} class="btn month-btn" class:active={'aug' === $currentFilteredMonth}>Aug</button>
-				<button on:click={() => filterMonth('Sept')} class="btn month-btn" class:active={'sept' === $currentFilteredMonth}>Sept</button>
-				<button on:click={() => filterMonth('Oct')} class="btn month-btn" class:active={'oct' === $currentFilteredMonth}>Oct</button>
-				<button on:click={() => filterMonth('Nov')} class="btn month-btn" class:active={'nov' === $currentFilteredMonth}>Nov</button>
-				<button on:click={() => filterMonth('Dec')} class="btn month-btn" class:active={'dec' === $currentFilteredMonth}>Dec</button>
+				<button on:click={() => filterMonth('mar')} class="btn month-btn" class:active={'mar' === $currentFilteredMonth}>Mar</button>
+				<button on:click={() => filterMonth('apr')} class="btn month-btn" class:active={'apr' === $currentFilteredMonth}>Apr</button>
+				<button on:click={() => filterMonth('may')} class="btn month-btn" class:active={'may' === $currentFilteredMonth}>May</button>
+				<button on:click={() => filterMonth('jun')} class="btn month-btn" class:active={'jun' === $currentFilteredMonth}>Jun</button>
+				<button on:click={() => filterMonth('jul')} class="btn month-btn" class:active={'jul' === $currentFilteredMonth}>Jul</button>
+				<button on:click={() => filterMonth('aug')} class="btn month-btn" class:active={'aug' === $currentFilteredMonth}>Aug</button>
+				<button on:click={() => filterMonth('sept')} class="btn month-btn" class:active={'sept' === $currentFilteredMonth}>Sept</button>
+				<button on:click={() => filterMonth('oct')} class="btn month-btn" class:active={'oct' === $currentFilteredMonth}>Oct</button>
+				<button on:click={() => filterMonth('nov')} class="btn month-btn" class:active={'nov' === $currentFilteredMonth}>Nov</button>
+				<button on:click={() => filterMonth('dec')} class="btn month-btn" class:active={'dec' === $currentFilteredMonth}>Dec</button>
 			</section>
 	</aside>
 {/if}
@@ -187,20 +192,31 @@
 	.input-contain{
 		position: relative;
 		max-width: 767px;
-		margin: 10px auto;
-	}
 
+	}
+	
+	.input-grid{
+		display: grid;
+		grid-template-columns: auto 76px;
+		max-width: 767px;
+		margin: 10px auto;
+		.filter-btn{
+			padding: 0;
+			border-radius: 1rem 3rem 3rem 1rem;
+			height: 76px;
+		}
+	}
 	input{
 		width: 100%;
 		box-shadow: var(--shadow);
 		font-size: 2.4rem;
 		padding: 2rem;
-		border-radius: 3rem;
+		border-radius: 3rem 1rem 1rem 3rem;
 		border: solid 3px transparent;
 		font-family: var(--headFont);
 		color: var(--brown);
 		background: var(--light);
-		margin: 10px auto;
+		margin: 0px auto;
 		max-width: 767px;
 		display: block;
 
