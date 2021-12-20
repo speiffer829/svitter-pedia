@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 	import { fly, scale, fade } from 'svelte/transition'
 	import { search, currentDir, showActiveOnlyBool, showAllBool, currentCritterList, filtersActive, currentFilteredMonth } from '$lib/stores/filterStore.js'
-	import { backOut, backIn } from 'svelte/easing';
+	import { backOut, backIn, elasticOut } from 'svelte/easing';
 	import { findIfActive } from '$lib/findIfActive'
 
 	export let critters, dir;
