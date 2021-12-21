@@ -1,10 +1,69 @@
+<script context="module">
+	export async function load({fetch}) {
+		const req = await fetch('/homepage.json')
+		const { leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow  } = await req.json()
+
+		return {
+			props: {
+				leavingArray,
+				newThisMonthArray,
+				comingNextMonthArray,
+				mostValuableNow,
+			}
+		}
+	}
+</script>
+
+<script>
+	
+	export let leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow;
+$: console.log( newThisMonthArray )
+</script>
+
 
 <h1>Welcome To My Critterpedia!</h1>
 
+<section class="grid col-2-md gap-2">
+	<article>
+		<h2>New This Month</h2>
+		{#each newThisMonthArray as critter}
+			<a href={`/${critter.dir}/${critter.slug}`}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+			</a>
+		{/each}
+	</article>
+
+	<article>
+		<h2>Coming Next Month</h2>
+		{#each comingNextMonthArray as critter}
+			<a href={`/${critter.dir}/${critter.slug}`}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+			</a>
+		{/each}
+	</article>
+
+	<article>
+		<h2>Leaving Next Month</h2>
+		{#each leavingArray as critter}
+			<a href={`/${critter.dir}/${critter.slug}`}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+			</a>
+		{/each}
+	</article>
+
+	<article>
+		<h2>Most Valuable Out Right Now</h2>
+		{#each mostValuableNow as critter}
+			<a href={`/${critter.dir}/${critter.slug}`}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+			</a>
+		{/each}
+	</article>
+</section>
 
 <style lang="scss">
 	h1{
-		font-size: 7rem;
+		font-size: 5rem;
 		color: var(--gold);
 		text-align: center;
 		padding-top: 3rem;
