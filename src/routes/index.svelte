@@ -17,7 +17,6 @@
 <script>
 	
 	export let leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow;
-$: console.log( newThisMonthArray )
 </script>
 
 
@@ -28,7 +27,8 @@ $: console.log( newThisMonthArray )
 		<h2>New This Month</h2>
 		{#each newThisMonthArray as critter}
 			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<span>{ critter.name }</span>
 			</a>
 		{/each}
 	</article>
@@ -37,16 +37,18 @@ $: console.log( newThisMonthArray )
 		<h2>Coming Next Month</h2>
 		{#each comingNextMonthArray as critter}
 			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<span>{ critter.name }</span>
 			</a>
 		{/each}
 	</article>
 
 	<article>
-		<h2>Leaving Next Month</h2>
+		<h2>Gone Next Month</h2>
 		{#each leavingArray as critter}
 			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<span>{ critter.name }</span>
 			</a>
 		{/each}
 	</article>
@@ -55,7 +57,8 @@ $: console.log( newThisMonthArray )
 		<h2>Most Valuable Out Right Now</h2>
 		{#each mostValuableNow as critter}
 			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.title}>
+				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<span>{ critter.name }</span>
 			</a>
 		{/each}
 	</article>
@@ -67,5 +70,13 @@ $: console.log( newThisMonthArray )
 		color: var(--gold);
 		text-align: center;
 		padding-top: 3rem;
+	}
+
+	a{
+		text-align: center;
+
+		span{
+			display: block;
+		}
 	}
 </style>
