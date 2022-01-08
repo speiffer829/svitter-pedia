@@ -23,6 +23,7 @@
 <h1>Welcome To My Critterpedia!</h1>
 
 <section class="grid col-2-md gap-2">
+	{#if newThisMonthArray.length}
 	<article>
 		<h2>New This Month</h2>
 		{#each newThisMonthArray as critter}
@@ -32,36 +33,43 @@
 			</a>
 		{/each}
 	</article>
+	{/if}
 
-	<article>
-		<h2>Coming Next Month</h2>
-		{#each comingNextMonthArray as critter}
-			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
-				<span>{ critter.name }</span>
-			</a>
-		{/each}
-	</article>
+	{#if comingNextMonthArray.length}
+		<article>
+			<h2>Coming Next Month</h2>
+			{#each comingNextMonthArray as critter}
+				<a href={`/${critter.dir}/${critter.slug}`}>
+					<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+					<span>{ critter.name }</span>
+				</a>
+			{/each}
+		</article>
+	{/if}
 
-	<article>
-		<h2>Gone Next Month</h2>
-		{#each leavingArray as critter}
-			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
-				<span>{ critter.name }</span>
-			</a>
-		{/each}
-	</article>
+	{#if leavingArray.length}
+		<article>
+			<h2>Gone Next Month</h2>
+			{#each leavingArray as critter}
+				<a href={`/${critter.dir}/${critter.slug}`}>
+					<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+					<span>{ critter.name }</span>
+				</a>
+			{/each}
+		</article>
+	{/if}
 
-	<article>
-		<h2>Most Valuable Out Right Now</h2>
-		{#each mostValuableNow as critter}
-			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
-				<span>{ critter.name }</span>
-			</a>
-		{/each}
-	</article>
+	{#if leavingArray.length}
+		<article>
+			<h2>Most Valuable Out Right Now</h2>
+			{#each mostValuableNow as critter}
+				<a href={`/${critter.dir}/${critter.slug}`}>
+					<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+					<span>{ critter.name }</span>
+				</a>
+			{/each}
+		</article>
+	{/if}
 </section>
 
 <style lang="scss">
@@ -72,11 +80,4 @@
 		padding-top: 3rem;
 	}
 
-	a{
-		text-align: center;
-
-		span{
-			display: block;
-		}
-	}
 </style>

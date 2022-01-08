@@ -46,6 +46,7 @@ export async function get() {
 	.sort( () => Math.random() - 0.5)
 
 	return {
+		status: 200,
 		body: {
 			leavingArray,
 			newThisMonthArray,
