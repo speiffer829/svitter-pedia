@@ -12,7 +12,6 @@
 
 
 	function clearFilters(resetCritters = false) {
-		console.log( 'fired' )
 		$search = ''
 		$showActiveOnlyBool = false
 		$showAllBool = true
@@ -22,6 +21,7 @@
 
 		if(resetCritters){
 			$currentCritterList = [...critters]
+			console.log( $currentCritterList )
 		}
 	}
 
@@ -77,6 +77,9 @@
 
 
 	onMount(() => {
+		console.log('currentDir:', $currentDir)
+		console.log('dir:', dir)
+		console.log( 'list' )
 		if($currentDir !== dir){
 			$currentDir = dir
 			clearFilters(true)

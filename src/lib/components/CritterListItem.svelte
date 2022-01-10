@@ -12,9 +12,9 @@ import ActiveDot from './ActiveDot.svelte';
 			entries.forEach(entry => {
 				if(entry.isIntersecting){
 					const imgWebp = new Image()
-					imgWebp.src = `/${dir}-detailed/${critter.detailedImg}.webp`
+					imgWebp.src = `/${critter.type}-detailed/${critter.detailedImg}.webp`
 					const imgAvif = new Image()
-					imgAvif.src = `/${dir}-detailed/${critter.detailedImg}.avif`
+					imgAvif.src = `/${critter.type}-detailed/${critter.detailedImg}.avif`
 					observer.unobserve(entry.target);
 				}
 			});
@@ -46,9 +46,9 @@ import ActiveDot from './ActiveDot.svelte';
 <a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket} bind:this={item} id={critter.slug} on:mouseenter={handleHover}>
 	<ActiveDot {critter} alignTopLeft={true} />
 	<picture>
-		<source srcset={`/${dir}/${critter.img}.avif`} type="image/avif">
-		<source srcset={`/${dir}/${critter.img}.webp`} type="image/webp">
-		<img src={`/${dir}/${critter.img}.png`} alt={critter.name} height="64" width="64" loading="lazy">
+		<source srcset={`/${critter.type}/${critter.img}.avif`} type="image/avif">
+		<source srcset={`/${critter.type}/${critter.img}.webp`} type="image/webp">
+		<img src={`/${critter.type}/${critter.img}.png`} alt={critter.name} height="64" width="64" loading="lazy">
 	</picture>
 	<span>{critter.name}</span>
 </a>

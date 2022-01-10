@@ -1,6 +1,6 @@
 <script context="module">
 	export async function load({fetch}) {
-		const req = await fetch('/homepage.json')
+		const req = await fetch('/api/homepage.json')
 		const { leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow  } = await req.json()
 
 		return {
@@ -27,8 +27,8 @@
 	<article>
 		<h2>New This Month</h2>
 		{#each newThisMonthArray as critter}
-			<a href={`/${critter.dir}/${critter.slug}`}>
-				<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+			<a href={`/${critter.type}/${critter.slug}`}>
+				<img src={`/${critter.type}/${critter.img}.webp`} alt={critter.name}>
 				<span>{ critter.name }</span>
 			</a>
 		{/each}
@@ -39,8 +39,8 @@
 		<article>
 			<h2>Coming Next Month</h2>
 			{#each comingNextMonthArray as critter}
-				<a href={`/${critter.dir}/${critter.slug}`}>
-					<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<a href={`/${critter.type}/${critter.slug}`}>
+					<img src={`/${critter.type}/${critter.img}.webp`} alt={critter.name}>
 					<span>{ critter.name }</span>
 				</a>
 			{/each}
@@ -51,8 +51,8 @@
 		<article>
 			<h2>Gone Next Month</h2>
 			{#each leavingArray as critter}
-				<a href={`/${critter.dir}/${critter.slug}`}>
-					<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<a href={`/${critter.type}/${critter.slug}`}>
+					<img src={`/${critter.type}/${critter.img}.webp`} alt={critter.name}>
 					<span>{ critter.name }</span>
 				</a>
 			{/each}
@@ -63,8 +63,8 @@
 		<article>
 			<h2>Most Valuable Out Right Now</h2>
 			{#each mostValuableNow as critter}
-				<a href={`/${critter.dir}/${critter.slug}`}>
-					<img src={`/${critter.dir}/${critter.img}.webp`} alt={critter.name}>
+				<a href={`/${critter.type}/${critter.slug}`}>
+					<img src={`/${critter.type}/${critter.img}.webp`} alt={critter.name}>
 					<span>{ critter.name }</span>
 				</a>
 			{/each}

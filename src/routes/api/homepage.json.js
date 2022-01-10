@@ -1,10 +1,8 @@
-import fishList from '$lib/fish.json';
-import bugsList from '$lib/bugs.json';
+import critters from '$lib/critters.json';
+
 
 export async function get() {
-	bugsList.forEach( bug => bug.dir = 'bugs' )
-	fishList.forEach( fish => fish.dir = 'fish' )
-	const critters = [...fishList, ...bugsList];
+
 
 
 	const currentMonthRaw = new Date().getMonth();
