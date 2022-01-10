@@ -21,7 +21,6 @@
 
 		if(resetCritters){
 			$currentCritterList = [...critters]
-			console.log( $currentCritterList )
 		}
 	}
 
@@ -77,9 +76,6 @@
 
 
 	onMount(() => {
-		console.log('currentDir:', $currentDir)
-		console.log('dir:', dir)
-		console.log( 'list' )
 		if($currentDir !== dir){
 			$currentDir = dir
 			clearFilters(true)

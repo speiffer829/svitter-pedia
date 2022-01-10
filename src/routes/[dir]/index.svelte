@@ -1,6 +1,7 @@
 <script context="module">
 	export async function load({ params, fetch }) {
 		const { dir } = params
+		console.log( 'dir', dir )
 
 		const req = await fetch(`/api/${dir}.json`)
 		const res = await req.json()
@@ -18,7 +19,7 @@
 <script>
 	import {flip} from "svelte/animate"
 	import { scale } from "svelte/transition"
-	import { elasticOut, quintOut } from "svelte/easing"
+	import { elasticOut, quintOut, backOut } from "svelte/easing"
 	import CritterListItem from "$lib/components/CritterListItem.svelte";
 	import FilterPane from "$lib/components/FilterPane.svelte";
 	import { currentCritterList } from '$lib/stores/filterStore'
@@ -36,13 +37,13 @@
 
 <h1>{ title }</h1>
 <main>
-	<FilterPane {critters} {dir} />
 	{#key dir}
+	<FilterPane {critters} {dir} />
 	<ul class="critter-list span-2-md span-3-lg">
 		{#each $currentCritterList as critter (critter.name)}
 			<li 
 				animate:flip={{duration: 500, easing: quintOut}} 
-				in:scale={{duration: 1000, easing: elasticOut}}
+				in:scale={{duration: 500, easing: backOut}}
 				out:scale|local={{duration: 500}}>
 				<CritterListItem {critter} {dir} />
 			</li>
