@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
-	import { findIfActive } from '$lib/findIfActive.ts';
+	import { findIfActive } from '$lib/findIfActive';
 	export let critter: Critter;
-	export let alignTopLeft: Boolean = false;
+	export let alignTopLeft: boolean = false;
 
 	let isActive = findIfActive(critter.start, critter.end, critter.months);
 </script>

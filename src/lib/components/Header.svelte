@@ -1,11 +1,19 @@
 <script lang="ts">
+	import { navigating } from '$app/stores';
+
 	let isOpenNav: boolean;
+
+	$: closeMenu(!!$navigating);
+
+	function closeMenu(status: boolean) {
+		if (status && isOpenNav) isOpenNav = false;
+	}
 </script>
 
 <nav class:isOpenNav>
-	<a href="/" sveltekit:prefetch on:click={() => (isOpenNav = false)}>Home</a>
-	<a href="/bugs" sveltekit:prefetch on:click={() => (isOpenNav = false)}>Bugs</a>
-	<a href="/fish" sveltekit:prefetch on:click={() => (isOpenNav = false)}>Fish</a>
+	<a href="/" sveltekit:prefetch>Home</a>
+	<a href="/bugs" sveltekit:prefetch>Bugs</a>
+	<a href="/fish" sveltekit:prefetch>Fish</a>
 </nav>
 
 <button on:click={() => (isOpenNav = !isOpenNav)}>

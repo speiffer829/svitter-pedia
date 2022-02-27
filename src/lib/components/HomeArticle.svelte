@@ -10,7 +10,12 @@
 		<div class="grid col-6-lg col-4-md col-3-sm col-2 gap-1">
 			{#each critters as critter}
 				<a href={`/${critter.type}/${critter.slug}`} class={``}>
-					<img src={`/${critter.type}/${critter.img}.webp`} alt={critter.name} />
+					<img
+						src={`/${critter.type}/${critter.img}.webp`}
+						alt={critter.name}
+						width="75"
+						height="75"
+					/>
 					<span>{critter.name}</span>
 				</a>
 			{/each}
