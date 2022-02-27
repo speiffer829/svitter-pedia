@@ -1,63 +1,66 @@
-<script>
-	import { onMount } from 'svelte'
-import ActiveDot from './ActiveDot.svelte';
-	export let critter, dir;
+<script lang="ts">
+	import type { Critter } from '$lib/types/index';
+	import { onMount } from 'svelte';
+	import ActiveDot from './ActiveDot.svelte';
+	export let critter: Critter, dir: string;
 
-	let item;
-
-	
+	let item: HTMLElement;
 
 	onMount(() => {
-		new IntersectionObserver((entries,observer) => {
-			entries.forEach(entry => {
-				if(entry.isIntersecting){
-					const imgWebp = new Image()
-					imgWebp.src = `/${critter.type}-detailed/${critter.detailedImg}.webp`
-					const imgAvif = new Image()
-					imgAvif.src = `/${critter.type}-detailed/${critter.detailedImg}.avif`
+		new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const imgWebp = new Image();
+					imgWebp.src = `/${critter.type}-detailed/${critter.detailedImg}.webp`;
+					const imgAvif = new Image();
+					imgAvif.src = `/${critter.type}-detailed/${critter.detailedImg}.avif`;
 					observer.unobserve(entry.target);
 				}
 			});
-		}).observe(item)
-	})
+		}).observe(item);
+	});
 
-		const findMoneyBracket = () => {
-		if(critter.price >= 10000){
+	const findMoneyBracket = () => {
+		if (critter.price >= 10000) {
 			return 'gold';
-		}else if(critter.price >= 5000){
+		} else if (critter.price >= 5000) {
 			return 'purple';
-		}else if(critter.price >= 1000){
+		} else if (critter.price >= 1000) {
 			return 'blue';
-		}else{
+		} else {
 			return 'green';
 		}
-	}
+	};
 
-	let moneyBracket = findMoneyBracket()
-
-	function handleHover(e) {
-		const rect = e.target.getBoundingClientRect()
-		const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-	}
+	let moneyBracket: string = findMoneyBracket();
 </script>
 
-
-<a href={`/${dir}/${critter.slug}`} sveltekit:prefetch class={moneyBracket} bind:this={item} id={critter.slug} on:mouseenter={handleHover}>
+<a
+	href={`/${dir}/${critter.slug}`}
+	sveltekit:prefetch
+	class={moneyBracket}
+	bind:this={item}
+	id={critter.slug}
+>
 	<ActiveDot {critter} alignTopLeft={true} />
 	<picture>
-		<source srcset={`/${critter.type}/${critter.img}.avif`} type="image/avif">
-		<source srcset={`/${critter.type}/${critter.img}.webp`} type="image/webp">
-		<img src={`/${critter.type}/${critter.img}.png`} alt={critter.name} height="64" width="64" loading="lazy">
+		<source srcset={`/${critter.type}/${critter.img}.avif`} type="image/avif" />
+		<source srcset={`/${critter.type}/${critter.img}.webp`} type="image/webp" />
+		<img
+			src={`/${critter.type}/${critter.img}.png`}
+			alt={critter.name}
+			height="64"
+			width="64"
+			loading="lazy"
+		/>
 	</picture>
 	<span>{critter.name}</span>
 </a>
 
-
 <style lang="scss">
-		a{
+	a {
 		background-color: var(--tan);
-		box-shadow: 2px 3px 4px hsl( 420 69% 0% / 25% );
+		box-shadow: 2px 3px 4px hsl(420 69% 0% / 25%);
 		display: grid;
 		grid-template-columns: 64px 1fr;
 		width: 100%;
@@ -74,33 +77,33 @@ import ActiveDot from './ActiveDot.svelte';
 		overflow: hidden;
 		transition: all 100ms;
 
-		&:active{
-			transform: scale(.9);
+		&:active {
+			transform: scale(0.9);
 		}
 
 		--base: var(--mint);
 		--darker: var(--dmint);
 		--lighter: var(--lmint);
 
-		&.blue{
+		&.blue {
 			--base: var(--blue);
 			--darker: var(--dblue);
 			--lighter: var(--lblue);
 		}
 
-		&.purple{
+		&.purple {
 			--base: var(--purple);
 			--darker: var(--dpurple);
 			--lighter: var(--lpurple);
 		}
 
-		&.gold{
+		&.gold {
 			--base: var(--gold);
 			--darker: var(--dgold);
 			--lighter: var(--lgold);
 		}
 
-		&::after{
+		&::after {
 			content: '';
 			width: 180px;
 			height: 180px;
@@ -109,11 +112,11 @@ import ActiveDot from './ActiveDot.svelte';
 			background: var(--lighter);
 			border-radius: 150px;
 			top: 0;
-			left:0;
+			left: 0;
 			transform: translate(-55%, -55%);
 			opacity: 0.5;
 		}
-		&::before{
+		&::before {
 			content: '';
 			width: 250px;
 			height: 160px;
@@ -122,17 +125,17 @@ import ActiveDot from './ActiveDot.svelte';
 			background: var(--lighter);
 			border-radius: 150px;
 			bottom: 0;
-			right:0;
+			right: 0;
 			transform: translate(55%, 55%);
 			opacity: 0.5;
 		}
 
-		span{
+		span {
 			padding-left: 1.5rem;
 			display: block;
 		}
 
-		img{
+		img {
 			width: 64px;
 			height: 64px;
 		}

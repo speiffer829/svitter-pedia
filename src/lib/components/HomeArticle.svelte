@@ -38,5 +38,14 @@
 		color: var(--brown);
 		text-decoration: none;
 		text-align: center;
+
+		&:hover img {
+			transform: scale(1.2);
+		}
+	}
+
+	img {
+		margin: 0 auto;
+		transition: all 300ms;
 	}
 </style>

@@ -1,4 +1,4 @@
-export function findIfActive( start, end, months  ) {
+export function findIfActive(start: number, end: number, months: string[]): boolean {
 	const date = new Date(Date.now());
 	const currentHour = date.getHours();
 	let isHoursActive = false;
@@ -22,4 +22,4 @@ export function findIfActive( start, end, months  ) {
 	const currentMonth = date.toLocaleString('en-US', { month: 'short' }).toLocaleLowerCase();
 
 	return months.includes(currentMonth) && isHoursActive;
-};
+}

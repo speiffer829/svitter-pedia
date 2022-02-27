@@ -1,15 +1,22 @@
-<script>
-	let isOpenNav
+<script lang="ts">
+	let isOpenNav: boolean;
 </script>
 
 <nav class:isOpenNav>
-	<a href="/" sveltekit:prefetch on:click={() => isOpenNav = false}>Home</a>
-	<a href="/bugs" sveltekit:prefetch on:click={() => isOpenNav = false}>Bugs</a>
-	<a href="/fish" sveltekit:prefetch on:click={() => isOpenNav = false}>Fish</a>
+	<a href="/" sveltekit:prefetch on:click={() => (isOpenNav = false)}>Home</a>
+	<a href="/bugs" sveltekit:prefetch on:click={() => (isOpenNav = false)}>Bugs</a>
+	<a href="/fish" sveltekit:prefetch on:click={() => (isOpenNav = false)}>Fish</a>
 </nav>
 
-<button on:click="{() => isOpenNav = !isOpenNav}">
-	<svg width="100%" height="100%" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg" class:crossMode={isOpenNav}>
+<button on:click={() => (isOpenNav = !isOpenNav)}>
+	<svg
+		width="100%"
+		height="100%"
+		viewBox="0 0 30 21"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+		class:crossMode={isOpenNav}
+	>
 		<rect width="30" height="3" rx="1.5" fill="var(--brown)" id="bar-1" />
 		<rect y="9" width="30" height="3" rx="1.5" fill="var(--brown)" id="bar-2" />
 		<rect y="18" width="30" height="3" rx="1.5" fill="var(--brown)" id="bar-3" />
@@ -17,7 +24,7 @@
 </button>
 
 <style lang="scss">
-	nav{
+	nav {
 		font-size: 1.6rem;
 		background-color: var(--brown);
 		background-image: url('/play-dots.png');
@@ -33,7 +40,7 @@
 		transform: translateY(-100%);
 		transition: all 300ms;
 
-		a{
+		a {
 			display: block;
 			font-size: 5rem;
 			font-weight: bold;
@@ -44,11 +51,11 @@
 		}
 	}
 
-	nav.isOpenNav{
+	nav.isOpenNav {
 		transform: translateY(0);
 	}
 
-	button{
+	button {
 		position: fixed;
 		bottom: 2rem;
 		right: 2rem;
@@ -63,21 +70,23 @@
 		cursor: pointer;
 	}
 
-	#bar-1, #bar-2, #bar-3{
+	#bar-1,
+	#bar-2,
+	#bar-3 {
 		transform-origin: center;
 		transition: transform 250ms;
 	}
 
-	.crossMode{
-		#bar-1{
+	.crossMode {
+		#bar-1 {
 			transform: translate(-5px, 7px) rotate(45deg);
 		}
 
-		#bar-2{
+		#bar-2 {
 			transform: scaleX(0);
 		}
-		
-		#bar-3{
+
+		#bar-3 {
 			transform: translate(-6px, -6px) rotate(-45deg);
 		}
 	}
