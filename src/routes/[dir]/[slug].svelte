@@ -15,11 +15,13 @@
 	}
 </script>
 
-<script>
+<script lang="ts">
 	import CritterImg from '$lib/components/CritterImg.svelte';
 	import CritterCard from '$lib/components/CritterCard.svelte';
-	export let critter;
-	export let dir;
+	import type { Critter } from '$lib/types/index';
+
+	export let critter: Critter;
+	export let dir: string;
 
 	const findThemeColor = () => {
 		if (critter.price >= 10000) {
@@ -56,6 +58,15 @@
 <svelte:head>
 	<title>{critter.name} | Critterpedia</title>
 	<meta name="theme-color" content={themeColor} />
+	<meta property="og:image" content={`/${dir}-detailed/${critter.detailedImg}.webp`} />
+	<meta property="og:image:type" content="image/webp" />
+	<meta property="og:image:width" content="488" />
+	<meta property="og:image:height" content="478" />
+	<meta property="og:title" content={critter.name} />
+	<meta
+		name="description"
+		content={`Useful information about the ${critter.name} from Animal Crossing.  Learn about it and others in this free Critterpedia.`}
+	/>
 </svelte:head>
 
 <div class="body-bg {moneyBracket}">
