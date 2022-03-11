@@ -1,10 +1,8 @@
 import critters from '$lib/critters.json';
-
+import { findIfActive } from '$lib/findIfActive';
+import type { Critter } from '$lib/types/index';
 
 export async function get() {
-
-
-
 	const currentMonthRaw = new Date().getMonth();
 
 	const currentMonth = getMonthText(currentMonthRaw);
@@ -14,7 +12,7 @@ export async function get() {
 	const lastMonth = getMonthText(currentMonthRaw === 0 ? 11 : currentMonthRaw - 1);
 
 	// Get All critters leaving this month
-	const leavingArray = critters
+	const leavingArray: Critter[] = critters
 		.filter((critter) => {
 			const { months } = critter;
 			return months.includes(currentMonth) && !months.includes(nextMonth);
@@ -22,7 +20,7 @@ export async function get() {
 		.sort(() => Math.random() - 0.5);
 
 	//Get all Critters who are new this month
-	const newThisMonthArray = critters
+	const newThisMonthArray: Critter[] = critters
 		.filter((critter) => {
 			const { months } = critter;
 			return months.includes(currentMonth) && !months.includes(lastMonth);
@@ -30,18 +28,25 @@ export async function get() {
 		.sort(() => Math.random() - 0.5);
 
 	//Get all Critters Coming Next Month
-	const comingNextMonthArray = critters.filter(critter => {
-		const { months } = critter
-		return !months.includes(currentMonth) && months.includes(nextMonth)
-	})
-	.sort( () => Math.random() - 0.5)
+	const comingNextMonthArray: Critter[] = critters
+		.filter((critter) => {
+			const { months } = critter;
+			return !months.includes(currentMonth) && months.includes(nextMonth);
+		})
+		.sort(() => Math.random() - 0.5);
 
 	//Get all critters worth more than $10,000 available now
-	const mostValuableNow = critters.filter(critter => {
-		const { price } = critter
-		return price >= 10000
-	})
-	.sort( () => Math.random() - 0.5)
+	const mostValuableNow: Critter[] = critters
+		.filter((critter: Critter): Critter[] => {
+			const { price } = critter;
+			return price >= 10000;
+		})
+		.filter((critter: Critter): Critter[] => {
+			const { start, end, months } = critter;
+			const isActive = findIfActive(start, end, months);
+			return isActive;
+		})
+		.sort(() => Math.random() - 0.5);
 
 	return {
 		status: 200,
@@ -50,7 +55,7 @@ export async function get() {
 			newThisMonthArray,
 			comingNextMonthArray,
 			mostValuableNow,
-		}
+		},
 	};
 }
 
@@ -98,7 +103,7 @@ function getMonthText(month) {
 			break;
 
 		default:
-			return 'jan'
+			return 'jan';
 			break;
 	}
 }
