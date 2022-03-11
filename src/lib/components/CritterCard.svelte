@@ -40,7 +40,7 @@
 	<div id="top" />
 	<main
 		in:fly={{
-			y: window.innerWidth > 767 ? 0 : -400,
+			y: window.innerWidth > 767 ? 0 : 400,
 			x: window.innerWidth > 767 ? 300 : 0,
 			duration: 1000,
 			easing: elasticOut,

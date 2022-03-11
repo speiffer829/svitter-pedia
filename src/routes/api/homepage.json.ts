@@ -2,13 +2,11 @@ import critters from '$lib/critters.json';
 import { findIfActive } from '$lib/findIfActive';
 import type { Critter } from '$lib/types/index';
 
-export async function get() {
+export async function get(): Obj {
+	// Get current date and time
 	const currentMonthRaw = new Date().getMonth();
-
 	const currentMonth = getMonthText(currentMonthRaw);
-
 	const nextMonth = getMonthText(currentMonthRaw === 11 ? 0 : currentMonthRaw + 1);
-
 	const lastMonth = getMonthText(currentMonthRaw === 0 ? 11 : currentMonthRaw - 1);
 
 	// Get All critters leaving this month
@@ -57,10 +55,6 @@ export async function get() {
 			mostValuableNow,
 		},
 	};
-}
-
-function shuffle(arr) {
-	return arr.sort(() => Math.random() - 0.5);
 }
 
 function getMonthText(month) {
