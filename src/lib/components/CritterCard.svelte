@@ -15,26 +15,17 @@
 	}
 
 	let titleAtTop: boolean = false;
+	let titleContain;
 
-	onMount(() => {
-		const options = {
-			root: null,
-			rootMargin: '0px',
-			threshold: 0.1,
-		};
-
-		const observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach((entry) => {
-				titleAtTop = !entry.isIntersecting;
-			});
-		}, options);
-
-		observer.observe(document?.querySelector('#top'));
-	});
+	function handleScroll() {
+		titleAtTop = titleContain?.getBoundingClientRect().top <= -25;
+	}
 
 	$: specialPrice = critter.price * 1.5;
 	$: reducedPrice = critter.price * 0.8;
 </script>
+
+<svelte:window on:scroll={handleScroll} />
 
 <div>
 	<div id="top" />
@@ -48,7 +39,7 @@
 		}}
 		class={moneyBracket}
 	>
-		<section class="title-contain" class:atTop={titleAtTop}>
+		<section class="title-contain" class:atTop={titleAtTop} bind:this={titleContain}>
 			<h1 class="name">{critter.name}</h1>
 			<div class="icon">
 				<ActiveDot {critter} />

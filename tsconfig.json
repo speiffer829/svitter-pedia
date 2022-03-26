@@ -23,7 +23,8 @@
 		"allowJs": true,
 		"checkJs": true,
 		"paths": {
-			"$lib/*": ["src/lib/*"]
+			"$lib/*": ["src/lib/*"],
+			"$lib": ["src/lib"]
 		}
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
@@ -31,5 +32,6 @@
     For some reason, lib/components/common/icons/index.js and service-worker gets this error:
     https://github.com/microsoft/TypeScript/issues/14538#issuecomment-654933955
   */
-	"exclude": ["src/lib/**/index.js", "src/**/service-worker.js"]
+	"exclude": ["src/lib/**/index.js", "src/**/service-worker.js"],
+	"extends": "./.svelte-kit/tsconfig.json"
 }
