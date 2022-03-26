@@ -15,7 +15,7 @@
 	}
 
 	let titleAtTop: boolean = false;
-	let titleContain;
+	let titleContain: HTMLElement;
 
 	function handleScroll() {
 		titleAtTop = titleContain?.getBoundingClientRect().top <= -25;
