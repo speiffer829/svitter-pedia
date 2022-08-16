@@ -1,7 +1,6 @@
 <script>
 	import HomeArticle from '$lib/components/HomeArticle.svelte';
 	export let data;
-	$: console.log(data);
 </script>
 
 <h1>Welcome To My Critterpedia!</h1>

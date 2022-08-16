@@ -6,9 +6,12 @@
 	import CritterListItem from '$lib/components/CritterListItem.svelte';
 	import FilterPane from '$lib/components/FilterPane.svelte';
 	import { currentCritterList } from '$lib/stores/filterStore';
+	import { page } from '$app/stores';
 
 	export let data;
-	export let { critters, dir }: { critters: Critter[]; dir: string } = data;
+	let { critters }: { critters: Critter[] } = data;
+
+	$: dir = $page.params.dir;
 
 	$: title = dir.replace(/./, (c) => c.toUpperCase());
 </script>
