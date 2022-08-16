@@ -1,19 +1,19 @@
 <script>
 	import HomeArticle from '$lib/components/HomeArticle.svelte';
 	export let data;
-	let { leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow } = data;
+	$: console.log(data);
 </script>
 
 <h1>Welcome To My Critterpedia!</h1>
 
 <section class="grid col-2-md gap-2">
-	<HomeArticle title="New This Month" critters={newThisMonthArray} />
+	<HomeArticle title="New This Month" critters={data.newThisMonthArray} />
 
-	<HomeArticle title="Coming Next Month" critters={comingNextMonthArray} />
+	<HomeArticle title="Coming Next Month" critters={data.comingNextMonthArray} />
 
-	<HomeArticle title="Gone Next Month" critters={leavingArray} />
+	<HomeArticle title="Gone Next Month" critters={data.leavingArray} />
 
-	<HomeArticle title="Most Valuable Out Right Now" critters={mostValuableNow} />
+	<HomeArticle title="Most Valuable Out Right Now" critters={data.mostValuableNow} />
 </section>
 
 <style lang="scss">
