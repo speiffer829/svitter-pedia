@@ -6,6 +6,7 @@ export async function load({ params }) {
 	const critters = allCritters.filter((critter) => critter.type === dir);
 
 	return {
+		dir,
 		critters,
 	};
 }
