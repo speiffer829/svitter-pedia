@@ -1,27 +1,10 @@
-<script context="module">
-	export async function load({ params, fetch }) {
-		const { dir, slug } = params;
-
-		const req = await fetch(`/api/${dir}/${slug}.json`);
-		const res = await req.json();
-		const { critter } = res;
-
-		return {
-			props: {
-				dir,
-				critter,
-			},
-		};
-	}
-</script>
-
 <script lang="ts">
 	import CritterImg from '$lib/components/CritterImg.svelte';
 	import CritterCard from '$lib/components/CritterCard.svelte';
 	import type { Critter } from '$lib/types/index';
 
-	export let critter: Critter;
-	export let dir: string;
+	export let data;
+	let { critter, dir }: { critter: Critter; dir: string } = data;
 
 	const findThemeColor = () => {
 		if (critter.price >= 10000) {

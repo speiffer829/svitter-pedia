@@ -1,27 +1,7 @@
-<script context="module">
-	export async function load({ fetch }) {
-		const req = await fetch('/api/homepage.json');
-		const {
-			leavingArray,
-			newThisMonthArray,
-			comingNextMonthArray,
-			mostValuableNow,
-		} = await req.json();
-
-		return {
-			props: {
-				leavingArray,
-				newThisMonthArray,
-				comingNextMonthArray,
-				mostValuableNow,
-			},
-		};
-	}
-</script>
-
 <script>
 	import HomeArticle from '$lib/components/HomeArticle.svelte';
-	export let leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow;
+	export let data;
+	let { leavingArray, newThisMonthArray, comingNextMonthArray, mostValuableNow } = data;
 </script>
 
 <h1>Welcome To My Critterpedia!</h1>

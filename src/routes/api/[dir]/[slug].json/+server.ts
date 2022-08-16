@@ -2,7 +2,7 @@ import allCritters from '$lib/critters.json';
 import type { Critter } from '$lib/types/index';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export async function get({ params }): Obj {
+export async function GET({ params }): Obj {
 	const { slug }: { slug: string } = params;
 	const critter: Critter = allCritters.find((critter: Critter) => critter.slug === slug);
 

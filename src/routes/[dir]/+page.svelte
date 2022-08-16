@@ -1,21 +1,3 @@
-<script context="module">
-	export async function load({ params, fetch }) {
-		const { dir } = params;
-		console.log('dir', dir);
-
-		const req = await fetch(`/api/${dir}.json`);
-		const res = await req.json();
-		const { critters } = res;
-
-		return {
-			props: {
-				dir,
-				critters,
-			},
-		};
-	}
-</script>
-
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
 	import { flip } from 'svelte/animate';
@@ -25,7 +7,8 @@
 	import FilterPane from '$lib/components/FilterPane.svelte';
 	import { currentCritterList } from '$lib/stores/filterStore';
 
-	export let critters: Critter[], dir: string;
+	export let data;
+	export let { critters, dir }: { critters: Critter[]; dir: string } = data;
 
 	$: title = dir.replace(/./, (c) => c.toUpperCase());
 </script>
