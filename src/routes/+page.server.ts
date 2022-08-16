@@ -2,7 +2,8 @@ import critters from '$lib/critters.json';
 import { findIfActive } from '$lib/findIfActive';
 import type { Critter } from '$lib/types/index';
 
-export async function get(): Obj {
+export async function load(): Obj {
+	if (!critters) throw new Error('critters are empty');
 	// Get current date and time
 	const currentMonthRaw = new Date().getMonth();
 	const currentMonth = getMonthText(currentMonthRaw);
@@ -47,13 +48,10 @@ export async function get(): Obj {
 		.sort(() => Math.random() - 0.5);
 
 	return {
-		status: 200,
-		body: {
-			leavingArray,
-			newThisMonthArray,
-			comingNextMonthArray,
-			mostValuableNow,
-		},
+		leavingArray,
+		newThisMonthArray,
+		comingNextMonthArray,
+		mostValuableNow,
 	};
 }
 
