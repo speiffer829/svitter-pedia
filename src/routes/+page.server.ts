@@ -82,7 +82,7 @@ function getMonthText(month) {
 			return 'aug';
 			break;
 		case 8:
-			return 'sept';
+			return 'sep';
 			break;
 		case 9:
 			return 'oct';

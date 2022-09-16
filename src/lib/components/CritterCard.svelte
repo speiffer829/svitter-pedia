@@ -116,7 +116,7 @@
 				<p class="month" class:active={critter.months.includes('jun')}>Jun</p>
 				<p class="month" class:active={critter.months.includes('jul')}>Jul</p>
 				<p class="month" class:active={critter.months.includes('aug')}>Aug</p>
-				<p class="month" class:active={critter.months.includes('sept')}>Sept</p>
+				<p class="month" class:active={critter.months.includes('sep')}>Sept</p>
 				<p class="month" class:active={critter.months.includes('oct')}>Oct</p>
 				<p class="month" class:active={critter.months.includes('nov')}>Nov</p>
 				<p class="month" class:active={critter.months.includes('dec')}>Dec</p>
