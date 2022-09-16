@@ -4,6 +4,10 @@
 	$: console.log(data);
 </script>
 
+<svelte:head>
+	<title>Critterpedia</title>
+</svelte:head>
+
 <h1>Welcome To My Critterpedia!</h1>
 
 <section class="grid col-2-md gap-2">
