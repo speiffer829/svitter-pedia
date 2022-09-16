@@ -208,9 +208,9 @@
 				class:active={'aug' === $currentFilteredMonth}>Aug</button
 			>
 			<button
-				on:click={() => filterMonth('sept')}
+				on:click={() => filterMonth('sep')}
 				class="btn month-btn"
-				class:active={'sept' === $currentFilteredMonth}>Sept</button
+				class:active={'sep' === $currentFilteredMonth}>Sept</button
 			>
 			<button
 				on:click={() => filterMonth('oct')}
