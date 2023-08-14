@@ -20,7 +20,6 @@ export function findIfActive(start: number, end: number, months: string[]): bool
 	}
 
 	const currentMonth = date.toLocaleString('en-US', { month: 'short' }).toLocaleLowerCase();
-	console.log(currentMonth);
 
 	return months.includes(currentMonth) && isHoursActive;
 }

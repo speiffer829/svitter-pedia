@@ -35,13 +35,7 @@
 	let moneyBracket: string = findMoneyBracket();
 </script>
 
-<a
-	href={`/${dir}/${critter.slug}`}
-	sveltekit:prefetch
-	class={moneyBracket}
-	bind:this={item}
-	id={critter.slug}
->
+<a href={`/${dir}/${critter.slug}`} class={moneyBracket} bind:this={item} id={critter.slug}>
 	<ActiveDot {critter} alignTopLeft={true} />
 	<picture>
 		<source srcset={`/${critter.type}/${critter.img}.avif`} type="image/avif" />

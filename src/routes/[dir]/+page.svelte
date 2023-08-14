@@ -9,7 +9,9 @@
 	import { page } from '$app/stores';
 
 	export let data;
-	let { critters }: { critters: Critter[] } = data;
+
+	$: critters = data.critters;
+	console.log(critters);
 
 	$: dir = $page.params.dir;
 
