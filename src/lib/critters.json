@@ -3402,6 +3402,8 @@
 		"type": "bugs",
 		"months": ["mar", "apr", "may", "jun", "jul", "aug", "sep", "oct"],
 		"times": [0, 1, 2, 3, 4, 5, 6, 7, 8, 19, 20, 21, 22, 23, 24],
+		"start": 19,
+		"end": 8,
 		"price": 1000,
 		"flickPrice": 1500,
 		"location": "flowers",
