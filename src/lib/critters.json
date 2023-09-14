@@ -4224,6 +4224,8 @@
 		"type": "bugs",
 		"months": ["mar", "apr", "may", "jun", "sep", "oct"],
 		"times": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+		"start": 4,
+		"end": 19,
 		"price": 160,
 		"location": "flying",
 		"img": "Yellow_Butterfly",
