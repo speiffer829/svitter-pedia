@@ -1,7 +1,6 @@
 <script>
 	import HomeArticle from '$lib/components/HomeArticle.svelte';
 	export let data;
-	$: console.log(data);
 </script>
 
 <svelte:head>

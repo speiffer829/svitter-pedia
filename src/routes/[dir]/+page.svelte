@@ -11,7 +11,6 @@
 	export let data;
 
 	$: critters = data.critters;
-	console.log(critters);
 
 	$: dir = $page.params.dir;
 
