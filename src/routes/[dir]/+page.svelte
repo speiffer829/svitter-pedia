@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
 	import { flip } from 'svelte/animate';
-	import { scale } from 'svelte/transition';
 	import { quintOut, backOut } from 'svelte/easing';
 	import CritterListItem from '$lib/components/CritterListItem.svelte';
 	import FilterPane from '$lib/components/FilterPane.svelte';
@@ -11,7 +10,6 @@
 	export let data;
 
 	$: critters = data.critters;
-	console.log(critters);
 
 	$: dir = $page.params.dir;
 
@@ -30,8 +28,6 @@
 			{#each $currentCritterList as critter (critter.name)}
 				<li
 					animate:flip={{ duration: 500, easing: quintOut }}
-					in:scale={{ duration: 500, easing: backOut }}
-					out:scale|local={{ duration: 500 }}
 				>
 					<CritterListItem {critter} {dir} />
 				</li>

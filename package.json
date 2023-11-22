@@ -1,37 +1,22 @@
 {
-	"name": "~TODO~",
-	"version": "0.0.1",
+	"name": "Critterpedia",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"package": "svelte-kit package",
-		"preview": "vite preview",
-		"check": "svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"preview": "vite preview"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-netlify": "^1.0.0-next.31",
 		"@sveltejs/adapter-static": "^1.0.0-next.20",
 		"@sveltejs/kit": "next",
-		"@typescript-eslint/eslint-plugin": "^4.19.0",
-		"@typescript-eslint/parser": "^4.19.0",
-		"eslint": "^7.22.0",
-		"eslint-config-prettier": "^8.1.0",
-		"eslint-plugin-svelte3": "^3.2.0",
-		"prettier": "2.2.1",
-		"prettier-plugin-svelte": "^2.2.0",
-		"svelte": "^5.0.0-next.1",
-		"svelte-image": "^0.2.9",
+		"svelte": "^5.0.0-next.9",
 		"tslib": "^2.0.0",
-		"typescript": "^4.0.0",
-		"vanilla-lazyload": "^17.5.0"
+		"typescript": "^4.0.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"postcss": "^7.0.36",
-		"sass": "^1.39.0",
-		"svelte-preprocess": "^4.0.0-alpha.2"
+		"postcss": "^7.0.36"
 	}
 }
