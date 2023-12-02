@@ -51,7 +51,7 @@
 	<span>{critter.name}</span>
 </a>
 
-<style lang="scss">
+<style lang="postcss">
 	a {
 		background-color: var(--tan);
 		box-shadow: 2px 3px 4px hsl(420 69% 0% / 25%);

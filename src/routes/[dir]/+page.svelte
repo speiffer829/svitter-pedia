@@ -26,9 +26,7 @@
 		<FilterPane {critters} {dir} />
 		<ul class="critter-list span-2-md span-3-lg">
 			{#each $currentCritterList as critter (critter.name)}
-				<li
-					animate:flip={{ duration: 500, easing: quintOut }}
-				>
+				<li animate:flip={{ duration: 500, easing: quintOut }}>
 					<CritterListItem {critter} {dir} />
 				</li>
 			{/each}
@@ -36,7 +34,7 @@
 	{/key}
 </main>
 
-<style lang="scss">
+<style lang="postcss">
 	main {
 		max-width: 1400px;
 		margin: 1rem auto;

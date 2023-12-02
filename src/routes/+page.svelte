@@ -19,7 +19,7 @@
 	<HomeArticle title="Most Valuable Out Right Now" critters={data.mostValuableNow} />
 </section>
 
-<style lang="scss">
+<style lang="postcss">
 	.grid {
 		padding: 2rem;
 	}

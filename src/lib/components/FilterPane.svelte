@@ -231,7 +231,7 @@
 	</aside>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
 	aside {
 		width: 90%;
 		max-width: 767px;
@@ -358,7 +358,9 @@
 		font-size: 3rem;
 		background: var(--red);
 		color: var(--light);
-		box-shadow: 0px 0px 5px hsl(var(--redHSL) / 80%), var(--shadow);
+		box-shadow:
+			0px 0px 5px hsl(var(--redHSL) / 80%),
+			var(--shadow);
 		border: none;
 		border-radius: 1rem;
 		transition: all 100ms;

@@ -23,7 +23,7 @@
 	</article>
 {/if}
 
-<style lang="scss">
+<style lang="postcss">
 	article {
 		padding: 1rem;
 		border-radius: 2rem;

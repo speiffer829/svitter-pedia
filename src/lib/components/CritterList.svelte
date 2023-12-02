@@ -26,7 +26,7 @@
 	</ul>
 </main>
 
-<style lang="scss">
+<style lang="postcss">
 	main {
 		max-width: 1400px;
 		margin: 1rem auto;

@@ -11,9 +11,9 @@
 </script>
 
 <nav class:isOpenNav>
-	<a href="/" sveltekit:prefetch>Home</a>
-	<a href="/bugs" sveltekit:prefetch>Bugs</a>
-	<a href="/fish" sveltekit:prefetch>Fish</a>
+	<a href="/">Home</a>
+	<a href="/bugs">Bugs</a>
+	<a href="/fish">Fish</a>
 </nav>
 
 <button on:click={() => (isOpenNav = !isOpenNav)}>
@@ -31,7 +31,7 @@
 	</svg>
 </button>
 
-<style lang="scss">
+<style lang="postcss">
 	nav {
 		font-size: 1.6rem;
 		background-color: var(--brown);

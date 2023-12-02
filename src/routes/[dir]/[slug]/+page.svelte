@@ -64,7 +64,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	div.body-bg {
 		width: 100%;
 		min-height: 100vh;

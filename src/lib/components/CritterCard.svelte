@@ -133,7 +133,7 @@
 				"{critter.blathers || 'God is Dead. Long Live Beelzebub'}"
 			</blockquote>
 
-			<img src="/blathers.webp" alt="blathers" width="180" loading="lazy" />
+			<img src="/blathers.webp" alt="blathers" width="180" loading="lazy" class="mx-auto" />
 		</div>
 	</main>
 </div>
@@ -155,7 +155,7 @@
 	</a>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	main {
 		width: 100%;
 		background-color: var(--tan);
@@ -201,7 +201,7 @@
 		padding: 5px 10px;
 		font-size: 1.2rem;
 		margin-bottom: 5px;
-		// box-shadow: 2px 2px 10px rgb(0 0 0 / 20%);
+		/* box-shadow: 2px 2px 10px rgb(0 0 0 / 20%); */
 		border: solid 1px var(--dbrown);
 	}
 
@@ -224,7 +224,6 @@
 		border: solid 4px var(--brown);
 		transition: all 600ms;
 	}
-
 	.atTop > .icon {
 		transform: translate(-50%, 30%) scale(0.7);
 	}

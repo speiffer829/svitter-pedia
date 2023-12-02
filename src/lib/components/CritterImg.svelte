@@ -26,7 +26,7 @@
 	</picture>
 </div>
 
-<style lang="scss">
+<style lang="postcss">
 	img {
 		z-index: -1;
 		position: relative;
