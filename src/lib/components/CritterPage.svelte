@@ -1,8 +1,14 @@
-<script>
+<script lang="ts">
 	import CritterImg from '$lib/components/CritterImg.svelte';
 	import CritterCard from '$lib/components/CritterCard.svelte';
-	export let critter;
-	export let dir;
+	import type { Critter } from '$lib/types/index';
+
+	type Props = {
+		critter: Critter;
+		dir: string;
+	};
+
+	let { critter, dir } = $props<Props>();
 
 	const findThemeColor = () => {
 		if (critter.price >= 10000) {
@@ -32,8 +38,8 @@
 
 	let moneyBracket = findMoneyBracket();
 
-	$: width = dir === 'fish' ? 1024 : 600;
-	$: height = dir === 'fish' ? 512 : 600;
+	let width = $derived(dir === 'fish' ? 1024 : 600);
+	let height = $derived(dir === 'fish' ? 512 : 600);
 </script>
 
 <svelte:head>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
-	import { onMount } from 'svelte';
 	import { fly, scale, fade } from 'svelte/transition';
 	import {
 		search,
@@ -14,9 +13,14 @@
 	import { backOut, backIn, elasticOut } from 'svelte/easing';
 	import { findIfActive } from '$lib/findIfActive';
 
-	export let critters: Critter[], dir: string;
+	type Props = {
+		critters: Critter[];
+		dir: string;
+	};
 
-	let filtersAreVisible: boolean = false;
+	let { critters, dir } = $props<Props>();
+
+	let filtersAreVisible: boolean = $state(false);
 
 	function clearFilters(resetCritters = false) {
 		$search = '';
@@ -79,7 +83,7 @@
 		];
 	}
 
-	onMount(() => {
+	$effect(() => {
 		if ($currentDir !== dir) {
 			$currentDir = dir;
 			clearFilters(true);

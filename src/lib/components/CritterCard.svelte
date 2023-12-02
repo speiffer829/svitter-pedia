@@ -1,10 +1,16 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
-	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
 	import ActiveDot from './ActiveDot.svelte';
-	export let critter: Critter, dir: string, moneyBracket: string;
+
+	type Props = {
+		critter: Critter;
+		dir: string;
+		moneyBracket: string;
+	};
+
+	let { critter, dir, moneyBracket } = $props<Props>();
 
 	function timeConvert(time): string {
 		if (time === 0) {
@@ -14,15 +20,15 @@
 		}
 	}
 
-	let titleAtTop: boolean = false;
-	let titleContain: HTMLElement;
+	let titleAtTop: boolean = $state(false);
+	let titleContain: HTMLElement = $state();
 
 	function handleScroll() {
 		titleAtTop = titleContain?.getBoundingClientRect().top <= -25;
 	}
 
-	$: specialPrice = critter.price * 1.5;
-	$: reducedPrice = critter.price * 0.8;
+	let specialPrice = $derived(critter.price * 1.5);
+	let reducedPrice = $derived(critter.price * 0.8);
 </script>
 
 <svelte:window on:scroll={handleScroll} />

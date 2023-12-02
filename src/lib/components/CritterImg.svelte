@@ -2,7 +2,15 @@
 	import { elasticOut } from 'svelte/easing';
 	import { scale } from 'svelte/transition';
 	import { parallaxImg } from '$lib/actions/parallaxImg';
-	export let src: string, alt: string, width: number, height: number;
+
+	type Props = {
+		src: string;
+		alt: string;
+		width: number;
+		height: number;
+	};
+
+	let { src, alt, width, height } = $props<Props>();
 </script>
 
 <svelte:head>

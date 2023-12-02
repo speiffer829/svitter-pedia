@@ -1,12 +1,17 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
-	import { onMount } from 'svelte';
 	import ActiveDot from './ActiveDot.svelte';
-	export let critter: Critter, dir: string;
 
-	let item: HTMLElement;
+	type Props = {
+		critter: Critter;
+		dir: string;
+	};
 
-	onMount(() => {
+	let { critter, dir } = $props<Props>();
+
+	let item: HTMLElement = $state();
+
+	$effect(() => {
 		new IntersectionObserver((entries, observer) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {

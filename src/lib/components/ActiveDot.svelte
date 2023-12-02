@@ -1,8 +1,13 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
 	import { findIfActive } from '$lib/findIfActive';
-	export let critter: Critter;
-	export let alignTopLeft: boolean = false;
+
+	type Props = {
+		critter: Critter;
+		alignTopLeft?: boolean;
+	};
+
+	let { critter, alignTopLeft = false } = $props<Props>();
 
 	let isActive = findIfActive(critter.start, critter.end, critter.months);
 </script>

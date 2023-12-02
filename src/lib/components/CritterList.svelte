@@ -7,7 +7,13 @@
 	import FilterPane from './FilterPane.svelte';
 	import { currentCritterList } from '$lib/stores/filterStore';
 
-	export let critters: Critter[], dir: string, title: string;
+	type Props = {
+		critters: Critter[];
+		dir: string;
+		title: string;
+	};
+
+	let { critters, dir, title } = $props<Props>();
 </script>
 
 <h1>{title}</h1>
