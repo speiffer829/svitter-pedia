@@ -4,16 +4,18 @@
 	import { quintOut, backOut } from 'svelte/easing';
 	import CritterListItem from '$lib/components/CritterListItem.svelte';
 	import FilterPane from '$lib/components/FilterPane.svelte';
-	import { currentCritterList } from '$lib/stores/filterStore';
+	import { currentCritterList } from '$lib/stores/filterStore.svelte.js';
 	import { page } from '$app/stores';
 
-	export let data;
+	type Props = {
+		data: {
+			critters: Critter[];
+			dir: string;
+		};
+	};
+	let { data } = $props<Props>();
 
-	$: critters = data.critters;
-
-	$: dir = $page.params.dir;
-
-	$: title = dir.replace(/./, (c) => c.toUpperCase());
+	const title = $derived(data.dir.replace(/./, (c) => c.toUpperCase()));
 </script>
 
 <svelte:head>
@@ -22,12 +24,12 @@
 
 <h1>{title}</h1>
 <main>
-	{#key dir}
-		<FilterPane {critters} {dir} />
+	{#key data.dir}
+		<FilterPane critters={data.critters} dir={data.dir} />
 		<ul class="critter-list span-2-md span-3-lg">
-			{#each $currentCritterList as critter (critter.name)}
+			{#each currentCritterList.value as critter (critter.name)}
 				<li animate:flip={{ duration: 500, easing: quintOut }}>
-					<CritterListItem {critter} {dir} />
+					<CritterListItem {critter} dir={data.dir} />
 				</li>
 			{/each}
 		</ul>

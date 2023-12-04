@@ -9,7 +9,7 @@
 		currentCritterList,
 		filtersActive,
 		currentFilteredMonth,
-	} from '$lib/stores/filterStore.js';
+	} from '$lib/stores/filterStore.svelte.js';
 	import { backOut, backIn, elasticOut } from 'svelte/easing';
 	import { findIfActive } from '$lib/findIfActive';
 
@@ -23,41 +23,41 @@
 	let filtersAreVisible: boolean = $state(false);
 
 	function clearFilters(resetCritters = false) {
-		$search = '';
-		$showActiveOnlyBool = false;
-		$showAllBool = true;
-		$filtersActive = false;
+		search.value = '';
+		showActiveOnlyBool.value = false;
+		showAllBool.value = true;
+		filtersActive.value = false;
 		filtersAreVisible = false;
-		$currentFilteredMonth = null;
+		currentFilteredMonth.value = null;
 
 		if (resetCritters) {
-			$currentCritterList = [...critters];
+			currentCritterList.value = [...critters];
 		}
 	}
 
 	function handleFilter() {
-		if ($search === '') {
+		if (search.value === '') {
 			clearFilters(true);
 		} else {
-			$filtersActive = true;
-			$showAllBool = false;
-			$showActiveOnlyBool = false;
+			filtersActive.value = true;
+			showAllBool.value = false;
+			showActiveOnlyBool.value = false;
 			const freshArr = critters.filter((critter) => {
-				return critter.name.toLowerCase().indexOf($search.toLowerCase()) !== -1;
+				return critter.name.toLowerCase().indexOf(search.value.toLowerCase()) !== -1;
 			});
 
-			$currentCritterList = [...freshArr];
+			currentCritterList.value = [...freshArr];
 		}
 	}
 
 	function showActiveOnly() {
-		if ($showActiveOnlyBool) return;
-		$search = '';
-		$showActiveOnlyBool = true;
-		$showAllBool = false;
-		$filtersActive = true;
+		if (showActiveOnlyBool.value) return;
+		search.value = '';
+		showActiveOnlyBool.value = true;
+		showAllBool.value = false;
+		filtersActive.value = true;
 		filtersAreVisible = false;
-		$currentCritterList = [
+		currentCritterList.value = [
 			...critters.filter((critter) => {
 				return findIfActive(critter.start, critter.end, critter.months);
 			}),
@@ -65,18 +65,18 @@
 	}
 
 	function clearSearch() {
-		$search = '';
+		search.value = '';
 		clearFilters();
 	}
 
 	function filterMonth(month) {
-		$search = '';
-		$showActiveOnlyBool = false;
-		$showAllBool = false;
-		$filtersActive = true;
+		search.value = '';
+		showActiveOnlyBool.value = false;
+		showAllBool.value = false;
+		filtersActive.value = true;
 		filtersAreVisible = false;
-		$currentFilteredMonth = month;
-		$currentCritterList = [
+		currentFilteredMonth.value = month;
+		currentCritterList.value = [
 			...critters.filter((critter) => {
 				return critter.months.includes(month);
 			}),
@@ -84,8 +84,8 @@
 	}
 
 	$effect(() => {
-		if ($currentDir !== dir) {
-			$currentDir = dir;
+		if (currentDir.value !== dir) {
+			currentDir.value = dir;
 			clearFilters(true);
 		}
 	});
@@ -102,8 +102,8 @@
 <section class="search-section">
 	<div class="input-grid grid">
 		<div class="input-contain">
-			<input type="search" bind:value={$search} on:input={handleFilter} placeholder="Search" />
-			{#if $search !== ''}
+			<input type="search" bind:value={search.value} on:input={handleFilter} placeholder="Search" />
+			{#if search.value !== ''}
 				<button
 					class="clear-btn"
 					on:click={() => clearFilters(true)}
@@ -130,7 +130,7 @@
 		<button
 			class="btn filter-btn"
 			on:click={() => (filtersAreVisible = !filtersAreVisible)}
-			class:active={$filtersActive}
+			class:active={filtersActive.value}
 		>
 			<svg
 				width="76"
@@ -157,15 +157,15 @@
 	>
 		<button class="close-btn" on:click={() => (filtersAreVisible = false)}>&times;</button>
 		<h2>Filters</h2>
-		<section class="btns grid col-2-md gap-1" class:col-2-md={$filtersActive}>
-			{#if $filtersActive}
+		<section class="btns grid col-2-md gap-1" class:col-2-md={filtersActive.value}>
+			{#if filtersActive.value}
 				<button class="btn clear-filters-btn" on:click={() => clearFilters(true)}
 					>Clear Filters</button
 				>
 			{/if}
 			<button
 				class="btn currently-active-btn"
-				class:active={$showActiveOnlyBool}
+				class:active={showActiveOnlyBool.value}
 				on:click={showActiveOnly}>Show Currently Active</button
 			>
 		</section>
@@ -174,62 +174,62 @@
 			<button
 				on:click={() => filterMonth('jan')}
 				class="btn month-btn"
-				class:active={'jan' === $currentFilteredMonth}>Jan</button
+				class:active={'jan' === currentFilteredMonth.value}>Jan</button
 			>
 			<button
 				on:click={() => filterMonth('feb')}
 				class="btn month-btn"
-				class:active={'feb' === $currentFilteredMonth}>Feb</button
+				class:active={'feb' === currentFilteredMonth.value}>Feb</button
 			>
 			<button
 				on:click={() => filterMonth('mar')}
 				class="btn month-btn"
-				class:active={'mar' === $currentFilteredMonth}>Mar</button
+				class:active={'mar' === currentFilteredMonth.value}>Mar</button
 			>
 			<button
 				on:click={() => filterMonth('apr')}
 				class="btn month-btn"
-				class:active={'apr' === $currentFilteredMonth}>Apr</button
+				class:active={'apr' === currentFilteredMonth.value}>Apr</button
 			>
 			<button
 				on:click={() => filterMonth('may')}
 				class="btn month-btn"
-				class:active={'may' === $currentFilteredMonth}>May</button
+				class:active={'may' === currentFilteredMonth.value}>May</button
 			>
 			<button
 				on:click={() => filterMonth('jun')}
 				class="btn month-btn"
-				class:active={'jun' === $currentFilteredMonth}>Jun</button
+				class:active={'jun' === currentFilteredMonth.value}>Jun</button
 			>
 			<button
 				on:click={() => filterMonth('jul')}
 				class="btn month-btn"
-				class:active={'jul' === $currentFilteredMonth}>Jul</button
+				class:active={'jul' === currentFilteredMonth.value}>Jul</button
 			>
 			<button
 				on:click={() => filterMonth('aug')}
 				class="btn month-btn"
-				class:active={'aug' === $currentFilteredMonth}>Aug</button
+				class:active={'aug' === currentFilteredMonth.value}>Aug</button
 			>
 			<button
 				on:click={() => filterMonth('sep')}
 				class="btn month-btn"
-				class:active={'sep' === $currentFilteredMonth}>Sept</button
+				class:active={'sep' === currentFilteredMonth.value}>Sept</button
 			>
 			<button
 				on:click={() => filterMonth('oct')}
 				class="btn month-btn"
-				class:active={'oct' === $currentFilteredMonth}>Oct</button
+				class:active={'oct' === currentFilteredMonth.value}>Oct</button
 			>
 			<button
 				on:click={() => filterMonth('nov')}
 				class="btn month-btn"
-				class:active={'nov' === $currentFilteredMonth}>Nov</button
+				class:active={'nov' === currentFilteredMonth.value}>Nov</button
 			>
 			<button
 				on:click={() => filterMonth('dec')}
 				class="btn month-btn"
-				class:active={'dec' === $currentFilteredMonth}>Dec</button
+				class:active={'dec' === currentFilteredMonth.value}>Dec</button
 			>
 		</section>
 	</aside>

@@ -5,7 +5,7 @@
 	import { elasticOut, quintOut } from 'svelte/easing';
 	import CritterListItem from './CritterListItem.svelte';
 	import FilterPane from './FilterPane.svelte';
-	import { currentCritterList } from '$lib/stores/filterStore';
+	import { currentCritterList } from '$lib/stores/filterStore.svelte.js';
 
 	type Props = {
 		critters: Critter[];
@@ -20,7 +20,7 @@
 <main>
 	<FilterPane {critters} {dir} />
 	<ul class="critter-list span-2-md span-3-lg">
-		{#each $currentCritterList as critter (critter.name)}
+		{#each currentCritterList.value as critter (critter.name)}
 			<li
 				animate:flip={{ duration: 500, easing: quintOut }}
 				in:scale={{ duration: 1000, easing: elasticOut }}

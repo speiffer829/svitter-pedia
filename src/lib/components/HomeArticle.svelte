@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { Critter } from '$lib/types/index';
-	export let critters: Critter[];
-	export let title: String;
+
+	type Props = {
+		critters: Critter[];
+		title: string;
+	};
+
+	let { critters, title } = $props<Props>();
 </script>
 
 {#if critters.length}

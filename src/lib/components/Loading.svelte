@@ -1,16 +1,18 @@
 <script lang="ts">
-	import { loading } from '$lib/stores/loading';
+	import { loading } from '$lib/stores/loading.svelte.js';
 
-	$: if ($loading.status === 'NAVIGATING') {
-		setTimeout(() => {
-			if ($loading.status === 'NAVIGATING') {
-				$loading.status = 'LOADING';
-			}
-		}, 300);
-	}
+	$effect(() => {
+		if (loading.status === 'NAVIGATING') {
+			setTimeout(() => {
+				if (loading.status === 'NAVIGATING') {
+					loading.status = 'LOADING';
+				}
+			}, 300);
+		}
+	});
 </script>
 
-{#if $loading.status === 'LOADING'}
+{#if loading.status === 'LOADING'}
 	<div class="overlay">
 		<div class="spinner" />
 	</div>

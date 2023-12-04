@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { navigating } from '$app/stores';
 
-	let isOpenNav: boolean;
+	let isOpenNav: boolean = $state();
 
-	$: closeMenu(!!$navigating);
-
-	function closeMenu(status: boolean) {
+	$effect(() => {
+		let status = !!$navigating;
 		if (status && isOpenNav) isOpenNav = false;
-	}
+	});
 </script>
 
 <nav class:isOpenNav>

@@ -3,7 +3,7 @@
 	import CritterCard from '$lib/components/CritterCard.svelte';
 	import type { Critter } from '$lib/types/index';
 
-	export let data;
+	let { data } = $props<{ data: { critter: Critter; dir: string } }>();
 	let { critter, dir }: { critter: Critter; dir: string } = data;
 
 	const findThemeColor = () => {
@@ -34,8 +34,8 @@
 
 	let moneyBracket = findMoneyBracket();
 
-	$: width = dir === 'fish' ? 1024 : 600;
-	$: height = dir === 'fish' ? 512 : 600;
+	let width = $derived(dir === 'fish' ? 1024 : 600);
+	let height = $derived(dir === 'fish' ? 512 : 600);
 </script>
 
 <svelte:head>
