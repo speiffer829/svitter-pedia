@@ -6,12 +6,14 @@
 	import { loading } from '$lib/stores/loading.svelte';
 	import { navigating } from '$app/stores';
 
+	const {children} = $props();
+
 	$effect(() => {
 		loading.setNavigate(!!$navigating);
 	});
 </script>
 
 <Header />
-<slot />
+{@render children()}
 
 <Loading />

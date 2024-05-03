@@ -2,13 +2,14 @@
 	import type { Critter } from '$lib/types/index';
 	import { onMount } from 'svelte';
 	import ActiveDot from './ActiveDot.svelte';
+	import { scale } from 'svelte/transition';
 
 	type Props = {
 		critter: Critter;
 		dir: string;
 	};
 
-	let { critter, dir } = $props<Props>();
+	let { critter, dir }: Props = $props();
 
 	let item: HTMLElement = $state();
 
@@ -41,7 +42,13 @@
 	let moneyBracket: string = findMoneyBracket();
 </script>
 
-<a href={`/${dir}/${critter.slug}`} class={moneyBracket} bind:this={item} id={critter.slug}>
+<a
+	href={`/${dir}/${critter.slug}`}
+	class={moneyBracket}
+	bind:this={item}
+	id={critter.slug}
+	transition:scale={{ duration: 500 }}
+>
 	<ActiveDot {critter} alignTopLeft={true} />
 	<picture>
 		<source srcset={`/${critter.type}/${critter.img}.avif`} type="image/avif" />

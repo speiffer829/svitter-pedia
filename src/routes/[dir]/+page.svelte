@@ -13,7 +13,7 @@
 			dir: string;
 		};
 	};
-	let { data } = $props<Props>();
+	let { data }: Props = $props();
 
 	const title = $derived(data.dir.replace(/./, (c) => c.toUpperCase()));
 </script>
