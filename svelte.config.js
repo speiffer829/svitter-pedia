@@ -1,8 +1,7 @@
-import { vitePreprocess } from '@sveltejs/kit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 // import { imagetools } from 'vite-imagetools';
-import adapter from '@sveltejs/adapter-netlify';
-// import adapter from '@sveltejs/adapter-static';
-import path from 'path';
+// import adapter from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-node';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

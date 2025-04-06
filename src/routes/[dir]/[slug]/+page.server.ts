@@ -8,7 +8,7 @@ export async function load({ params }): Obj {
 	const critter: Critter = allCritters.find((critter: Critter) => critter.slug === slug);
 
 	if (critter === undefined) {
-		throw error(404, 'no critter found');
+		error(404, 'no critter found');
 	}
 
 	// if (!critter) throw 404;
