@@ -4,6 +4,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"start": "node build",
 		"package": "svelte-kit package",
 		"preview": "vite preview"
 	},

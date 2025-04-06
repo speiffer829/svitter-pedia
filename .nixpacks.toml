@@ -1,0 +1,2 @@
+[variables]
+NIXPACKS_SPA_OUTPUT_DIR = "build"
