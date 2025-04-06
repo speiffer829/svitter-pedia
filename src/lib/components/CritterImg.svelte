@@ -10,7 +10,7 @@
 		height: number;
 	};
 
-	let { src, alt, width, height } = $props<Props>();
+	let { src, alt, width, height }: Props = $props();
 </script>
 
 <svelte:head>

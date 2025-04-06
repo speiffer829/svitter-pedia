@@ -3,8 +3,10 @@
 	import CritterCard from '$lib/components/CritterCard.svelte';
 	import type { Critter } from '$lib/types/index';
 
-	let { data } = $props<{ data: { critter: Critter; dir: string } }>();
-	let { critter, dir }: { critter: Critter; dir: string } = data;
+	type Props = { data: { critter: Critter; dir: string } };
+
+	let { data }: Props = $props();
+	let { critter, dir } = data;
 
 	const findThemeColor = () => {
 		if (critter.price >= 10000) {

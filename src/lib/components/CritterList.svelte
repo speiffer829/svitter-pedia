@@ -13,7 +13,7 @@
 		title: string;
 	};
 
-	let { critters, dir, title } = $props<Props>();
+	let { critters, dir, title }: Props = $props();
 </script>
 
 <h1>{title}</h1>
@@ -24,7 +24,7 @@
 			<li
 				animate:flip={{ duration: 500, easing: quintOut }}
 				in:scale={{ duration: 1000, easing: elasticOut }}
-				out:scale|local={{ duration: 500 }}
+				out:scale={{ duration: 500 }}
 			>
 				<CritterListItem {critter} {dir} />
 			</li>
